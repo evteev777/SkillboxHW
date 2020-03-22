@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+
+    <Properties>
+        <Property name="logPath">10_SQLAndHibernate/10-02-JDBCExperiments/logs</Property>
+        <Property name="fileName">all</Property>
+        <Property name="hibernate.show_sql">false</Property>
+        <Property name="hibernate.generate_statistics">false</Property>
+        <Property name="hibernate.use_sql_comments">false</Property>
+    </Properties>
+
+    <Appenders>
+
+        <Console name="org.hibernate" target="SYSTEM_OUT">
+            <PatternLayout pattern="!!!!! %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %logger{35} %msg%n"/>
+        </Console>
+
+        <File name="File" fileName="${logPath}/${fileName}.log" append="false" immediateFlush="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %p %c{1.} %m%n" />
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <root level="DEBUG">
+            <appender-ref ref="org.hibernate" level="INFO" />
+            <appender-ref ref="File" level="DEBUG"/>
+        </root>
+    </Loggers>
+
+</Configuration>

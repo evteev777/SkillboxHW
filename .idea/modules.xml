@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_Begin/01-01-Begin/01-01-Begin.iml" filepath="$PROJECT_DIR$/01_Begin/01-01-Begin/01-01-Begin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_Begin/01-04-HelloWorld/01-04-HelloWorld.iml" filepath="$PROJECT_DIR$/01_Begin/01-04-HelloWorld/01-04-HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_Begin/01-05-RoadCamera/01-05-RoadCamera.iml" filepath="$PROJECT_DIR$/01_Begin/01-05-RoadCamera/01-05-RoadCamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_Begin/01-06-Date/01-06-Date.iml" filepath="$PROJECT_DIR$/01_Begin/01-06-Date/01-06-Date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Syntax/02-01,02,05-RoadController/02-01,02,05-RoadController.iml" filepath="$PROJECT_DIR$/02_Syntax/02-01,02,05-RoadController/02-01,02,05-RoadController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Syntax/02-03-1-Booleans/02-03-1-Booleans.iml" filepath="$PROJECT_DIR$/02_Syntax/02-03-1-Booleans/02-03-1-Booleans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Syntax/02-03-2-Ages/02-03-2-Ages.iml" filepath="$PROJECT_DIR$/02_Syntax/02-03-2-Ages/02-03-2-Ages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Syntax/02-04-1-ForWhileCycles/02-04-1-ForWhileCycles.iml" filepath="$PROJECT_DIR$/02_Syntax/02-04-1-ForWhileCycles/02-04-1-ForWhileCycles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Syntax/02-05-2-IncomeCalculator/02-05-2-IncomeCalculator.iml" filepath="$PROJECT_DIR$/02_Syntax/02-05-2-IncomeCalculator/02-05-2-IncomeCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_ObjectsAndClasses/03-01-07,09-Cats/03-01-07,09-Cats.iml" filepath="$PROJECT_DIR$/03_ObjectsAndClasses/03-01-07,09-Cats/03-01-07,09-Cats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_ObjectsAndClasses/03-08-Airport/03-08-Airport.iml" filepath="$PROJECT_DIR$/03_ObjectsAndClasses/03-08-Airport/03-08-Airport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-01-IntegerExperiments/04-01-IntegerExperiments.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-01-IntegerExperiments/04-01-IntegerExperiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-02-MinMaxNumbers/04-02-MinMaxNumbers.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-02-MinMaxNumbers/04-02-MinMaxNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-03-Containers/04-03-Containers.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-03-Containers/04-03-Containers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-04-1-Alphabet/04-04-1-Alphabet.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-04-1-Alphabet/04-04-1-Alphabet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-04-2-StringExperiments/04-04-2-StringExperiments.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-04-2-StringExperiments/04-04-2-StringExperiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-1-StringExperimentsRegEx/04-05-1-StringExperimentsRegEx.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-1-StringExperimentsRegEx/04-05-1-StringExperimentsRegEx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-2-SplitBBCNewsArticle/04-05-2-SplitBBCNewsArticle.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-2-SplitBBCNewsArticle/04-05-2-SplitBBCNewsArticle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-3-Names/04-05-3-Names.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-3-Names/04-05-3-Names.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-4-PhoneNumberFormat/04-05-4-PhoneNumberFormat.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-05-4-PhoneNumberFormat/04-05-4-PhoneNumberFormat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_NumbersStringsAndDates/04-06-BirthdayWeekDay/04-06-BirthdayWeekDay.iml" filepath="$PROJECT_DIR$/04_NumbersStringsAndDates/04-06-BirthdayWeekDay/04-06-BirthdayWeekDay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-01-1-RainbowArray/05-01-1-RainbowArray.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-01-1-RainbowArray/05-01-1-RainbowArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-01-2-Temperature/05-01-2-Temperature.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-01-2-Temperature/05-01-2-Temperature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-01-3-DrawX/05-01-3-DrawX.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-01-3-DrawX/05-01-3-DrawX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-02-TodoList/05-02-TodoList.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-02-TodoList/05-02-TodoList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-03-Emails/05-03-Emails.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-03-Emails/05-03-Emails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-04-Contacts/05-04-Contacts.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-04-Contacts/05-04-Contacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ArraysAndCollections/05-05-CoolCarNumbers/05-05-CoolCarNumbers.iml" filepath="$PROJECT_DIR$/05_ArraysAndCollections/05-05-CoolCarNumbers/05-05-CoolCarNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-01, 02-BankAccounts/06-01, 02-BankAccounts.iml" filepath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-01, 02-BankAccounts/06-01, 02-BankAccounts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-BankClients/06-03-BankClients.iml" filepath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-BankClients/06-03-BankClients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-04-CompanyEmployees/06-04-CompanyEmployees.iml" filepath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-04-CompanyEmployees/06-04-CompanyEmployees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_AdvancedOOPFeatures/07-01-LambdaExpressions/07-01-LambdaExpressions.iml" filepath="$PROJECT_DIR$/07_AdvancedOOPFeatures/07-01-LambdaExpressions/07-01-LambdaExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_AdvancedOOPFeatures/07-02-AirportFlights/07-02-AirportFlights.iml" filepath="$PROJECT_DIR$/07_AdvancedOOPFeatures/07-02-AirportFlights/07-02-AirportFlights.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/08-03-ConsoleCustomerList/08-03-ConsoleCustomerList.iml" filepath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/08-03-ConsoleCustomerList/08-03-ConsoleCustomerList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/08-05-SPBMetro.iml" filepath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/08-05-SPBMetro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_FilesAndNetwork/09-05-FolderSize/09-05-FolderSize.iml" filepath="$PROJECT_DIR$/09_FilesAndNetwork/09-05-FolderSize/09-05-FolderSize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_FilesAndNetwork/09-07-CopyFolder/09-07-CopyFolder.iml" filepath="$PROJECT_DIR$/09_FilesAndNetwork/09-07-CopyFolder/09-07-CopyFolder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_FilesAndNetwork/09-09-MovementList/09-09-MovementList.iml" filepath="$PROJECT_DIR$/09_FilesAndNetwork/09-09-MovementList/09-09-MovementList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_FilesAndNetwork/09-11-DownloadImagesFromLentaRu/09-11-DownloadImagesFromLentaRu.iml" filepath="$PROJECT_DIR$/09_FilesAndNetwork/09-11-DownloadImagesFromLentaRu/09-11-DownloadImagesFromLentaRu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_FilesAndNetwork/09-14-MosMetro/09-14-MosMetro.iml" filepath="$PROJECT_DIR$/09_FilesAndNetwork/09-14-MosMetro/09-14-MosMetro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_SQLAndHibernate/10-01-AvgCoursesPurchases/10-01-AvgCoursesPurchases.iml" filepath="$PROJECT_DIR$/10_SQLAndHibernate/10-01-AvgCoursesPurchases/10-01-AvgCoursesPurchases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_SQLAndHibernate/10-02-JDBCExperiments/10-02-JDBCExperiments.iml" filepath="$PROJECT_DIR$/10_SQLAndHibernate/10-02-JDBCExperiments/10-02-JDBCExperiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_basics.iml" filepath="$PROJECT_DIR$/.idea/java_basics.iml" />
+    </modules>
+  </component>
+</project>

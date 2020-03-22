@@ -1,0 +1,4 @@
+class Container
+{
+    int count;
+}

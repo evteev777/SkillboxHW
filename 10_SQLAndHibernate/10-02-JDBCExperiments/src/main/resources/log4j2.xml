@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="DEBUG">
+<Configuration status="WARN">
 
     <Properties>
         <Property name="logPath">logs</Property>
@@ -8,8 +8,12 @@
 
     <Appenders>
 
-        <Console name="org.hibernate" target="SYSTEM_OUT">
-            <PatternLayout pattern="!!!!! %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %logger{35} %msg%n"/>
+<!--        <Console name="org.hibernate" target="SYSTEM_OUT">-->
+<!--            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %logger{35} %msg%n"/>-->
+<!--        </Console>-->
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%m%n"/>
         </Console>
 
         <File name="File" fileName="${logPath}/${fileName}.log" append="false" immediateFlush="true">
@@ -20,7 +24,8 @@
 
     <Loggers>
         <root level="DEBUG">
-            <appender-ref ref="org.hibernate" level="INFO" />
+<!--            <appender-ref ref="org.hibernate" level="WARN" />-->
+            <appender-ref ref="Console" level="WARN" />
             <appender-ref ref="File" level="DEBUG"/>
         </root>
     </Loggers>

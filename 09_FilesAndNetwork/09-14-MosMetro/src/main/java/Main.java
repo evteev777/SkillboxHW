@@ -26,7 +26,7 @@ public class Main {
 
         try {
             final String LINK = "https://ru.wikipedia.org/wiki/Список_станций_Московского_метрополитена";
-            final String PATH = "09_FilesAndNetwork/09-14-MosMetro/src/main/resources/mosmetro.json";
+            final String PATH = "src/main/resources/mosmetro.json";
             final File file = new File(PATH);
 
             StationIndex mosMetro = parseHTML(LINK);

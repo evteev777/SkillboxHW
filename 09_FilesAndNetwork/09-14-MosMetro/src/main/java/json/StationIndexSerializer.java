@@ -41,7 +41,7 @@ public class StationIndexSerializer implements JsonSerializer<StationIndex> {
                     stationJson.add("closingDate", new JsonPrimitive(station
                             .getClosingDate().format(DateTimeFormatter.ISO_LOCAL_DATE)));
                 } else {
-                    stationJson.add("closingDate", new JsonNull());
+                    stationJson.add("closingDate", JsonNull.INSTANCE);
                 }
                 stations.add(stationJson);
             }

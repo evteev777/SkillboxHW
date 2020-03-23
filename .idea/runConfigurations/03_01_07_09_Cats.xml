@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="03-01-07,09-Cats" type="Application" factoryName="Application" folderName="03_ObjectsAndClasses">
+    <option name="MAIN_CLASS_NAME" value="Loader" />
+    <module name="03-01-07,09-Cats" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

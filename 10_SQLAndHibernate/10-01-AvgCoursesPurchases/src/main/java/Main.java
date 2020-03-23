@@ -42,36 +42,36 @@ public class Main {
     }
 
     private static void getAvgPurchases(Statement statement, String SQL_QUERY_AVG) throws SQLException {
-        ResultSet resultSet_avg = statement.executeQuery(SQL_QUERY_AVG);
+        ResultSet resultSetAvg = statement.executeQuery(SQL_QUERY_AVG);
 
         System.out.printf("%-35s | %14s | %21s | %21s | %17s | %14s |\n",
                 "НАЗВАНИЕ КУРСА", "ПРОДАНО КУРСОВ", "ДАТА  НАЧАЛА  ПРОДАЖ",
                 "ДАТА ОКОНЧАНИЯ ПРОДАЖ", "СРЕДНЕЕ ЗА ПЕРИОД", "СРЕДНЕЕ ЗА ГОД");
 
-        while (resultSet_avg.next()) {
+        while (resultSetAvg.next()) {
             System.out.printf("%-35s | %14s | %21s | %21s | %17s | %14s |\n",
-                    resultSet_avg.getString("course_name"),
-                    resultSet_avg.getString("purchase_count"),
-                    resultSet_avg.getString("first_purchase_date"),
-                    resultSet_avg.getString("last_purchase_date"),
-                    resultSet_avg.getString("period_avg_purchases_count"),
-                    resultSet_avg.getString("year_avg_purchases_count"));
+                    resultSetAvg.getString("course_name"),
+                    resultSetAvg.getString("purchase_count"),
+                    resultSetAvg.getString("first_purchase_date"),
+                    resultSetAvg.getString("last_purchase_date"),
+                    resultSetAvg.getString("period_avg_purchases_count"),
+                    resultSetAvg.getString("year_avg_purchases_count"));
         }
-        resultSet_avg.close();
+        resultSetAvg.close();
     }
 
     private static void getPurchasesPerMonth(Statement statement, String SQL_QUERY_MONTH) throws SQLException {
-        ResultSet resultSet_month = statement.executeQuery(SQL_QUERY_MONTH);
+        ResultSet resultSetMonth = statement.executeQuery(SQL_QUERY_MONTH);
 
         System.out.printf("\n%-35s | %5s | %14s |\n",
                 "НАЗВАНИЕ КУРСА", "МЕСЯЦ", "ПРОДАНО КУРСОВ");
 
-        while (resultSet_month.next()) {
+        while (resultSetMonth.next()) {
             System.out.printf("%-35s | %5s | %14s |\n",
-                    resultSet_month.getString("course_name"),
-                    resultSet_month.getString("purchase_month"),
-                    resultSet_month.getString("purchase_count"));
+                    resultSetMonth.getString("course_name"),
+                    resultSetMonth.getString("purchase_month"),
+                    resultSetMonth.getString("purchase_count"));
         }
-        resultSet_month.close();
+        resultSetMonth.close();
     }
 }

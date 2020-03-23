@@ -48,6 +48,10 @@
         <option value="$PROJECT_DIR$/09_FilesAndNetwork/14-MosMetro/pom.xml" />
         <option value="$PROJECT_DIR$/10_SQLAndHibernate/01-AvgCoursesPurchases/pom.xml" />
         <option value="$PROJECT_DIR$/10_SQLAndHibernate/02-JDBCExperiments/pom.xml" />
+        <option value="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/pom.xml" />
+        <option value="$PROJECT_DIR$/09_FilesAndNetwork/09-14-MosMetro/pom.xml" />
+        <option value="$PROJECT_DIR$/10_SQLAndHibernate/10-01-AvgCoursesPurchases/pom.xml" />
+        <option value="$PROJECT_DIR$/10_SQLAndHibernate/10-02-JDBCExperiments/pom.xml" />
       </list>
     </option>
   </component>

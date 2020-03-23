@@ -21,7 +21,7 @@ public class Main {
     private static final Marker INPUT_ERROR = MarkerManager.getMarker("INPUT_ERROR");
     private static final Marker EXCEPTION = MarkerManager.getMarker("EXCEPTION");
 
-    private static String dataFile = "08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/src/main/resources/map.json";
+    private static String dataFile = "src/main/resources/map.json";
     private static Scanner scanner;
 
     private static StationIndex stationIndex;

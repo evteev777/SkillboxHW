@@ -21,8 +21,8 @@ public class Main {
             String sep = File.separator;
 
             final String FROM_URL = "https://lenta.ru";
-//            final String FROM_FILE = "09_FilesAndNetwork/09-11-DownloadImagesFromLentaRu/data/lenta_ru.html";
-            final String TO_DIR = "09_FilesAndNetwork/09-11-DownloadImagesFromLentaRu/data/downloads";
+//            final String FROM_FILE = "data/lenta_ru.html";
+            final String TO_DIR = "data/downloads";
 
             Document doc = Jsoup.connect(FROM_URL).get();
 //            Document doc = Jsoup.parse(readFile(FROM_FILE));

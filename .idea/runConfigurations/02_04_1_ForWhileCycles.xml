@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="02-04-1-ForWhileCycles" type="Application" factoryName="Application" folderName="02-Syntax">
+    <option name="MAIN_CLASS_NAME" value="Main" />
+    <module name="02-04-1-ForWhileCycles" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -2,11 +2,8 @@
 <Configuration status="DEBUG">
 
     <Properties>
-        <Property name="logPath">10_SQLAndHibernate/10-02-JDBCExperiments/logs</Property>
+        <Property name="logPath">logs</Property>
         <Property name="fileName">all</Property>
-        <Property name="hibernate.show_sql">false</Property>
-        <Property name="hibernate.generate_statistics">false</Property>
-        <Property name="hibernate.use_sql_comments">false</Property>
     </Properties>
 
     <Appenders>

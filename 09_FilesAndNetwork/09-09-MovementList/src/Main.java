@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        final String movementListFile = "09_FilesAndNetwork/09-09-MovementList/data/movementList.csv";
+        final String movementListFile = "data/movementList.csv";
 
         List<Record> bankStatement = Record.loadFromMovementList(movementListFile);
 

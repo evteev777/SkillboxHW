@@ -7,7 +7,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{35} - %msg%n"/>
         </Console>
 
-        <RollingFile name="AppLog" fileName="08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/logs/app.log"
+        <RollingFile name="AppLog" fileName="logs/app.log"
                      filePattern="logs/$${date:yyyy-MM-dd}/app-%d{yyyy-MM-dd-HH-mm}-%i.log"
                      append="true"
                      immediateFlush="true"
@@ -20,7 +20,7 @@
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
 
-        <File name="InputOk" fileName="08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/logs/input_ok.log"
+        <File name="InputOk" fileName="logs/input_ok.log"
               append="true"
               immediateFlush="true"
               createOnDemand="false">
@@ -28,7 +28,7 @@
             <MarkerFilter marker="INPUT_OK" onMatch="ACCEPT" onMismatch="DENY"/>
         </File>
 
-        <File name="InputError" fileName="08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/logs/input_error.log"
+        <File name="InputError" fileName="logs/input_error.log"
               append="true"
               immediateFlush="true"
               createOnDemand="false">
@@ -36,7 +36,7 @@
             <MarkerFilter marker="INPUT_ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
         </File>
 
-        <File name="Exception" fileName="08_ExceptionsDebuggingAndTesting/08-05-SPBMetro/logs/exception.log"
+        <File name="Exception" fileName="logs/exception.log"
               append="true"
               immediateFlush="true"
               createOnDemand="false">

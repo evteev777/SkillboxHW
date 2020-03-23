@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Main {
 
-    private static String staffFile = "07_AdvancedOOPFeatures/07-01-LambdaExpressions/data/staff.txt";
+    private static String staffFile = "data/staff.txt";
     private static String dateFormat = "dd.MM.yyyy";
 
     public static void main(String[] args) {

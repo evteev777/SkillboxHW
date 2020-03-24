@@ -1,458 +1,1040 @@
-2020-03-23 21:16:27.356 [main] DEBUG o.j.logging Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-2020-03-23 21:16:27.383 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
-2020-03-23 21:16:27.385 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
-2020-03-23 21:16:27.390 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
-2020-03-23 21:16:27.485 [main] INFO o.h.Version HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-03-23 21:16:27.487 [main] DEBUG o.h.c.Environment HHH000206: hibernate.properties not found
-2020-03-23 21:16:27.722 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
-2020-03-23 21:16:27.722 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
-2020-03-23 21:16:27.736 [main] DEBUG o.h.b.c.i.JaxbCfgProcessor cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
-2020-03-23 21:16:28.034 [main] DEBUG o.h.s.s.ServiceBinding Overriding existing service binding [org.hibernate.secure.spi.JaccService]
-2020-03-23 21:16:28.050 [main] DEBUG o.h.c.i.RegionFactoryInitiator Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
-2020-03-23 21:16:28.051 [main] DEBUG o.h.c.i.RegionFactoryInitiator Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
-2020-03-23 21:16:28.063 [main] INFO o.h.a.c.Version HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-03-23 21:16:28.088 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration boolean -> org.hibernate.type.BooleanType@6e33c391
-2020-03-23 21:16:28.088 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration boolean -> org.hibernate.type.BooleanType@6e33c391
-2020-03-23 21:16:28.088 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6e33c391
-2020-03-23 21:16:28.088 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@47747fb9
-2020-03-23 21:16:28.089 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration true_false -> org.hibernate.type.TrueFalseType@2a7b6f69
-2020-03-23 21:16:28.090 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration yes_no -> org.hibernate.type.YesNoType@7db0565c
-2020-03-23 21:16:28.091 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte -> org.hibernate.type.ByteType@cc62a3b
-2020-03-23 21:16:28.091 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte -> org.hibernate.type.ByteType@cc62a3b
-2020-03-23 21:16:28.091 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@cc62a3b
-2020-03-23 21:16:28.091 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration character -> org.hibernate.type.CharacterType@51a06cbe
-2020-03-23 21:16:28.092 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration char -> org.hibernate.type.CharacterType@51a06cbe
-2020-03-23 21:16:28.092 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@51a06cbe
-2020-03-23 21:16:28.092 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration short -> org.hibernate.type.ShortType@52c8295b
-2020-03-23 21:16:28.093 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration short -> org.hibernate.type.ShortType@52c8295b
-2020-03-23 21:16:28.093 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Short -> org.hibernate.type.ShortType@52c8295b
-2020-03-23 21:16:28.094 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration integer -> org.hibernate.type.IntegerType@22680f52
-2020-03-23 21:16:28.094 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration int -> org.hibernate.type.IntegerType@22680f52
-2020-03-23 21:16:28.094 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@22680f52
-2020-03-23 21:16:28.095 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration long -> org.hibernate.type.LongType@1fc793c2
-2020-03-23 21:16:28.095 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration long -> org.hibernate.type.LongType@1fc793c2
-2020-03-23 21:16:28.095 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Long -> org.hibernate.type.LongType@1fc793c2
-2020-03-23 21:16:28.096 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration float -> org.hibernate.type.FloatType@37d3d232
-2020-03-23 21:16:28.096 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration float -> org.hibernate.type.FloatType@37d3d232
-2020-03-23 21:16:28.096 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Float -> org.hibernate.type.FloatType@37d3d232
-2020-03-23 21:16:28.097 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration double -> org.hibernate.type.DoubleType@46cf05f7
-2020-03-23 21:16:28.097 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration double -> org.hibernate.type.DoubleType@46cf05f7
-2020-03-23 21:16:28.097 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@46cf05f7
-2020-03-23 21:16:28.098 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@3a80515c
-2020-03-23 21:16:28.098 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@3a80515c
-2020-03-23 21:16:28.098 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration big_integer -> org.hibernate.type.BigIntegerType@588ab592
-2020-03-23 21:16:28.099 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@588ab592
-2020-03-23 21:16:28.099 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration string -> org.hibernate.type.StringType@58a55449
-2020-03-23 21:16:28.100 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.String -> org.hibernate.type.StringType@58a55449
-2020-03-23 21:16:28.100 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2a2bb0eb
-2020-03-23 21:16:28.100 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7728643a
-2020-03-23 21:16:28.101 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration url -> org.hibernate.type.UrlType@6ebd78d1
-2020-03-23 21:16:28.101 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.net.URL -> org.hibernate.type.UrlType@6ebd78d1
-2020-03-23 21:16:28.102 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Duration -> org.hibernate.type.DurationType@50b8ae8d
-2020-03-23 21:16:28.102 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.Duration -> org.hibernate.type.DurationType@50b8ae8d
-2020-03-23 21:16:28.107 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Instant -> org.hibernate.type.InstantType@88d6f9b
-2020-03-23 21:16:28.107 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.Instant -> org.hibernate.type.InstantType@88d6f9b
-2020-03-23 21:16:28.109 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2fa7ae9
-2020-03-23 21:16:28.109 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2fa7ae9
-2020-03-23 21:16:28.110 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalDate -> org.hibernate.type.LocalDateType@10b3df93
-2020-03-23 21:16:28.110 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@10b3df93
-2020-03-23 21:16:28.111 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@24855019
-2020-03-23 21:16:28.111 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@24855019
-2020-03-23 21:16:28.112 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@12f3afb5
-2020-03-23 21:16:28.112 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@12f3afb5
-2020-03-23 21:16:28.113 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@27dc79f7
-2020-03-23 21:16:28.113 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@27dc79f7
-2020-03-23 21:16:28.114 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@3ad394e6
-2020-03-23 21:16:28.115 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@3ad394e6
-2020-03-23 21:16:28.118 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration date -> org.hibernate.type.DateType@50d68830
-2020-03-23 21:16:28.119 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Date -> org.hibernate.type.DateType@50d68830
-2020-03-23 21:16:28.122 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration time -> org.hibernate.type.TimeType@4acf72b6
-2020-03-23 21:16:28.122 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Time -> org.hibernate.type.TimeType@4acf72b6
-2020-03-23 21:16:28.125 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration timestamp -> org.hibernate.type.TimestampType@3a45c42a
-2020-03-23 21:16:28.126 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@3a45c42a
-2020-03-23 21:16:28.126 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Date -> org.hibernate.type.TimestampType@3a45c42a
-2020-03-23 21:16:28.128 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@27a0a5a2
-2020-03-23 21:16:28.129 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar -> org.hibernate.type.CalendarType@7dd712e8
-2020-03-23 21:16:28.129 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7dd712e8
-2020-03-23 21:16:28.129 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7dd712e8
-2020-03-23 21:16:28.130 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@53bc1328
-2020-03-23 21:16:28.131 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6a1ebcff
-2020-03-23 21:16:28.133 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration locale -> org.hibernate.type.LocaleType@622ef26a
-2020-03-23 21:16:28.133 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@622ef26a
-2020-03-23 21:16:28.134 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration currency -> org.hibernate.type.CurrencyType@11963225
-2020-03-23 21:16:28.134 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@11963225
-2020-03-23 21:16:28.136 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration timezone -> org.hibernate.type.TimeZoneType@f325091
-2020-03-23 21:16:28.136 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@f325091
-2020-03-23 21:16:28.137 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration class -> org.hibernate.type.ClassType@6bd51ed8
-2020-03-23 21:16:28.138 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Class -> org.hibernate.type.ClassType@6bd51ed8
-2020-03-23 21:16:28.143 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5cad8b7d
-2020-03-23 21:16:28.143 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5cad8b7d
-2020-03-23 21:16:28.144 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2e6ee0bc
-2020-03-23 21:16:28.146 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration binary -> org.hibernate.type.BinaryType@7a34b7b8
-2020-03-23 21:16:28.146 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte[] -> org.hibernate.type.BinaryType@7a34b7b8
-2020-03-23 21:16:28.146 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [B -> org.hibernate.type.BinaryType@7a34b7b8
-2020-03-23 21:16:28.147 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@85ec632
-2020-03-23 21:16:28.147 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@85ec632
-2020-03-23 21:16:28.147 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@85ec632
-2020-03-23 21:16:28.148 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration row_version -> org.hibernate.type.RowVersionType@1c4ee95c
-2020-03-23 21:16:28.149 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration image -> org.hibernate.type.ImageType@e27ba81
-2020-03-23 21:16:28.151 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration characters -> org.hibernate.type.CharArrayType@772485dd
-2020-03-23 21:16:28.152 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration char[] -> org.hibernate.type.CharArrayType@772485dd
-2020-03-23 21:16:28.152 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [C -> org.hibernate.type.CharArrayType@772485dd
-2020-03-23 21:16:28.153 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@60b85ba1
-2020-03-23 21:16:28.153 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@60b85ba1
-2020-03-23 21:16:28.153 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@60b85ba1
-2020-03-23 21:16:28.154 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration text -> org.hibernate.type.TextType@d71adc2
-2020-03-23 21:16:28.154 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ntext -> org.hibernate.type.NTextType@159e366
-2020-03-23 21:16:28.156 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration blob -> org.hibernate.type.BlobType@5d332969
-2020-03-23 21:16:28.156 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@5d332969
-2020-03-23 21:16:28.157 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4837595f
-2020-03-23 21:16:28.159 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration clob -> org.hibernate.type.ClobType@126be319
-2020-03-23 21:16:28.159 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@126be319
-2020-03-23 21:16:28.160 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration nclob -> org.hibernate.type.NClobType@7726e185
-2020-03-23 21:16:28.161 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7726e185
-2020-03-23 21:16:28.162 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1db0ec27
-2020-03-23 21:16:28.162 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1af05b03
-2020-03-23 21:16:28.164 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration serializable -> org.hibernate.type.SerializableType@5a6d5a8f
-2020-03-23 21:16:28.167 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration object -> org.hibernate.type.ObjectType@76b0ae1b
-2020-03-23 21:16:28.167 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@76b0ae1b
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6105f8a3
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2237bada
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@77e2a6e2
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@5710768a
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@199e4c2b
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6e0d4a8
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@64d7b720
-2020-03-23 21:16:28.168 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@30272916
-2020-03-23 21:16:28.195 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
-2020-03-23 21:16:28.196 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
-2020-03-23 21:16:28.197 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
-2020-03-23 21:16:28.197 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
-2020-03-23 21:16:28.197 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
-2020-03-23 21:16:28.198 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
-2020-03-23 21:16:28.198 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
-2020-03-23 21:16:28.199 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-2020-03-23 21:16:28.200 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
-2020-03-23 21:16:28.200 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
-2020-03-23 21:16:28.201 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
-2020-03-23 21:16:28.201 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
-2020-03-23 21:16:28.201 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-2020-03-23 21:16:28.202 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
-2020-03-23 21:16:28.207 [main] WARN o.h.o.c.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2020-03-23 21:16:28.212 [main] INFO o.h.o.c.pooling HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow]
-2020-03-23 21:16:28.213 [main] INFO o.h.o.c.pooling HHH10001001: Connection properties: {password=password, user=root}
-2020-03-23 21:16:28.213 [main] INFO o.h.o.c.pooling HHH10001003: Autocommit mode: false
-2020-03-23 21:16:28.215 [main] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl Initializing Connection pool with 1 Connections
-2020-03-23 21:16:28.215 [main] INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 10 (min=1)
-2020-03-23 21:16:28.375 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator Database ->
+2020-03-24 22:15:17.617 [main] WARN  Program start
+2020-03-24 22:15:17.639 [main] DEBUG o.j.logging Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2020-03-24 22:15:17.681 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2020-03-24 22:15:17.684 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2020-03-24 22:15:17.703 [main] DEBUG o.h.i.i.IntegratorServiceImpl Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2020-03-24 22:15:17.843 [main] INFO o.h.Version HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-24 22:15:17.847 [main] DEBUG o.h.c.Environment HHH000206: hibernate.properties not found
+2020-03-24 22:15:18.048 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+2020-03-24 22:15:18.049 [main] DEBUG o.h.b.j.i.s.LocalXmlResourceResolver Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+2020-03-24 22:15:18.056 [main] DEBUG o.h.b.c.i.JaxbCfgProcessor cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2020-03-24 22:15:18.457 [main] DEBUG o.h.s.s.ServiceBinding Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2020-03-24 22:15:18.475 [main] DEBUG o.h.c.i.RegionFactoryInitiator Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2020-03-24 22:15:18.475 [main] DEBUG o.h.c.i.RegionFactoryInitiator Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2020-03-24 22:15:18.500 [main] INFO o.h.a.c.Version HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-24 22:15:18.542 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration boolean -> org.hibernate.type.BooleanType@213e3629
+2020-03-24 22:15:18.543 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration boolean -> org.hibernate.type.BooleanType@213e3629
+2020-03-24 22:15:18.543 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@213e3629
+2020-03-24 22:15:18.544 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@70eecdc2
+2020-03-24 22:15:18.544 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration true_false -> org.hibernate.type.TrueFalseType@52eacb4b
+2020-03-24 22:15:18.545 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration yes_no -> org.hibernate.type.YesNoType@1edb61b1
+2020-03-24 22:15:18.546 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte -> org.hibernate.type.ByteType@5305c37d
+2020-03-24 22:15:18.547 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte -> org.hibernate.type.ByteType@5305c37d
+2020-03-24 22:15:18.547 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5305c37d
+2020-03-24 22:15:18.548 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration character -> org.hibernate.type.CharacterType@4d9d1b69
+2020-03-24 22:15:18.548 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration char -> org.hibernate.type.CharacterType@4d9d1b69
+2020-03-24 22:15:18.548 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4d9d1b69
+2020-03-24 22:15:18.550 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration short -> org.hibernate.type.ShortType@781e7326
+2020-03-24 22:15:18.550 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration short -> org.hibernate.type.ShortType@781e7326
+2020-03-24 22:15:18.550 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Short -> org.hibernate.type.ShortType@781e7326
+2020-03-24 22:15:18.551 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration integer -> org.hibernate.type.IntegerType@433ffad1
+2020-03-24 22:15:18.551 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration int -> org.hibernate.type.IntegerType@433ffad1
+2020-03-24 22:15:18.551 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@433ffad1
+2020-03-24 22:15:18.552 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration long -> org.hibernate.type.LongType@4593ff34
+2020-03-24 22:15:18.553 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration long -> org.hibernate.type.LongType@4593ff34
+2020-03-24 22:15:18.553 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Long -> org.hibernate.type.LongType@4593ff34
+2020-03-24 22:15:18.554 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration float -> org.hibernate.type.FloatType@29caf222
+2020-03-24 22:15:18.554 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration float -> org.hibernate.type.FloatType@29caf222
+2020-03-24 22:15:18.554 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Float -> org.hibernate.type.FloatType@29caf222
+2020-03-24 22:15:18.555 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration double -> org.hibernate.type.DoubleType@1804f60d
+2020-03-24 22:15:18.556 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration double -> org.hibernate.type.DoubleType@1804f60d
+2020-03-24 22:15:18.556 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1804f60d
+2020-03-24 22:15:18.557 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@21680803
+2020-03-24 22:15:18.557 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@21680803
+2020-03-24 22:15:18.558 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration big_integer -> org.hibernate.type.BigIntegerType@c074c0c
+2020-03-24 22:15:18.559 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@c074c0c
+2020-03-24 22:15:18.560 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration string -> org.hibernate.type.StringType@2d0566ba
+2020-03-24 22:15:18.562 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.String -> org.hibernate.type.StringType@2d0566ba
+2020-03-24 22:15:18.563 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5167268
+2020-03-24 22:15:18.564 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1af7f54a
+2020-03-24 22:15:18.565 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration url -> org.hibernate.type.UrlType@54e7391d
+2020-03-24 22:15:18.565 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.net.URL -> org.hibernate.type.UrlType@54e7391d
+2020-03-24 22:15:18.566 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Duration -> org.hibernate.type.DurationType@58783f6c
+2020-03-24 22:15:18.566 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.Duration -> org.hibernate.type.DurationType@58783f6c
+2020-03-24 22:15:18.572 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Instant -> org.hibernate.type.InstantType@4d0402b
+2020-03-24 22:15:18.572 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.Instant -> org.hibernate.type.InstantType@4d0402b
+2020-03-24 22:15:18.574 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@3f2049b6
+2020-03-24 22:15:18.574 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@3f2049b6
+2020-03-24 22:15:18.575 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3c321bdb
+2020-03-24 22:15:18.575 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3c321bdb
+2020-03-24 22:15:18.579 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@1e392345
+2020-03-24 22:15:18.580 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@1e392345
+2020-03-24 22:15:18.588 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@6831d8fd
+2020-03-24 22:15:18.590 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@6831d8fd
+2020-03-24 22:15:18.591 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1a38ba58
+2020-03-24 22:15:18.592 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1a38ba58
+2020-03-24 22:15:18.593 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2b27cc70
+2020-03-24 22:15:18.593 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2b27cc70
+2020-03-24 22:15:18.595 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration date -> org.hibernate.type.DateType@323e8306
+2020-03-24 22:15:18.595 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Date -> org.hibernate.type.DateType@323e8306
+2020-03-24 22:15:18.597 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration time -> org.hibernate.type.TimeType@57a4d5ee
+2020-03-24 22:15:18.598 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Time -> org.hibernate.type.TimeType@57a4d5ee
+2020-03-24 22:15:18.600 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration timestamp -> org.hibernate.type.TimestampType@33aa93c
+2020-03-24 22:15:18.600 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@33aa93c
+2020-03-24 22:15:18.600 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Date -> org.hibernate.type.TimestampType@33aa93c
+2020-03-24 22:15:18.603 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@26d10f2e
+2020-03-24 22:15:18.604 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar -> org.hibernate.type.CalendarType@26f143ed
+2020-03-24 22:15:18.605 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@26f143ed
+2020-03-24 22:15:18.605 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@26f143ed
+2020-03-24 22:15:18.606 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@1968a49c
+2020-03-24 22:15:18.606 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6b739528
+2020-03-24 22:15:18.607 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration locale -> org.hibernate.type.LocaleType@6a175569
+2020-03-24 22:15:18.608 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6a175569
+2020-03-24 22:15:18.608 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration currency -> org.hibernate.type.CurrencyType@5b69fd74
+2020-03-24 22:15:18.609 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5b69fd74
+2020-03-24 22:15:18.610 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration timezone -> org.hibernate.type.TimeZoneType@271f18d3
+2020-03-24 22:15:18.610 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@271f18d3
+2020-03-24 22:15:18.611 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration class -> org.hibernate.type.ClassType@3fc08eec
+2020-03-24 22:15:18.611 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3fc08eec
+2020-03-24 22:15:18.612 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@467f77a5
+2020-03-24 22:15:18.612 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@467f77a5
+2020-03-24 22:15:18.613 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@308a6984
+2020-03-24 22:15:18.614 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration binary -> org.hibernate.type.BinaryType@74a9c4b0
+2020-03-24 22:15:18.614 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration byte[] -> org.hibernate.type.BinaryType@74a9c4b0
+2020-03-24 22:15:18.614 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [B -> org.hibernate.type.BinaryType@74a9c4b0
+2020-03-24 22:15:18.616 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@e362c57
+2020-03-24 22:15:18.616 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@e362c57
+2020-03-24 22:15:18.616 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@e362c57
+2020-03-24 22:15:18.617 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration row_version -> org.hibernate.type.RowVersionType@1556f2dd
+2020-03-24 22:15:18.618 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration image -> org.hibernate.type.ImageType@6b5f8707
+2020-03-24 22:15:18.624 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration characters -> org.hibernate.type.CharArrayType@51bde877
+2020-03-24 22:15:18.624 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration char[] -> org.hibernate.type.CharArrayType@51bde877
+2020-03-24 22:15:18.624 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [C -> org.hibernate.type.CharArrayType@51bde877
+2020-03-24 22:15:18.626 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@1a1d3c1a
+2020-03-24 22:15:18.626 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@1a1d3c1a
+2020-03-24 22:15:18.626 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@1a1d3c1a
+2020-03-24 22:15:18.626 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration text -> org.hibernate.type.TextType@24528a25
+2020-03-24 22:15:18.627 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration ntext -> org.hibernate.type.NTextType@5a772895
+2020-03-24 22:15:18.629 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration blob -> org.hibernate.type.BlobType@3b718392
+2020-03-24 22:15:18.629 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@3b718392
+2020-03-24 22:15:18.630 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7ee55e70
+2020-03-24 22:15:18.631 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration clob -> org.hibernate.type.ClobType@36b6964d
+2020-03-24 22:15:18.631 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@36b6964d
+2020-03-24 22:15:18.633 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration nclob -> org.hibernate.type.NClobType@d4ab71a
+2020-03-24 22:15:18.633 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@d4ab71a
+2020-03-24 22:15:18.634 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1ad777f
+2020-03-24 22:15:18.634 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4fdf8f12
+2020-03-24 22:15:18.636 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration serializable -> org.hibernate.type.SerializableType@38d5b107
+2020-03-24 22:15:18.639 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration object -> org.hibernate.type.ObjectType@77e2a6e2
+2020-03-24 22:15:18.639 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@77e2a6e2
+2020-03-24 22:15:18.639 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@64d7b720
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@30272916
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5bb3d42d
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@5bf61e67
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2c1dc8e
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@b273a59
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4e7095ac
+2020-03-24 22:15:18.640 [main] DEBUG o.h.t.BasicTypeRegistry Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@251ebf23
+2020-03-24 22:15:18.671 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2020-03-24 22:15:18.671 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2020-03-24 22:15:18.672 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2020-03-24 22:15:18.672 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2020-03-24 22:15:18.673 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2020-03-24 22:15:18.674 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2020-03-24 22:15:18.674 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2020-03-24 22:15:18.676 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-03-24 22:15:18.677 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2020-03-24 22:15:18.677 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2020-03-24 22:15:18.678 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2020-03-24 22:15:18.678 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2020-03-24 22:15:18.678 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-03-24 22:15:18.679 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2020-03-24 22:15:18.685 [main] WARN o.h.o.c.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-03-24 22:15:18.694 [main] INFO o.h.o.c.pooling HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow]
+2020-03-24 22:15:18.694 [main] INFO o.h.o.c.pooling HHH10001001: Connection properties: {password=password, user=root}
+2020-03-24 22:15:18.694 [main] INFO o.h.o.c.pooling HHH10001003: Autocommit mode: false
+2020-03-24 22:15:18.697 [main] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl Initializing Connection pool with 1 Connections
+2020-03-24 22:15:18.697 [main] INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 10 (min=1)
+2020-03-24 22:15:18.975 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator Database ->
        name : MySQL
     version : 8.0.18
       major : 8
       minor : 0
-2020-03-23 21:16:28.375 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator Driver ->
+2020-03-24 22:15:18.975 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator Driver ->
        name : MySQL Connector/J
     version : mysql-connector-java-8.0.19 (Revision: a0ca826f5cdf51a98356fdfb1bf251eb042f80bf)
       major : 8
       minor : 0
-2020-03-23 21:16:28.375 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator JDBC version : 4.2
-2020-03-23 21:16:28.384 [main] INFO o.h.d.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2020-03-23 21:16:28.394 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder JDBC driver metadata reported database stores quoted identifiers in more than one case
-2020-03-23 21:16:28.425 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
-2020-03-23 21:16:28.450 [main] DEBUG o.h.b.m.r.Namespace Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
-2020-03-23 21:16:28.453 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@27d57a2c] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2ff95fc6]
-2020-03-23 21:16:28.484 [main] DEBUG o.h.c.AnnotationBinder Binding entity from annotated class: Course
-2020-03-23 21:16:28.497 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
-2020-03-23 21:16:28.500 [main] DEBUG o.h.c.a.EntityBinder Import with entity name Course
-2020-03-23 21:16:28.502 [main] DEBUG o.h.c.a.EntityBinder Bind entity Course on table Courses
-2020-03-23 21:16:28.522 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=id, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.523 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property id with lazy=false
-2020-03-23 21:16:28.525 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:id]
-2020-03-23 21:16:28.527 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for id
-2020-03-23 21:16:28.528 [main] DEBUG o.h.c.a.PropertyBinder Building property id
-2020-03-23 21:16:28.530 [main] DEBUG o.h.c.BinderHelper #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
-2020-03-23 21:16:28.530 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=description, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property description with lazy=false
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:description]
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for description
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.a.PropertyBinder Building property description
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=duration, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property duration with lazy=false
-2020-03-23 21:16:28.531 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:duration]
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for duration
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.a.PropertyBinder Building property duration
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=name, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property name with lazy=false
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:name]
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for name
-2020-03-23 21:16:28.532 [main] DEBUG o.h.c.a.PropertyBinder Building property name
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=price, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property price with lazy=false
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:price]
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for price
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.a.PropertyBinder Building property price
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=price_per_hour, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property pricePerHour with lazy=false
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:pricePerHour]
-2020-03-23 21:16:28.533 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for pricePerHour
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.a.PropertyBinder Building property pricePerHour
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=students_count, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property studentsCount with lazy=false
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:studentsCount]
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for studentsCount
-2020-03-23 21:16:28.534 [main] DEBUG o.h.c.a.PropertyBinder Building property studentsCount
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=teacher_id, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property teacherId with lazy=false
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:teacherId]
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for teacherId
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.a.PropertyBinder Building property teacherId
-2020-03-23 21:16:28.536 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=type, insertable=true, updatable=true, unique=false}
-2020-03-23 21:16:28.537 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property type with lazy=false
-2020-03-23 21:16:28.537 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:type]
-2020-03-23 21:16:28.538 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for type
-2020-03-23 21:16:28.538 [main] DEBUG o.h.c.a.PropertyBinder Building property type
-2020-03-23 21:16:28.540 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for id
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for description
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for duration
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for name
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for price
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for pricePerHour
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for studentsCount
-2020-03-23 21:16:28.541 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for teacherId
-2020-03-23 21:16:28.542 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for type
-2020-03-23 21:16:28.544 [main] DEBUG o.h.m.PrimaryKey Forcing column [id] to be non-null as it is part of the primary key for table [courses]
-2020-03-23 21:16:28.562 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.590 [main] DEBUG o.h.i.SessionFactoryImpl Building session factory
-2020-03-23 21:16:28.591 [main] DEBUG o.h.c.Settings SessionFactory name : null
-2020-03-23 21:16:28.591 [main] DEBUG o.h.c.Settings Automatic flush during beforeCompletion(): enabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Automatic session close at end of transaction: disabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Statistics: disabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Deleted entity synthetic identifier rollback: disabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Default entity-mode: pojo
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Check Nullability in Core (should be disabled when Bean Validation is on): enabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Allow initialization of lazy state outside session : disabled
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Using BatchFetchStyle : LEGACY
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Default batch fetch size: -1
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Maximum outer join fetch depth: 2
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Default null ordering: NONE
-2020-03-23 21:16:28.592 [main] DEBUG o.h.c.Settings Order SQL updates by primary key: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Order SQL inserts for batching: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings multi-tenancy strategy : NONE
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings JTA Track by Thread: enabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Query language substitutions: {}
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Named query checking : enabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Second-level cache: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Second-level query cache: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Second-level query cache factory: null
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Second-level cache region prefix: null
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Optimize second-level cache for minimal puts: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Structured second-level cache entries: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Second-level cache direct-reference entries: disabled
-2020-03-23 21:16:28.593 [main] DEBUG o.h.c.Settings Automatic eviction of collection cache: disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JDBC batch size: 15
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JDBC batch updates for versioned data: enabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings Scrollable result sets: enabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings Wrap result sets: disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JDBC3 getGeneratedKeys(): enabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JDBC result set fetch size: null
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings Connection release mode: AFTER_TRANSACTION
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings Generate SQL with comments: disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JPA compliance - query : disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JPA compliance - closed-handling : disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JPA compliance - lists : disabled
-2020-03-23 21:16:28.594 [main] DEBUG o.h.c.Settings JPA compliance - transactions : disabled
-2020-03-23 21:16:28.630 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.638 [main] DEBUG o.h.i.SessionFactoryImpl Session factory constructed with filter configurations : {}
-2020-03-23 21:16:28.638 [main] DEBUG o.h.i.SessionFactoryImpl Instantiating session factory with properties: {dialect=org.hibernate.dialect.MySQL5Dialect, java.specification.version=13, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=/Users/evteev/Documents/Code/Java/Skillbox/java_basics/10_SQLAndHibernate/10-02-JDBCExperiments/target/classes:/Users/evteev/.m2/repository/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar:/Users/evteev/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/evteev/.m2/repository/org/hibernate/hibernate-core/5.4.12.Final/hibernate-core-5.4.12.Final.jar:/Users/evteev/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/evteev/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/evteev/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/evteev/.m2/repository/net/bytebuddy/byte-buddy/1.10.7/byte-buddy-1.10.7.jar:/Users/evteev/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/evteev/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/evteev/.m2/repository/org/jboss/jandex/2.1.1.Final/jandex-2.1.1.Final.jar:/Users/evteev/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/evteev/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/evteev/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/evteev/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/evteev/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/evteev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/evteev/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/evteev/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/evteev/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/evteev/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/evteev/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.1/log4j-core-2.13.1.jar:/Users/evteev/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.1/log4j-api-2.13.1.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=validate, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=13, os.name=Mac OS X, current_session_context_class=thread, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home/lib, sun.java.command=Main, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, jdk.debug=release, sun.cpu.endian=little, user.home=/Users/evteev, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2019-09-17, java.home=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
-, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.hbm2ddl.auto=validate, connection.password=password, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=13+33, user.name=evteev, path.separator=:, hibernate.connection.username=****, os.version=10.15.3, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow, connection.pool_size=10, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=false, hibernate.current_session_context_class=thread, show_sql=true, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=/var/folders/sy/g6kjghjn18q5mr6fz2z_srrh0000gn/T/, java.version=13, user.dir=/Users/evteev/Documents/Code/Java/Skillbox/java_basics/10_SQLAndHibernate/10-02-JDBCExperiments, os.arch=x86_64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@17690e14, java.library.path=/Users/evteev/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=13+33, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeBig, hibernate.connection.pool_size=10, connection.url=jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.class.version=57.0}
-2020-03-23 21:16:28.648 [main] DEBUG o.h.s.s.JaccIntegrator Skipping JACC integration as it was not enabled
-2020-03-23 21:16:28.649 [main] DEBUG o.h.i.SessionFactoryImpl Instantiated session factory
-2020-03-23 21:16:28.650 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@27d57a2c] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@eca6a74]
-2020-03-23 21:16:28.681 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Course] is safe
-2020-03-23 21:16:28.682 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Course
-2020-03-23 21:16:28.691 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.692 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.692 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Course] is safe
-2020-03-23 21:16:28.692 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Course
-2020-03-23 21:16:28.849 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.849 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister Static SQL for entity: Course
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Version select: select id from Courses where id =?
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Snapshot select: select course_.id, course_.description as descript2_0_, course_.duration as duration3_0_, course_.name as name4_0_, course_.price as price5_0_, course_.price_per_hour as price_pe6_0_, course_.students_count as students7_0_, course_.teacher_id as teacher_8_0_, course_.type as type9_0_ from Courses course_ where course_.id=?
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Insert 0: insert into Courses (description, duration, name, price, price_per_hour, students_count, teacher_id, type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Update 0: update Courses set description=?, duration=?, name=?, price=?, price_per_hour=?, students_count=?, teacher_id=?, type=? where id=?
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Delete 0: delete from Courses where id=?
-2020-03-23 21:16:28.859 [main] DEBUG o.h.p.e.AbstractEntityPersister  Identity insert: insert into Courses (description, duration, name, price, price_per_hour, students_count, teacher_id, type) values (?, ?, ?, ?, ?, ?, ?, ?)
-2020-03-23 21:16:28.871 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@345d053b]
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : description
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : duration
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : price
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : pricePerHour
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : studentsCount
-2020-03-23 21:16:28.872 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacherId
-2020-03-23 21:16:28.873 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : type
-2020-03-23 21:16:28.873 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
-2020-03-23 21:16:28.879 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
-2020-03-23 21:16:28.882 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Course)
+2020-03-24 22:15:18.976 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator JDBC version : 4.2
+2020-03-24 22:15:18.996 [main] INFO o.h.d.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-24 22:15:19.013 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder JDBC driver metadata reported database stores quoted identifiers in more than one case
+2020-03-24 22:15:19.065 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2020-03-24 22:15:19.111 [main] DEBUG o.h.b.m.r.Namespace Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2020-03-24 22:15:19.114 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@35088e87] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@486bc9a4]
+2020-03-24 22:15:19.160 [main] DEBUG o.h.c.AnnotationBinder Binding entity from annotated class: Course
+2020-03-24 22:15:19.178 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2020-03-24 22:15:19.182 [main] DEBUG o.h.c.a.EntityBinder Import with entity name Course
+2020-03-24 22:15:19.185 [main] DEBUG o.h.c.a.EntityBinder Bind entity Course on table Courses
+2020-03-24 22:15:19.211 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.214 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property id with lazy=false
+2020-03-24 22:15:19.215 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:id]
+2020-03-24 22:15:19.217 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for id
+2020-03-24 22:15:19.218 [main] DEBUG o.h.c.a.PropertyBinder Building property id
+2020-03-24 22:15:19.220 [main] DEBUG o.h.c.BinderHelper #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2020-03-24 22:15:19.221 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.221 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property description with lazy=false
+2020-03-24 22:15:19.221 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:description]
+2020-03-24 22:15:19.221 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for description
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.a.PropertyBinder Building property description
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=duration, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property duration with lazy=false
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:duration]
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for duration
+2020-03-24 22:15:19.222 [main] DEBUG o.h.c.a.PropertyBinder Building property duration
+2020-03-24 22:15:19.223 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.223 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property name with lazy=false
+2020-03-24 22:15:19.223 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:name]
+2020-03-24 22:15:19.223 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for name
+2020-03-24 22:15:19.223 [main] DEBUG o.h.c.a.PropertyBinder Building property name
+2020-03-24 22:15:19.224 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=price, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.224 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property price with lazy=false
+2020-03-24 22:15:19.224 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:price]
+2020-03-24 22:15:19.224 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for price
+2020-03-24 22:15:19.224 [main] DEBUG o.h.c.a.PropertyBinder Building property price
+2020-03-24 22:15:19.225 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=price_per_hour, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.225 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property pricePerHour with lazy=false
+2020-03-24 22:15:19.225 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:pricePerHour]
+2020-03-24 22:15:19.225 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for pricePerHour
+2020-03-24 22:15:19.225 [main] DEBUG o.h.c.a.PropertyBinder Building property pricePerHour
+2020-03-24 22:15:19.227 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.234 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.234 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=students_KEY, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.235 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3JoinColumn{logicalColumnName='students_KEY', referencedColumn='null', mappedBy='null'}
+2020-03-24 22:15:19.236 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3JoinColumn{logicalColumnName='course_id', referencedColumn='', mappedBy=''}
+2020-03-24 22:15:19.237 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3JoinColumn{logicalColumnName='student_id', referencedColumn='', mappedBy=''}
+2020-03-24 22:15:19.237 [main] DEBUG o.h.c.a.CollectionBinder Collection role: Course.students
+2020-03-24 22:15:19.239 [main] DEBUG o.h.c.a.PropertyBinder Building property students
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=students_count, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property studentsCount with lazy=false
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:studentsCount]
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for studentsCount
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.a.PropertyBinder Building property studentsCount
+2020-03-24 22:15:19.240 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+2020-03-24 22:15:19.241 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=teacher, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.242 [main] DEBUG o.h.c.a.PropertyBinder Building property teacher
+2020-03-24 22:15:19.242 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Courses), mappingColumn=type, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.242 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property type with lazy=false
+2020-03-24 22:15:19.242 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Course:type]
+2020-03-24 22:15:19.244 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for type
+2020-03-24 22:15:19.244 [main] DEBUG o.h.c.a.PropertyBinder Building property type
+2020-03-24 22:15:19.245 [main] DEBUG o.h.c.AnnotationBinder Binding entity from annotated class: Student
+2020-03-24 22:15:19.246 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2020-03-24 22:15:19.246 [main] DEBUG o.h.c.a.EntityBinder Import with entity name Student
+2020-03-24 22:15:19.246 [main] DEBUG o.h.c.a.EntityBinder Bind entity Student on table Students
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Students), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property id with lazy=false
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Student:id]
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for id
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.a.PropertyBinder Building property id
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.BinderHelper #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2020-03-24 22:15:19.247 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Students), mappingColumn=age, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property age with lazy=false
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Student:age]
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for age
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.PropertyBinder Building property age
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Students), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property name with lazy=false
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Student:name]
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for name
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.a.PropertyBinder Building property name
+2020-03-24 22:15:19.248 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Students), mappingColumn=registration_date, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property registrationDate with lazy=false
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Student:registrationDate]
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for registrationDate
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.a.PropertyBinder Building property registrationDate
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.AnnotationBinder Binding entity from annotated class: Teacher
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2020-03-24 22:15:19.249 [main] DEBUG o.h.c.a.EntityBinder Import with entity name Teacher
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.a.EntityBinder Bind entity Teacher on table Teachers
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Teachers), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property id with lazy=false
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Teacher:id]
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for id
+2020-03-24 22:15:19.250 [main] DEBUG o.h.c.a.PropertyBinder Building property id
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.BinderHelper #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Teachers), mappingColumn=age, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property age with lazy=false
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Teacher:age]
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for age
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.PropertyBinder Building property age
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Teachers), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property name with lazy=false
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Teacher:name]
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for name
+2020-03-24 22:15:19.251 [main] DEBUG o.h.c.a.PropertyBinder Building property name
+2020-03-24 22:15:19.252 [main] DEBUG o.h.c.Ejb3Column Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Teachers), mappingColumn=salary, insertable=true, updatable=true, unique=false}
+2020-03-24 22:15:19.252 [main] DEBUG o.h.c.a.PropertyBinder MetadataSourceProcessor property salary with lazy=false
+2020-03-24 22:15:19.252 [main] DEBUG o.h.c.AbstractPropertyHolder Attempting to locate auto-apply AttributeConverter for property [Teacher:salary]
+2020-03-24 22:15:19.252 [main] DEBUG o.h.c.a.SimpleValueBinder building SimpleValue for salary
+2020-03-24 22:15:19.252 [main] DEBUG o.h.c.a.PropertyBinder Building property salary
+2020-03-24 22:15:19.253 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for id
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for description
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for duration
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for name
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for price
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for pricePerHour
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for studentsCount
+2020-03-24 22:15:19.254 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for type
+2020-03-24 22:15:19.255 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for id
+2020-03-24 22:15:19.255 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for age
+2020-03-24 22:15:19.255 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for name
+2020-03-24 22:15:19.255 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for registrationDate
+2020-03-24 22:15:19.255 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for id
+2020-03-24 22:15:19.256 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for age
+2020-03-24 22:15:19.256 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for name
+2020-03-24 22:15:19.256 [main] DEBUG o.h.c.a.SimpleValueBinder Starting fillSimpleValue for salary
+2020-03-24 22:15:19.259 [main] DEBUG o.h.m.PrimaryKey Forcing column [id] to be non-null as it is part of the primary key for table [courses]
+2020-03-24 22:15:19.259 [main] DEBUG o.h.m.PrimaryKey Forcing column [id] to be non-null as it is part of the primary key for table [students]
+2020-03-24 22:15:19.259 [main] DEBUG o.h.m.PrimaryKey Forcing column [id] to be non-null as it is part of the primary key for table [teachers]
+2020-03-24 22:15:19.259 [main] DEBUG o.h.c.CollectionSecondPass Second pass for collection: Course.students
+2020-03-24 22:15:19.259 [main] DEBUG o.h.c.a.CollectionBinder Binding as ManyToMany: Course.students
+2020-03-24 22:15:19.261 [main] DEBUG o.h.c.CollectionSecondPass Mapped collection key: course_id, element: student_id
+2020-03-24 22:15:19.262 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Teacher
+2020-03-24 22:15:19.284 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Student
+2020-03-24 22:15:19.285 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Course
+2020-03-24 22:15:19.286 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Teacher
+2020-03-24 22:15:19.286 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Student
+2020-03-24 22:15:19.286 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl Resolving reference to class: Course
+2020-03-24 22:15:19.313 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.326 [main] DEBUG o.h.i.SessionFactoryImpl Building session factory
+2020-03-24 22:15:19.327 [main] DEBUG o.h.c.Settings SessionFactory name : null
+2020-03-24 22:15:19.327 [main] DEBUG o.h.c.Settings Automatic flush during beforeCompletion(): enabled
+2020-03-24 22:15:19.327 [main] DEBUG o.h.c.Settings Automatic session close at end of transaction: disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Statistics: disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Deleted entity synthetic identifier rollback: disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Default entity-mode: pojo
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Allow initialization of lazy state outside session : disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Using BatchFetchStyle : LEGACY
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Default batch fetch size: -1
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Maximum outer join fetch depth: 2
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Default null ordering: NONE
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Order SQL updates by primary key: disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Order SQL inserts for batching: disabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings multi-tenancy strategy : NONE
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings JTA Track by Thread: enabled
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Query language substitutions: {}
+2020-03-24 22:15:19.328 [main] DEBUG o.h.c.Settings Named query checking : enabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Second-level cache: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Second-level query cache: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Second-level query cache factory: null
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Second-level cache region prefix: null
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Optimize second-level cache for minimal puts: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Structured second-level cache entries: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Second-level cache direct-reference entries: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings Automatic eviction of collection cache: disabled
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings JDBC batch size: 15
+2020-03-24 22:15:19.329 [main] DEBUG o.h.c.Settings JDBC batch updates for versioned data: enabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings Scrollable result sets: enabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings Wrap result sets: disabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings JDBC3 getGeneratedKeys(): enabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings JDBC result set fetch size: null
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings Connection release mode: AFTER_TRANSACTION
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings Generate SQL with comments: disabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings JPA compliance - query : disabled
+2020-03-24 22:15:19.330 [main] DEBUG o.h.c.Settings JPA compliance - closed-handling : disabled
+2020-03-24 22:15:19.331 [main] DEBUG o.h.c.Settings JPA compliance - lists : disabled
+2020-03-24 22:15:19.331 [main] DEBUG o.h.c.Settings JPA compliance - transactions : disabled
+2020-03-24 22:15:19.380 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.391 [main] DEBUG o.h.i.SessionFactoryImpl Session factory constructed with filter configurations : {}
+2020-03-24 22:15:19.391 [main] DEBUG o.h.i.SessionFactoryImpl Instantiating session factory with properties: {dialect=org.hibernate.dialect.MySQL5Dialect, java.specification.version=13, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=/Users/evteev/Documents/Code/Java/Skillbox/java_basics/10_SQLAndHibernate/10-02-JDBCExperiments/target/classes:/Users/evteev/.m2/repository/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar:/Users/evteev/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/evteev/.m2/repository/org/hibernate/hibernate-core/5.4.12.Final/hibernate-core-5.4.12.Final.jar:/Users/evteev/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/evteev/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/evteev/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/evteev/.m2/repository/net/bytebuddy/byte-buddy/1.10.7/byte-buddy-1.10.7.jar:/Users/evteev/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/evteev/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/evteev/.m2/repository/org/jboss/jandex/2.1.1.Final/jandex-2.1.1.Final.jar:/Users/evteev/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/evteev/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/evteev/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/evteev/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/evteev/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/evteev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/evteev/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/evteev/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/evteev/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/evteev/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/evteev/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.1/log4j-core-2.13.1.jar:/Users/evteev/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.1/log4j-api-2.13.1.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=validate, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=13, os.name=Mac OS X, current_session_context_class=thread, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home/lib, sun.java.command=Main, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, jdk.debug=release, sun.cpu.endian=little, user.home=/Users/evteev, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2019-09-17, java.home=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.hbm2ddl.auto=validate, connection.password=password, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=13+33, user.name=evteev, path.separator=:, hibernate.connection.username=****, os.version=10.15.3, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow, connection.pool_size=10, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=false, hibernate.current_session_context_class=thread, show_sql=true, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=/var/folders/sy/g6kjghjn18q5mr6fz2z_srrh0000gn/T/, java.version=13, user.dir=/Users/evteev/Documents/Code/Java/Skillbox/java_basics/10_SQLAndHibernate/10-02-JDBCExperiments, os.arch=x86_64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@6a094db2, java.library.path=/Users/evteev/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=13+33, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeBig, hibernate.connection.pool_size=10, connection.url=jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.class.version=57.0}
+2020-03-24 22:15:19.403 [main] DEBUG o.h.s.s.JaccIntegrator Skipping JACC integration as it was not enabled
+2020-03-24 22:15:19.404 [main] DEBUG o.h.i.SessionFactoryImpl Instantiated session factory
+2020-03-24 22:15:19.404 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@35088e87] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@63c12e52]
+2020-03-24 22:15:19.446 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Teacher] is safe
+2020-03-24 22:15:19.446 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Teacher
+2020-03-24 22:15:19.464 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Teacher] is safe
+2020-03-24 22:15:19.464 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Teacher
+2020-03-24 22:15:19.670 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Course] is safe
+2020-03-24 22:15:19.670 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Course
+2020-03-24 22:15:19.672 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.672 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.672 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Course] is safe
+2020-03-24 22:15:19.673 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Course
+2020-03-24 22:15:19.708 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.708 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.709 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Student] is safe
+2020-03-24 22:15:19.709 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Student
+2020-03-24 22:15:19.709 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl Not known whether passed class name [Student] is safe
+2020-03-24 22:15:19.709 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Student
+2020-03-24 22:15:19.732 [main] DEBUG o.h.p.c.AbstractCollectionPersister Static SQL for collection: Course.students
+2020-03-24 22:15:19.732 [main] DEBUG o.h.p.c.AbstractCollectionPersister  Row insert: insert into Subscriptions (course_id, student_id) values (?, ?)
+2020-03-24 22:15:19.732 [main] DEBUG o.h.p.c.AbstractCollectionPersister  Row update: update Subscriptions set student_id=? where course_id=? and student_id=?
+2020-03-24 22:15:19.732 [main] DEBUG o.h.p.c.AbstractCollectionPersister  Row delete: delete from Subscriptions where course_id=? and student_id=?
+2020-03-24 22:15:19.733 [main] DEBUG o.h.p.c.AbstractCollectionPersister  One-shot delete: delete from Subscriptions where course_id=?
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister Static SQL for entity: Teacher
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Version select: select id from Teachers where id =?
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Snapshot select: select teacher_.id, teacher_.age as age2_3_, teacher_.name as name3_3_, teacher_.salary as salary4_3_ from Teachers teacher_ where teacher_.id=?
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Insert 0: insert into Teachers (age, name, salary, id) values (?, ?, ?, ?)
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Update 0: update Teachers set age=?, name=?, salary=? where id=?
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Delete 0: delete from Teachers where id=?
+2020-03-24 22:15:19.737 [main] DEBUG o.h.p.e.AbstractEntityPersister  Identity insert: insert into Teachers (age, name, salary) values (?, ?, ?)
+2020-03-24 22:15:19.753 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4887de2b]
+2020-03-24 22:15:19.754 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : age
+2020-03-24 22:15:19.754 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.754 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : salary
+2020-03-24 22:15:19.754 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.765 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.768 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Teacher)
+    - Returns
+       - EntityReturnImpl(entity=Teacher, querySpaceUid=<gen:0>, path=Teacher)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Teacher)
+          - SQL table alias mapping - teacher0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_3_0_}
+
+2020-03-24 22:15:19.769 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Teacher [NONE]: select teacher0_.id as id1_3_0_, teacher0_.age as age2_3_0_, teacher0_.name as name3_3_0_, teacher0_.salary as salary4_3_0_ from Teachers teacher0_ where teacher0_.id=?
+2020-03-24 22:15:19.770 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@456bcb74]
+2020-03-24 22:15:19.770 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : age
+2020-03-24 22:15:19.770 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.770 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : salary
+2020-03-24 22:15:19.770 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.771 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.771 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Teacher)
+    - Returns
+       - EntityReturnImpl(entity=Teacher, querySpaceUid=<gen:0>, path=Teacher)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Teacher)
+          - SQL table alias mapping - teacher0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_3_0_}
+
+2020-03-24 22:15:19.772 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Teacher [READ]: select teacher0_.id as id1_3_0_, teacher0_.age as age2_3_0_, teacher0_.name as name3_3_0_, teacher0_.salary as salary4_3_0_ from Teachers teacher0_ where teacher0_.id=?
+2020-03-24 22:15:19.782 [main] DEBUG o.h.l.Loader Static select for action ACTION_MERGE on entity Teacher: select teacher0_.id as id1_3_0_, teacher0_.age as age2_3_0_, teacher0_.name as name3_3_0_, teacher0_.salary as salary4_3_0_ from Teachers teacher0_ where teacher0_.id=?
+2020-03-24 22:15:19.783 [main] DEBUG o.h.l.Loader Static select for action ACTION_REFRESH on entity Teacher: select teacher0_.id as id1_3_0_, teacher0_.age as age2_3_0_, teacher0_.name as name3_3_0_, teacher0_.salary as salary4_3_0_ from Teachers teacher0_ where teacher0_.id=?
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister Static SQL for entity: Course
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister  Version select: select id from Courses where id =?
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister  Snapshot select: select course_.id, course_.description as descript2_0_, course_.duration as duration3_0_, course_.name as name4_0_, course_.price as price5_0_, course_.price_per_hour as price_pe6_0_, course_.students_count as students7_0_, course_.teacher_id as teacher_9_0_, course_.type as type8_0_ from Courses course_ where course_.id=?
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister  Insert 0: insert into Courses (description, duration, name, price, price_per_hour, students_count, teacher_id, type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister  Update 0: update Courses set description=?, duration=?, name=?, price=?, price_per_hour=?, students_count=?, teacher_id=?, type=? where id=?
+2020-03-24 22:15:19.784 [main] DEBUG o.h.p.e.AbstractEntityPersister  Delete 0: delete from Courses where id=?
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.e.AbstractEntityPersister  Identity insert: insert into Courses (description, duration, name, price, price_per_hour, students_count, teacher_id, type) values (?, ?, ?, ?, ?, ?, ?, ?)
+2020-03-24 22:15:19.785 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c887052]
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : description
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : duration
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : price
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : pricePerHour
+2020-03-24 22:15:19.785 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : students
+2020-03-24 22:15:19.788 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@38d08cb5]
+2020-03-24 22:15:19.790 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1280682]
+2020-03-24 22:15:19.790 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : studentsCount
+2020-03-24 22:15:19.790 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher
+2020-03-24 22:15:19.790 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7b2ccba5]
+2020-03-24 22:15:19.792 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.age
+2020-03-24 22:15:19.792 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.name
+2020-03-24 22:15:19.792 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.salary
+2020-03-24 22:15:19.792 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : type
+2020-03-24 22:15:19.792 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.792 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.793 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Course)
     - Returns
        - EntityReturnImpl(entity=Course, querySpaceUid=<gen:0>, path=Course)
+          - CollectionAttributeFetchImpl(collection=Course.students, querySpaceUid=<gen:1>, path=Course.students)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=Student, querySpaceUid=<gen:2>, path=Course.students.<elements>)
+          - EntityAttributeFetchImpl(entity=Teacher, querySpaceUid=<gen:3>, path=Course.teacher)
     - QuerySpaces
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=Course)
           - SQL table alias mapping - course0_
           - alias suffix - 0_
           - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(teacher)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=Teacher)
+                - SQL table alias mapping - teacher1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
 
-2020-03-23 21:16:28.884 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Course [NONE]: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:28.884 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21b6c9c2]
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : description
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : duration
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : price
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : pricePerHour
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : studentsCount
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacherId
-2020-03-23 21:16:28.884 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : type
-2020-03-23 21:16:28.885 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
-2020-03-23 21:16:28.885 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
-2020-03-23 21:16:28.885 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Course)
+2020-03-24 22:15:19.793 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Course [NONE]: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:19.794 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@56c8e6f0]
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : description
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : duration
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : price
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : pricePerHour
+2020-03-24 22:15:19.794 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : students
+2020-03-24 22:15:19.795 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@58aa10f4]
+2020-03-24 22:15:19.795 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4fb56bea]
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : studentsCount
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher
+2020-03-24 22:15:19.795 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5e5beb8a]
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.age
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.name
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : teacher.salary
+2020-03-24 22:15:19.795 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : type
+2020-03-24 22:15:19.795 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.796 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.797 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Course)
     - Returns
        - EntityReturnImpl(entity=Course, querySpaceUid=<gen:0>, path=Course)
+          - CollectionAttributeFetchImpl(collection=Course.students, querySpaceUid=<gen:1>, path=Course.students)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=Student, querySpaceUid=<gen:2>, path=Course.students.<elements>)
+          - EntityAttributeFetchImpl(entity=Teacher, querySpaceUid=<gen:3>, path=Course.teacher)
     - QuerySpaces
        - EntityQuerySpaceImpl(uid=<gen:0>, entity=Course)
           - SQL table alias mapping - course0_
           - alias suffix - 0_
           - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(teacher)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=Teacher)
+                - SQL table alias mapping - teacher1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
 
-2020-03-23 21:16:28.885 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Course [READ]: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:28.892 [main] DEBUG o.h.l.Loader Static select for action ACTION_MERGE on entity Course: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:28.893 [main] DEBUG o.h.l.Loader Static select for action ACTION_REFRESH on entity Course: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:28.906 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.906 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.918 [main] INFO o.h.o.c.access HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5be052ca] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2020-03-23 21:16:28.937 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
-2020-03-23 21:16:28.940 [main] DEBUG o.h.q.s.NamedQueryRepository Checking 0 named HQL queries
-2020-03-23 21:16:28.941 [main] DEBUG o.h.q.s.NamedQueryRepository Checking 0 named SQL queries
-2020-03-23 21:16:28.945 [main] DEBUG o.h.i.SessionFactoryRegistry Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@318c68d5
-2020-03-23 21:16:28.947 [main] DEBUG o.h.i.SessionFactoryRegistry Registering SessionFactory: 22145d17-d90a-420d-abfb-0789f3f5ee75 (<unnamed>)
-2020-03-23 21:16:28.947 [main] DEBUG o.h.i.SessionFactoryRegistry Not binding SessionFactory to JNDI, no JNDI name configured
-2020-03-23 21:16:28.984 [main] DEBUG o.h.s.i.StatisticsInitiator Statistics initialized [enabled=false]
-2020-03-23 21:16:28.993 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:28.997 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-2020-03-23 21:16:29.003 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#1]
-2020-03-23 21:16:29.004 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Веб-разработчик c 0 до PRO
-2020-03-23 21:16:29.004 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.004 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 10
-2020-03-23 21:16:29.004 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Веб-разработчик c 0 до PRO
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 189600
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 18960.0
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.005 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 99
-2020-03-23 21:16:29.006 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.006 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacherId` : value = 1
-2020-03-23 21:16:29.006 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacherId`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.006 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
-2020-03-23 21:16:29.006 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.007 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#1]
-2020-03-23 21:16:29.009 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#1
-2020-03-23 21:16:29.010 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
-2020-03-23 21:16:29.011 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:29.012 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#2]
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Мобильный разработчик с нуля
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 10
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Мобильный разработчик с нуля
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 138000
-2020-03-23 21:16:29.013 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 13800.0
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 99
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacherId` : value = 2
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacherId`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.014 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#2]
-2020-03-23 21:16:29.015 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#2
-2020-03-23 21:16:29.015 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
-2020-03-23 21:16:29.015 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:29.018 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-2020-03-23 21:16:29.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#3]
-2020-03-23 21:16:29.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Java-разработчик
-2020-03-23 21:16:29.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 5
-2020-03-23 21:16:29.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Java-разработчик
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 78000
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 15600.0
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 176
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacherId` : value = 10
-2020-03-23 21:16:29.021 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacherId`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.021 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
-2020-03-23 21:16:29.021 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.021 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#3]
-2020-03-23 21:16:29.021 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#3
-2020-03-23 21:16:29.021 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
-2020-03-23 21:16:29.022 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:29.023 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-2020-03-23 21:16:29.023 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#4]
-2020-03-23 21:16:29.023 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс PHP-разработчик с 0 до PRO
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 3
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = PHP-разработчик с 0 до PRO
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 40000
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 13333.3
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 275
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacherId` : value = 4
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacherId`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
-2020-03-23 21:16:29.024 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.025 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#4]
-2020-03-23 21:16:29.025 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#4
-2020-03-23 21:16:29.025 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
-2020-03-23 21:16:29.025 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_8_0_0_, course0_.type as type9_0_0_ from Courses course0_ where course0_.id=?
-2020-03-23 21:16:29.026 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#5]
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Python-разработчик с нуля
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 4
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Python-разработчик с нуля
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 60000
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 15000.0
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 396
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacherId` : value = 10
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacherId`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
-2020-03-23 21:16:29.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#5]
-2020-03-23 21:16:29.028 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#5
-2020-03-23 21:16:29.028 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
-2020-03-23 21:16:29.029 [main] WARN  Веб-разработчик c 0 до PRO
-2020-03-23 21:16:29.029 [main] WARN  Мобильный разработчик с нуля
-2020-03-23 21:16:29.030 [main] WARN  Java-разработчик
-2020-03-23 21:16:29.030 [main] WARN  PHP-разработчик с 0 до PRO
-2020-03-23 21:16:29.030 [main] WARN  Python-разработчик с нуля
-2020-03-23 21:16:29.030 [main] DEBUG o.h.i.SessionFactoryImpl HHH000031: Closing
-2020-03-23 21:16:29.030 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@72543547] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@eca6a74]
-2020-03-23 21:16:29.031 [main] DEBUG o.h.s.i.AbstractServiceRegistryImpl Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
-2020-03-23 21:16:29.031 [main] INFO o.h.o.c.pooling HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow]
-2020-03-23 21:16:29.038 [main] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2020-03-24 22:15:19.797 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Course [READ]: select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:19.798 [main] DEBUG o.h.l.Loader Static select for action ACTION_MERGE on entity Course: select course0_.id as id1_0_1_, course0_.description as descript2_0_1_, course0_.duration as duration3_0_1_, course0_.name as name4_0_1_, course0_.price as price5_0_1_, course0_.price_per_hour as price_pe6_0_1_, course0_.students_count as students7_0_1_, course0_.teacher_id as teacher_9_0_1_, course0_.type as type8_0_1_, teacher1_.id as id1_3_0_, teacher1_.age as age2_3_0_, teacher1_.name as name3_3_0_, teacher1_.salary as salary4_3_0_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:19.799 [main] DEBUG o.h.l.Loader Static select for action ACTION_REFRESH on entity Course: select course0_.id as id1_0_1_, course0_.description as descript2_0_1_, course0_.duration as duration3_0_1_, course0_.name as name4_0_1_, course0_.price as price5_0_1_, course0_.price_per_hour as price_pe6_0_1_, course0_.students_count as students7_0_1_, course0_.teacher_id as teacher_9_0_1_, course0_.type as type8_0_1_, teacher1_.id as id1_3_0_, teacher1_.age as age2_3_0_, teacher1_.name as name3_3_0_, teacher1_.salary as salary4_3_0_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:19.799 [main] DEBUG o.h.p.e.AbstractEntityPersister Static SQL for entity: Student
+2020-03-24 22:15:19.800 [main] DEBUG o.h.p.e.AbstractEntityPersister  Version select: select id from Students where id =?
+2020-03-24 22:15:19.800 [main] DEBUG o.h.p.e.AbstractEntityPersister  Snapshot select: select student_.id, student_.age as age2_1_, student_.name as name3_1_, student_.registration_date as registra4_1_ from Students student_ where student_.id=?
+2020-03-24 22:15:19.801 [main] DEBUG o.h.p.e.AbstractEntityPersister  Insert 0: insert into Students (age, name, registration_date, id) values (?, ?, ?, ?)
+2020-03-24 22:15:19.801 [main] DEBUG o.h.p.e.AbstractEntityPersister  Update 0: update Students set age=?, name=?, registration_date=? where id=?
+2020-03-24 22:15:19.801 [main] DEBUG o.h.p.e.AbstractEntityPersister  Delete 0: delete from Students where id=?
+2020-03-24 22:15:19.801 [main] DEBUG o.h.p.e.AbstractEntityPersister  Identity insert: insert into Students (age, name, registration_date) values (?, ?, ?)
+2020-03-24 22:15:19.802 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@415ef4d8]
+2020-03-24 22:15:19.802 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : age
+2020-03-24 22:15:19.802 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.802 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : registrationDate
+2020-03-24 22:15:19.803 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.803 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.803 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Student)
+    - Returns
+       - EntityReturnImpl(entity=Student, querySpaceUid=<gen:0>, path=Student)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Student)
+          - SQL table alias mapping - student0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2020-03-24 22:15:19.803 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Student [NONE]: select student0_.id as id1_1_0_, student0_.age as age2_1_0_, student0_.name as name3_1_0_, student0_.registration_date as registra4_1_0_ from Students student0_ where student0_.id=?
+2020-03-24 22:15:19.803 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@535b1ae6]
+2020-03-24 22:15:19.804 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : age
+2020-03-24 22:15:19.804 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.804 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : registrationDate
+2020-03-24 22:15:19.804 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.804 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.804 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(entity=Student)
+    - Returns
+       - EntityReturnImpl(entity=Student, querySpaceUid=<gen:0>, path=Student)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Student)
+          - SQL table alias mapping - student0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2020-03-24 22:15:19.804 [main] DEBUG o.h.l.e.p.EntityLoader Static select for entity Student [READ]: select student0_.id as id1_1_0_, student0_.age as age2_1_0_, student0_.name as name3_1_0_, student0_.registration_date as registra4_1_0_ from Students student0_ where student0_.id=?
+2020-03-24 22:15:19.805 [main] DEBUG o.h.l.Loader Static select for action ACTION_MERGE on entity Student: select student0_.id as id1_1_0_, student0_.age as age2_1_0_, student0_.name as name3_1_0_, student0_.registration_date as registra4_1_0_ from Students student0_ where student0_.id=?
+2020-03-24 22:15:19.805 [main] DEBUG o.h.l.Loader Static select for action ACTION_REFRESH on entity Student: select student0_.id as id1_1_0_, student0_.age as age2_1_0_, student0_.name as name3_1_0_, student0_.registration_date as registra4_1_0_ from Students student0_ where student0_.id=?
+2020-03-24 22:15:19.810 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@20ead579]
+2020-03-24 22:15:19.810 [main] DEBUG o.h.l.p.b.i.s.QuerySpacesImpl Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5426cb36]
+2020-03-24 22:15:19.811 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : age
+2020-03-24 22:15:19.811 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : name
+2020-03-24 22:15:19.811 [main] DEBUG o.h.p.w.s.MetamodelGraphWalker Visiting attribute path : registrationDate
+2020-03-24 22:15:19.811 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy Building LoadPlan...
+2020-03-24 22:15:19.814 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor processing queryspace <gen:0>
+2020-03-24 22:15:19.815 [main] DEBUG o.h.l.p.b.s.LoadPlanTreePrinter LoadPlan(collection=Course.students)
+    - Returns
+       - CollectionReturnImpl(collection=Course.students, querySpaceUid=<gen:0>, path=[Course.students])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=Student, querySpaceUid=<gen:1>, path=[Course.students].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=Course.students)
+          - SQL table alias mapping - students0_
+          - alias suffix - 0_
+          - suffixed key columns - {course_i1_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=Student)
+                - SQL table alias mapping - student1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+2020-03-24 22:15:19.815 [main] DEBUG o.h.l.c.p.CollectionLoader Static select for collection Course.students: select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:19.835 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.836 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.856 [main] INFO o.h.o.c.access HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@72906e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-03-24 22:15:19.918 [main] DEBUG o.h.t.EnumType Using NAMED-based conversion for Enum CourseType
+2020-03-24 22:15:19.924 [main] DEBUG o.h.q.s.NamedQueryRepository Checking 0 named HQL queries
+2020-03-24 22:15:19.925 [main] DEBUG o.h.q.s.NamedQueryRepository Checking 0 named SQL queries
+2020-03-24 22:15:19.934 [main] DEBUG o.h.i.SessionFactoryRegistry Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@65514add
+2020-03-24 22:15:19.936 [main] DEBUG o.h.i.SessionFactoryRegistry Registering SessionFactory: 4cf9e0d9-4722-4706-9843-3c38429bbd0d (<unnamed>)
+2020-03-24 22:15:19.936 [main] DEBUG o.h.i.SessionFactoryRegistry Not binding SessionFactory to JNDI, no JNDI name configured
+2020-03-24 22:15:19.983 [main] DEBUG o.h.s.i.StatisticsInitiator Statistics initialized [enabled=false]
+2020-03-24 22:15:19.995 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:20.002 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2020-03-24 22:15:20.010 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#1]
+2020-03-24 22:15:20.010 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Веб-разработчик c 0 до PRO
+2020-03-24 22:15:20.010 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 10
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Веб-разработчик c 0 до PRO
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 189600
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 18960.0
+2020-03-24 22:15:20.011 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.012 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `students` : value = NOT NULL COLLECTION
+2020-03-24 22:15:20.012 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`students`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.018 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 99
+2020-03-24 22:15:20.018 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.018 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacher` : value = 1
+2020-03-24 22:15:20.018 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacher`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.018 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
+2020-03-24 22:15:20.019 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#1]
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Teacher#1]
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 18
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Ягешев Сидор
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `salary` : value = 10000
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`salary`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.020 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Teacher#1]
+2020-03-24 22:15:20.022 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#1
+2020-03-24 22:15:20.022 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
+2020-03-24 22:15:20.023 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:20.025 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2020-03-24 22:15:20.025 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#2]
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Мобильный разработчик с нуля
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 10
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Мобильный разработчик с нуля
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 138000
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.026 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 13800.0
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `students` : value = NOT NULL COLLECTION
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`students`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 99
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacher` : value = 2
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacher`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
+2020-03-24 22:15:20.027 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#2]
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Teacher#2]
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 19
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Яглинцев Владислав
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `salary` : value = 20000
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`salary`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.028 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Teacher#2]
+2020-03-24 22:15:20.028 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#2
+2020-03-24 22:15:20.029 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
+2020-03-24 22:15:20.029 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:20.031 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2020-03-24 22:15:20.031 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#3]
+2020-03-24 22:15:20.031 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Java-разработчик
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 5
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Java-разработчик
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 78000
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 15600.0
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.032 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `students` : value = NOT NULL COLLECTION
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`students`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 176
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacher` : value = 10
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacher`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#3]
+2020-03-24 22:15:20.033 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Teacher#10]
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 27
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Лобан Эммануил
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `salary` : value = 8500
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`salary`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.034 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Teacher#10]
+2020-03-24 22:15:20.034 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#3
+2020-03-24 22:15:20.034 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
+2020-03-24 22:15:20.035 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:20.036 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#4]
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс PHP-разработчик с 0 до PRO
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 3
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = PHP-разработчик с 0 до PRO
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 40000
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 13333.3
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `students` : value = NOT NULL COLLECTION
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`students`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.037 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 275
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacher` : value = 4
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacher`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#4]
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Teacher#4]
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 21
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Колиух Вацлав
+2020-03-24 22:15:20.038 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.039 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `salary` : value = 5000
+2020-03-24 22:15:20.039 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`salary`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.039 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Teacher#4]
+2020-03-24 22:15:20.039 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#4
+2020-03-24 22:15:20.039 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
+2020-03-24 22:15:20.039 [main] DEBUG o.h.SQL select course0_.id as id1_0_0_, course0_.description as descript2_0_0_, course0_.duration as duration3_0_0_, course0_.name as name4_0_0_, course0_.price as price5_0_0_, course0_.price_per_hour as price_pe6_0_0_, course0_.students_count as students7_0_0_, course0_.teacher_id as teacher_9_0_0_, course0_.type as type8_0_0_, teacher1_.id as id1_3_1_, teacher1_.age as age2_3_1_, teacher1_.name as name3_3_1_, teacher1_.salary as salary4_3_1_ from Courses course0_ left outer join Teachers teacher1_ on course0_.teacher_id=teacher1_.id where course0_.id=?
+2020-03-24 22:15:20.040 [main] DEBUG o.h.l.p.e.p.i.EntityReferenceInitializerImpl On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Course#5]
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `description` : value = Представляем вашему вниманию шикарный курс Python-разработчик с нуля
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `duration` : value = 4
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`duration`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Python-разработчик с нуля
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `price` : value = 60000
+2020-03-24 22:15:20.041 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`price`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `pricePerHour` : value = 15000.0
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`pricePerHour`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `students` : value = NOT NULL COLLECTION
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`students`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `studentsCount` : value = 396
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`studentsCount`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `teacher` : value = 10
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`teacher`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `type` : value = PROGRAMMING
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`type`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.042 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Course#5]
+2020-03-24 22:15:20.042 [main] DEBUG o.h.l.e.p.AbstractLoadPlanBasedEntityLoader Done entity load : Course#5
+2020-03-24 22:15:20.043 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl Initiating JDBC connection release from afterTransaction
+2020-03-24 22:15:20.045 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Loading collection: [Course.students#1]
+2020-03-24 22:15:20.045 [main] DEBUG o.h.SQL select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:20.050 [main] DEBUG o.h.l.p.e.p.i.ResultSetProcessorImpl Preparing collection initializer : [Course.students#1]
+2020-03-24 22:15:20.053 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.053 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.054 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.054 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.054 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.055 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#1]
+2020-03-24 22:15:20.055 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#2]
+2020-03-24 22:15:20.055 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 19
+2020-03-24 22:15:20.055 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.055 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Амбражевич Порфирий
+2020-03-24 22:15:20.055 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-01-08 00:00:00.0
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#2]
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#37]
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 28
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Жариков Афанасий
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-09-09 00:00:00.0
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.056 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#37]
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#47]
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 38
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Бойков Максим
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-11-18 00:00:00.0
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#47]
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#68]
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 35
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Гайденко Илья
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-04-14 00:00:00.0
+2020-03-24 22:15:20.057 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#68]
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#82]
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 23
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Ядрихинский Егор
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-07-21 00:00:00.0
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#82]
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#92]
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 33
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Янпольский Михей
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-09-29 00:00:00.0
+2020-03-24 22:15:20.058 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.059 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#92]
+2020-03-24 22:15:20.059 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections were found in result set for role: Course.students
+2020-03-24 22:15:20.059 [main] DEBUG o.h.e.l.i.CollectionLoadContext Collection fully initialized: [Course.students#1]
+2020-03-24 22:15:20.059 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections initialized for role: Course.students
+2020-03-24 22:15:20.059 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Done loading collection
+2020-03-24 22:15:20.059 [main] WARN  course: Веб-разработчик c 0 до PRO    	teacher: Ягешев Сидор        	6 students
+2020-03-24 22:15:20.060 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Loading collection: [Course.students#2]
+2020-03-24 22:15:20.060 [main] DEBUG o.h.SQL select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:20.061 [main] DEBUG o.h.l.p.e.p.i.ResultSetProcessorImpl Preparing collection initializer : [Course.students#2]
+2020-03-24 22:15:20.061 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.061 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.062 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.062 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.062 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.062 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.063 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#2]
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#1]
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 18
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Фуриков Эрнст
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-01-01 00:00:00.0
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#1]
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#3]
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 20
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Носов Макар
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.063 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-01-15 00:00:00.0
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#3]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#38]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 29
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Земцовский Всеволод
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-09-16 00:00:00.0
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#38]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#48]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 39
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Бурцов Никита
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-11-25 00:00:00.0
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#48]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#69]
+2020-03-24 22:15:20.064 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 36
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Перехваткин Сергей
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-04-21 00:00:00.0
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#69]
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#83]
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 24
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Никольский Всеслав
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-07-28 00:00:00.0
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#83]
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#93]
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 34
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Чичерин Федосий
+2020-03-24 22:15:20.065 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-10-06 00:00:00.0
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#93]
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections were found in result set for role: Course.students
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.l.i.CollectionLoadContext Collection fully initialized: [Course.students#2]
+2020-03-24 22:15:20.066 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections initialized for role: Course.students
+2020-03-24 22:15:20.066 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Done loading collection
+2020-03-24 22:15:20.066 [main] WARN  course: Мобильный разработчик с нуля  	teacher: Яглинцев Владислав  	7 students
+2020-03-24 22:15:20.066 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Loading collection: [Course.students#3]
+2020-03-24 22:15:20.066 [main] DEBUG o.h.SQL select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:20.067 [main] DEBUG o.h.l.p.e.p.i.ResultSetProcessorImpl Preparing collection initializer : [Course.students#3]
+2020-03-24 22:15:20.068 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.068 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.069 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.069 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.069 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.070 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#3]
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#4]
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 21
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Кооскора Вениамин
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-01-22 00:00:00.0
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#4]
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#39]
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 30
+2020-03-24 22:15:20.070 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Грузинский Парфен
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-09-23 00:00:00.0
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#39]
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#49]
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 40
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Квасников Емельян
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-12-02 00:00:00.0
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.071 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#49]
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#70]
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 37
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Барсуков Виктор
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-04-28 00:00:00.0
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#70]
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#84]
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 25
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Лилов Тимофей
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-08-04 00:00:00.0
+2020-03-24 22:15:20.072 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#84]
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#94]
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 35
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Решетилов Изяслав
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-10-13 00:00:00.0
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#94]
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections were found in result set for role: Course.students
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.l.i.CollectionLoadContext Collection fully initialized: [Course.students#3]
+2020-03-24 22:15:20.073 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections initialized for role: Course.students
+2020-03-24 22:15:20.074 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Done loading collection
+2020-03-24 22:15:20.074 [main] WARN  course: Java-разработчик              	teacher: Лобан Эммануил      	6 students
+2020-03-24 22:15:20.074 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Loading collection: [Course.students#4]
+2020-03-24 22:15:20.074 [main] DEBUG o.h.SQL select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:20.075 [main] DEBUG o.h.l.p.e.p.i.ResultSetProcessorImpl Preparing collection initializer : [Course.students#4]
+2020-03-24 22:15:20.076 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.076 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.076 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.077 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.077 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.077 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#4]
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#5]
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 22
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Беленков Денис
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.077 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-01-29 00:00:00.0
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#5]
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#40]
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 31
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Калашников Терентий
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-09-30 00:00:00.0
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#40]
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#50]
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 41
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Кандаков Адриан
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-12-09 00:00:00.0
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.078 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#50]
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#71]
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 38
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Абакумов Казимир
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-05-05 00:00:00.0
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#71]
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#85]
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 26
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Клоков Ярослав
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-08-11 00:00:00.0
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.079 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#85]
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#95]
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 36
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Ягренев Прохор
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-10-20 00:00:00.0
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#95]
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections were found in result set for role: Course.students
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.l.i.CollectionLoadContext Collection fully initialized: [Course.students#4]
+2020-03-24 22:15:20.080 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections initialized for role: Course.students
+2020-03-24 22:15:20.080 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Done loading collection
+2020-03-24 22:15:20.080 [main] WARN  course: PHP-разработчик с 0 до PRO    	teacher: Колиух Вацлав       	6 students
+2020-03-24 22:15:20.080 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Loading collection: [Course.students#5]
+2020-03-24 22:15:20.080 [main] DEBUG o.h.SQL select students0_.course_id as course_i1_2_0_, students0_.student_id as student_2_2_0_, student1_.id as id1_1_1_, student1_.age as age2_1_1_, student1_.name as name3_1_1_, student1_.registration_date as registra4_1_1_ from Subscriptions students0_ inner join Students student1_ on students0_.student_id=student1_.id where students0_.course_id=?
+2020-03-24 22:15:20.081 [main] DEBUG o.h.l.p.e.p.i.ResultSetProcessorImpl Preparing collection initializer : [Course.students#5]
+2020-03-24 22:15:20.082 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.082 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.082 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.082 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.082 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.083 [main] DEBUG o.h.l.p.e.p.i.CollectionReferenceInitializerImpl Found row of collection: [Course.students#5]
+2020-03-24 22:15:20.083 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#6]
+2020-03-24 22:15:20.083 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 23
+2020-03-24 22:15:20.083 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Блаженов Артем
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-02-05 00:00:00.0
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#6]
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#41]
+2020-03-24 22:15:20.085 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 32
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Молодых Елисей
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-10-07 00:00:00.0
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#41]
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#51]
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 18
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Дьячков Севастьян
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2016-12-16 00:00:00.0
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#51]
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#72]
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 39
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Катаев Павел
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-05-12 00:00:00.0
+2020-03-24 22:15:20.086 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#72]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#86]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 27
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Тургенев Самсон
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-08-18 00:00:00.0
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#86]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Resolving attributes for [Student#96]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `age` : value = 37
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`age`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `name` : value = Герций Афанасий
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`name`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Processing attribute `registrationDate` : value = 2017-10-27 00:00:00.0
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Attribute (`registrationDate`)  - enhanced for lazy-loading? - false
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.i.TwoPhaseLoad Done materializing entity [Student#96]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections were found in result set for role: Course.students
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.l.i.CollectionLoadContext Collection fully initialized: [Course.students#5]
+2020-03-24 22:15:20.087 [main] DEBUG o.h.e.l.i.CollectionLoadContext 1 collections initialized for role: Course.students
+2020-03-24 22:15:20.088 [main] DEBUG o.h.l.c.p.AbstractLoadPlanBasedCollectionInitializer Done loading collection
+2020-03-24 22:15:20.088 [main] WARN  course: Python-разработчик с нуля     	teacher: Лобан Эммануил      	6 students
+2020-03-24 22:15:20.091 [main] DEBUG o.h.i.SessionFactoryImpl HHH000031: Closing
+2020-03-24 22:15:20.091 [main] DEBUG o.h.t.s.TypeConfiguration$Scope Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@1d15c0a1] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@63c12e52]
+2020-03-24 22:15:20.092 [main] DEBUG o.h.s.i.AbstractServiceRegistryImpl Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2020-03-24 22:15:20.092 [main] INFO o.h.o.c.pooling HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/skillbox?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Moscow]
+2020-03-24 22:15:20.102 [main] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2020-03-24 22:15:20.103 [main] WARN  Program completed

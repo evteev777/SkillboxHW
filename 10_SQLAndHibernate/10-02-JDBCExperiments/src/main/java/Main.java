@@ -16,8 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         Logger logger = LogManager.getRootLogger();
-        Marker CONSOLE = MarkerManager.getMarker("Console");
-//        logger.warn(CONSOLE, "Program start");
+        logger.warn("Program start");
 
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure("hibernate.cfg.xml")
@@ -36,13 +35,19 @@ public class Main {
         Course course3 = session.get(Course.class, 3);
         Course course4 = session.get(Course.class, 4);
         Course course5 = session.get(Course.class, 5);
-        logger.warn(CONSOLE, course1.getName());
-        logger.warn(CONSOLE, course2.getName());
-        logger.warn(CONSOLE, course3.getName());
-        logger.warn(CONSOLE, course4.getName());
-        logger.warn(CONSOLE, course5.getName());
+        logger.warn(String.format("course: %-30s\tteacher: %-20s\t%s students",
+                course1.getName(), course1.getTeacher().getName(), course1.getStudents().size()));
+        logger.warn(String.format("course: %-30s\tteacher: %-20s\t%s students",
+                course2.getName(), course2.getTeacher().getName(), + course2.getStudents().size()));
+        logger.warn(String.format("course: %-30s\tteacher: %-20s\t%s students",
+                course3.getName(), course3.getTeacher().getName(), course3.getStudents().size()));
+        logger.warn(String.format("course: %-30s\tteacher: %-20s\t%s students",
+                course4.getName(), course4.getTeacher().getName(), course4.getStudents().size()));
+        logger.warn(String.format("course: %-30s\tteacher: %-20s\t%s students",
+                course5.getName(), course5.getTeacher().getName(), course5.getStudents().size()));
 
+        session.close();
         sessionFactory.close();
-//        logger.warn(CONSOLE, "Program completed");
+        logger.warn( "Program completed");
     }
 }

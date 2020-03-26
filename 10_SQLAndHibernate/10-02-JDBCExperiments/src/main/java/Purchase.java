@@ -1,36 +1,41 @@
-//import javax.persistence.*;
-//import java.util.Date;
-//
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
+
 //@Entity
 //@Table(name = "PurchaseList")
-public class Purchase {
+public class Purchase implements Serializable {
 //
-//    @Column(name = "student_name")
-//    private String studentName;
+//    @EmbeddedId
+////    @Column(name = "student_name")
+//    @OneToOne(cascade = CascadeType.ALL)
+//    private Student student;
 //
-//    @Column(name = "course_name")
-//    private String courseName;
+//    @EmbeddedId
+////    @Column(name = "course_name")
+//    @OneToOne(cascade = CascadeType.ALL)
+//    private Course course;
 //
 //    private int price;
 //
 //    @Column(name = "subscription_date")
-//    @Temporal(TemporalType.DATE)
+////    @Temporal(TemporalType.DATE)
 //    Date subscriptionDate;
 //
-//    public String getStudentName() {
-//        return studentName;
+//    public Student getStudent() {
+//        return student;
 //    }
 //
-//    public void setStudentName(String studentName) {
-//        this.studentName = studentName;
+//    public void setStudent(Student student) {
+//        this.student = student;
 //    }
 //
-//    public String getCourseName() {
-//        return courseName;
+//    public Course getCourse() {
+//        return course;
 //    }
 //
-//    public void setCourseName(String courseName) {
-//        this.courseName = courseName;
+//    public void setCourse(Course course) {
+//        this.course = course;
 //    }
 //
 //    public int getPrice() {

@@ -1,5 +1,6 @@
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Students")
@@ -16,6 +17,9 @@ public class Student {
     @Column(name = "registration_date")
 //    @Temporal(TemporalType.DATE)
     Date registrationDate;
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//    private List<Purchase> purchases;
 
     public int getId() {
         return id;
@@ -48,4 +52,12 @@ public class Student {
     public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
+
+//    public List<Purchase> getPurchases() {
+//        return purchases;
+//    }
+//
+//    public void setPurchases(List<Purchase> purchases) {
+//        this.purchases = purchases;
+//    }
 }

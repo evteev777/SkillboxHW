@@ -1,6 +1,6 @@
-//import javax.persistence.*;
-//import java.util.Date;
-//
+import javax.persistence.*;
+import java.util.Date;
+
 //@Entity
 //@Table(name = "Subscriptions")
 public class Subscription {
@@ -14,7 +14,7 @@ public class Subscription {
 //    private int courseId;
 //
 //    @Column(name = "subscription_date")
-//    @Temporal(TemporalType.DATE)
+////    @Temporal(TemporalType.DATE)
 //    Date subscriptionDate;
 //
 //    public int getStudentId() {

@@ -30,12 +30,15 @@ public class Course {
     @Column(name = "price_per_hour")
     private float pricePerHour;
 
-    @ManyToMany
-    @JoinTable(name = "Subscriptions",
-            joinColumns = {@JoinColumn(name = "course_id")},
-            inverseJoinColumns = {@JoinColumn(name = "student_id")}
-    )
-    private List<Student> students;
+//    @ManyToMany
+//    @JoinTable(name = "Subscriptions",
+//            joinColumns = {@JoinColumn(name = "course_id")},
+//            inverseJoinColumns = {@JoinColumn(name = "student_id")}
+//    )
+//    private List<Student> students;
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//    private List<Purchase> purchases;
 
     public int getId() {
         return id;
@@ -109,11 +112,19 @@ public class Course {
         this.pricePerHour = pricePerHour;
     }
 
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
+//    public List<Student> getStudents() {
+//        return students;
+//    }
+//
+//    public void setStudents(List<Student> students) {
+//        this.students = students;
+//    }
+//
+//    public List<Purchase> getPurchases() {
+//        return purchases;
+//    }
+//
+//    public void setPurchases(List<Purchase> purchases) {
+//        this.purchases = purchases;
+//    }
 }

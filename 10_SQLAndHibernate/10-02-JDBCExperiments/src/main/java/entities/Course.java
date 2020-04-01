@@ -50,5 +50,5 @@ public class Course {
             joinColumns = @JoinColumn(name="course_id", referencedColumnName="id"),
             inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName="id")
     )
-    private List<Course> students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
 }

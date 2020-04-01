@@ -63,9 +63,9 @@ public class Main {
             Course teacherCourse = teacherCourses.get(i);
             appLogger.info("  — Course " + (i + 1) + ": \t  - " + teacherCourse.getName());
 
-            List<Course> studentsOnCourse = teacherCourse.getStudents();
+            List<Student> studentsOnCourse = teacherCourse.getStudents();
             for (int j = 0; j < studentsOnCourse.size(); j++) {
-                Course std = studentsOnCourse.get(j);
+                Student std = studentsOnCourse.get(j);
                 appLogger.info("    — Student " + (j + 1) + ": \t    — " + std.getName());
             }
         }

@@ -1,23 +1,42 @@
-05:55:44.566 [main] DEBUG	appLog: Program start
-05:55:46.890 [main] INFO	appLog: Student: 	Носов Макар
-05:55:46.912 [main] INFO	appLog: — Course: 	- Мобильный разработчик с нуля
-05:55:46.912 [main] INFO	appLog: — Course: 	- Веб-дизайн с нуля до PRO
-05:55:46.918 [main] INFO	appLog: Course: 	Java-разработчик
-05:55:46.927 [main] INFO	appLog: — Student: 	- PHP-разработчик с 0 до PRO
-05:55:46.927 [main] INFO	appLog: — Student: 	- Как открыть веб-студию
-05:55:46.931 [main] INFO	appLog: Course: 	Data Scientist с 0 до PRO
-05:55:46.931 [main] INFO	appLog: - Teacher:		- Лобан Эммануил
-05:55:46.939 [main] INFO	appLog:   — Course 1: 	  - Java-разработчик
-05:55:46.939 [main] INFO	appLog:     — Student 1: 	    — PHP-разработчик с 0 до PRO
-05:55:46.939 [main] INFO	appLog:     — Student 2: 	    — Как открыть веб-студию
-05:55:46.939 [main] INFO	appLog:   — Course 2: 	  - Python-разработчик с нуля
-05:55:46.948 [main] INFO	appLog:     — Student 1: 	    — Frontend-разработчик
-05:55:46.948 [main] INFO	appLog:     — Student 2: 	    — Управление командами
-05:55:46.948 [main] INFO	appLog:   — Course 3: 	  - Data Scientist с 0 до PRO
-05:55:46.957 [main] INFO	appLog:     — Student 1: 	    — Веб-разработчик c 0 до PRO
-05:55:46.957 [main] INFO	appLog:     — Student 2: 	    — Аналитик данных на Python
-05:55:46.957 [main] INFO	appLog:     — Student 3: 	    — SQL
-05:55:46.957 [main] INFO	appLog:   — Course 4: 	  - Анимация интерфейсов
-05:55:46.966 [main] INFO	appLog:     — Student 1: 	    — Frontend-разработчик
-05:55:46.966 [main] INFO	appLog:     — Student 2: 	    — Дизайн интерьеров с нуля
-05:55:46.966 [main] DEBUG	appLog: Program completed
+16:01:07.226 [main] DEBUG	appLog: Program start
+16:01:09.415 [main] INFO	appLog: Student: 	Носов Макар
+16:01:09.430 [main] INFO	appLog: — Course: 	- Мобильный разработчик с нуля
+16:01:09.430 [main] INFO	appLog: — Course: 	- Веб-дизайн с нуля до PRO
+16:01:09.435 [main] INFO	appLog: Course: 	Java-разработчик
+16:01:09.447 [main] INFO	appLog: — Student: 	- Кооскора Вениамин
+16:01:09.447 [main] INFO	appLog: — Student: 	- Грузинский Парфен
+16:01:09.447 [main] INFO	appLog: — Student: 	- Квасников Емельян
+16:01:09.447 [main] INFO	appLog: — Student: 	- Барсуков Виктор
+16:01:09.447 [main] INFO	appLog: — Student: 	- Лилов Тимофей
+16:01:09.447 [main] INFO	appLog: — Student: 	- Решетилов Изяслав
+16:01:09.450 [main] INFO	appLog: Course: 	Data Scientist с 0 до PRO
+16:01:09.450 [main] INFO	appLog: - Teacher:		- Лобан Эммануил
+16:01:09.457 [main] INFO	appLog:   — Course 1: 	  - Java-разработчик
+16:01:09.457 [main] INFO	appLog:     — Student 1: 	    — Кооскора Вениамин
+16:01:09.457 [main] INFO	appLog:     — Student 2: 	    — Грузинский Парфен
+16:01:09.457 [main] INFO	appLog:     — Student 3: 	    — Квасников Емельян
+16:01:09.458 [main] INFO	appLog:     — Student 4: 	    — Барсуков Виктор
+16:01:09.458 [main] INFO	appLog:     — Student 5: 	    — Лилов Тимофей
+16:01:09.458 [main] INFO	appLog:     — Student 6: 	    — Решетилов Изяслав
+16:01:09.458 [main] INFO	appLog:   — Course 2: 	  - Python-разработчик с нуля
+16:01:09.468 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
+16:01:09.469 [main] INFO	appLog:     — Student 2: 	    — Молодых Елисей
+16:01:09.469 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
+16:01:09.469 [main] INFO	appLog:     — Student 4: 	    — Катаев Павел
+16:01:09.469 [main] INFO	appLog:     — Student 5: 	    — Тургенев Самсон
+16:01:09.469 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
+16:01:09.469 [main] INFO	appLog:   — Course 3: 	  - Data Scientist с 0 до PRO
+16:01:09.477 [main] INFO	appLog:     — Student 1: 	    — Фуриков Эрнст
+16:01:09.477 [main] INFO	appLog:     — Student 2: 	    — Шамило Федосий
+16:01:09.478 [main] INFO	appLog:     — Student 3: 	    — Саввин Онисим
+16:01:09.478 [main] INFO	appLog:     — Student 4: 	    — Порошин Степан
+16:01:09.478 [main] INFO	appLog:     — Student 5: 	    — Большаков Панкратий
+16:01:09.478 [main] INFO	appLog:     — Student 6: 	    — Круминьш Виталий
+16:01:09.478 [main] INFO	appLog:   — Course 4: 	  - Анимация интерфейсов
+16:01:09.488 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
+16:01:09.488 [main] INFO	appLog:     — Student 2: 	    — Журавлев Севастьян
+16:01:09.488 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
+16:01:09.488 [main] INFO	appLog:     — Student 4: 	    — Боварин Анатолий
+16:01:09.488 [main] INFO	appLog:     — Student 5: 	    — Ядрихинский Егор
+16:01:09.488 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
+16:01:09.488 [main] DEBUG	appLog: Program completed

@@ -1,69 +1,74 @@
-import org.apache.logging.log4j.LogManager;
+import lombok.Cleanup;
+import entities.Course;
+import entities.Student;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
+import org.apache.logging.log4j.LogManager;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import java.util.logging.Level;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Logger logger = LogManager.getLogger("appLog");
-        logger.info("Program start");
+        Logger appLogger = LogManager.getLogger("appLog");
+        appLogger.debug("Program start");
 
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure("hibernate.cfg.xml")
-                .build();
-        Metadata metadata = new MetadataSources(registry)
-                .getMetadataBuilder()
-                .build();
-        SessionFactory sessionFactory = metadata
-                .getSessionFactoryBuilder()
-                .build();
+                .configure("hibernate.cfg.xml").build();
+
+        @Cleanup SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata()
+                .getSessionFactoryBuilder().build();
 
         Session session = sessionFactory.openSession();
+        session.beginTransaction();
 
-        Course course1 = session.get(Course.class, 1);
-        Course course2 = session.get(Course.class, 2);
-        Course course3 = session.get(Course.class, 3);
-        Course course4 = session.get(Course.class, 4);
-        Course course5 = session.get(Course.class, 5);
+//        Subscription subscription = session.get(Subscription.class, 3);
+//        appLogger.info(subscription.getCourseId());
+//        appLogger.info(subscription.getStudentId());
 
-        logger.info(String.format("course: %-30s\tteacher: %-20s",
-                course1.getName(), course1.getTeacher().getName()));
+        studentMappingLog(appLogger, session, 3);
+        courseMappingLog(appLogger, session, 3);
+        totalMappingLog(appLogger, session, 10);
 
-//        logger.warn(String.format("\ncourse: %-30s\nteacher: %-20s\nstudents: %s",
-//                course1.getName(), course1.getTeacher().getName(), course1.getStudents().size()));
-//        course1.getStudents().forEach(student -> {
-//            System.out.println("- " + student.getName());
-//            student.getPurchases().forEach(purchase -> System.out.println("  - " + purchase.getCourse().getName()));
-//        });
-//
-//        logger.warn(String.format("\ncourse: %-30s\bteacher: %-20s\nstudents: %s",
-//                course2.getName(), course2.getTeacher().getName(), + course2.getStudents().size()));
-//        course2.getStudents().forEach(s -> System.out.println("- " + s.getName()));
-//
-//        logger.warn(String.format("\ncourse: %-30s\nteacher: %-20s\nstudents: %s",
-//                course3.getName(), course3.getTeacher().getName(), course3.getStudents().size()));
-//        course3.getStudents().forEach(s -> System.out.println("- " + s.getName()));
-//
-//        logger.warn(String.format("\ncourse: %-30s\nteacher: %-20s\nstudents: %s",
-//                course4.getName(), course4.getTeacher().getName(), course4.getStudents().size()));
-//        course4.getStudents().forEach(s -> System.out.println("- " + s.getName()));
-//
-//        logger.warn(String.format("\ncourse: %-30s\nteacher: %-20s\nstudents: %s",
-//                course5.getName(), course5.getTeacher().getName(), course5.getStudents().size()));
-//        course5.getStudents().forEach(s -> System.out.println("- " + s.getName()));
+        appLogger.debug( "Program completed");
+    }
 
-        session.close();
-        sessionFactory.close();
-        logger.info( "Program completed");
+    private static void studentMappingLog(Logger appLogger, Session session, int studentNumber) {
+        Student student = session.get(Student.class, studentNumber);
+        appLogger.info("Student: \t" + student.getName());
+        student.getCourses().forEach(c -> appLogger.info("— Course: \t- " + c.getName()));
+        System.out.println();
+    }
+
+    private static void courseMappingLog(Logger appLogger, Session session, int courseNumber) {
+        Course course = session.get(Course.class, courseNumber);
+        appLogger.info("Course: \t" + course.getName());
+        course.getStudents().forEach(s -> appLogger.info("— Student: \t- " + s.getName()));
+        System.out.println();
+    }
+
+    private static void totalMappingLog(Logger appLogger, Session session, int courseNumber) {
+        Course course = session.get(Course.class, courseNumber);
+
+        appLogger.info("Course: \t" + course.getName());
+        appLogger.info("- Teacher:\t\t- " + course.getTeacher().getName());
+
+        List<Course> teacherCourses = course.getTeacher().getCourses();
+        for (int i = 0; i < teacherCourses.size(); i++) {
+            Course teacherCourse = teacherCourses.get(i);
+            appLogger.info("  — Course " + (i + 1) + ": \t  - " + teacherCourse.getName());
+
+            List<Course> studentsOnCourse = teacherCourse.getStudents();
+            for (int j = 0; j < studentsOnCourse.size(); j++) {
+                Course std = studentsOnCourse.get(j);
+                appLogger.info("    — Student " + (j + 1) + ": \t    — " + std.getName());
+            }
+        }
+        System.out.println();
     }
 }

@@ -15,17 +15,17 @@
         <!-- Select our SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <!-- Echo the SQL to stdout -->
-        <property name="show_sql">true</property>
         <property name="hibernate.show_sql">false</property>
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">validate</property>
 
-        <mapping class="Course"/>
-        <mapping class="Student"/>
-        <mapping class="Teacher"/>
-        <mapping class="Purchase"/>
+        <mapping class="entities.Course"/>
+        <mapping class="entities.Student"/>
+        <mapping class="entities.Teacher"/>
+        <mapping class="entities.Purchase"/>
+        <mapping class="entities.Subscription"/>
 
     </session-factory>
 </hibernate-configuration>

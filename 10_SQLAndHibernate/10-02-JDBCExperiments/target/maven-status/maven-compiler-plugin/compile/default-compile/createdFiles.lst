@@ -1,3 +1,7 @@
 Main.class
 CourseType.class
 Course.class
+Purchase.class
+Subscription.class
+Teacher.class
+Student.class

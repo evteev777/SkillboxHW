@@ -1,0 +1,23 @@
+05:55:44.566 [main] DEBUG	appLog: Program start
+05:55:46.890 [main] INFO	appLog: Student: 	Носов Макар
+05:55:46.912 [main] INFO	appLog: — Course: 	- Мобильный разработчик с нуля
+05:55:46.912 [main] INFO	appLog: — Course: 	- Веб-дизайн с нуля до PRO
+05:55:46.918 [main] INFO	appLog: Course: 	Java-разработчик
+05:55:46.927 [main] INFO	appLog: — Student: 	- PHP-разработчик с 0 до PRO
+05:55:46.927 [main] INFO	appLog: — Student: 	- Как открыть веб-студию
+05:55:46.931 [main] INFO	appLog: Course: 	Data Scientist с 0 до PRO
+05:55:46.931 [main] INFO	appLog: - Teacher:		- Лобан Эммануил
+05:55:46.939 [main] INFO	appLog:   — Course 1: 	  - Java-разработчик
+05:55:46.939 [main] INFO	appLog:     — Student 1: 	    — PHP-разработчик с 0 до PRO
+05:55:46.939 [main] INFO	appLog:     — Student 2: 	    — Как открыть веб-студию
+05:55:46.939 [main] INFO	appLog:   — Course 2: 	  - Python-разработчик с нуля
+05:55:46.948 [main] INFO	appLog:     — Student 1: 	    — Frontend-разработчик
+05:55:46.948 [main] INFO	appLog:     — Student 2: 	    — Управление командами
+05:55:46.948 [main] INFO	appLog:   — Course 3: 	  - Data Scientist с 0 до PRO
+05:55:46.957 [main] INFO	appLog:     — Student 1: 	    — Веб-разработчик c 0 до PRO
+05:55:46.957 [main] INFO	appLog:     — Student 2: 	    — Аналитик данных на Python
+05:55:46.957 [main] INFO	appLog:     — Student 3: 	    — SQL
+05:55:46.957 [main] INFO	appLog:   — Course 4: 	  - Анимация интерфейсов
+05:55:46.966 [main] INFO	appLog:     — Student 1: 	    — Frontend-разработчик
+05:55:46.966 [main] INFO	appLog:     — Student 2: 	    — Дизайн интерьеров с нуля
+05:55:46.966 [main] DEBUG	appLog: Program completed

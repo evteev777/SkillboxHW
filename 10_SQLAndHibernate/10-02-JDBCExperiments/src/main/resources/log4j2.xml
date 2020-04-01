@@ -3,38 +3,30 @@
 
     <Properties>
         <Property name="logPath">logs</Property>
-        <Property name="fileName">app</Property>
+        <Property name="appLogFile">app</Property>
+        <Property name="generalLogFile">general</Property>
     </Properties>
 
     <Appenders>
-
-        <File name="org.apache.logging" fileName="${logPath}/log4j.log" append="false" immediateFlush="true">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %p %c{1.} %m%n" />
-        </File>
-
-        <File name="org.hibernate" fileName="${logPath}/hibernate.log" append="false" immediateFlush="true">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %p %c{1.} %m%n" />
-        </File>
-
-        <Console name="Console" target="SYSTEM_OUT">
+        <Console name="AppToConsole" target="SYSTEM_OUT">
             <PatternLayout pattern="%m%n"/>
         </Console>
-
-        <File name="File" fileName="${logPath}/${fileName}.log" append="false" immediateFlush="true">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %p %c{1.} %m%n" />
+        <File name="AppToFile" fileName="${logPath}/${appLogFile}.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %p\t%c{1.}: %m%n" />
         </File>
-
+        <File name="AllToFile" fileName="${logPath}/${generalLogFile}.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %p\t%c{1.}: %m%n" />
+        </File>
     </Appenders>
 
     <Loggers>
-        <root level="DEBUG">
-            <appender-ref ref="org.apache.logging" level="ALL"/>
-            <appender-ref ref="org.hibernate" level="TRACE" />
-        </root>
         <logger name="appLog" level="ALL">
-            <appender-ref ref="Console" level="INFO" />
-            <appender-ref ref="File" level="INFO"/>
+            <appender-ref ref="AppToConsole" level="INFO" />
+            <appender-ref ref="AppToFile" level="DEBUG"/>
         </logger>
+        <root level="ALL">
+            <appender-ref ref="AllToFile" level="ALL" />
+        </root>
     </Loggers>
 
 </Configuration>

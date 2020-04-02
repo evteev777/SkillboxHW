@@ -1,17 +1,16 @@
 package entities;
 
 import lombok.*;
-
 import javax.persistence.*;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 // Lombok
 @Data
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "name", "registrationDate"})
 
 @Entity
@@ -27,10 +26,14 @@ public class Student {
 
     private int age;
 
-    @Column(name = "registration_date")
     @NonNull
+    @Column(name = "registration_date")
+    @Temporal(TemporalType.TIMESTAMP)
     Date registrationDate;
 
     @ManyToMany(mappedBy = "students")
     private List<Course> courses = new ArrayList<>();
+
+    @OneToMany(mappedBy = "student")
+    private List<Subscription> subscriptions;
 }

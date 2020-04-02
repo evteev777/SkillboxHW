@@ -1,42 +1,125 @@
-16:01:07.226 [main] DEBUG	appLog: Program start
-16:01:09.415 [main] INFO	appLog: Student: 	Носов Макар
-16:01:09.430 [main] INFO	appLog: — Course: 	- Мобильный разработчик с нуля
-16:01:09.430 [main] INFO	appLog: — Course: 	- Веб-дизайн с нуля до PRO
-16:01:09.435 [main] INFO	appLog: Course: 	Java-разработчик
-16:01:09.447 [main] INFO	appLog: — Student: 	- Кооскора Вениамин
-16:01:09.447 [main] INFO	appLog: — Student: 	- Грузинский Парфен
-16:01:09.447 [main] INFO	appLog: — Student: 	- Квасников Емельян
-16:01:09.447 [main] INFO	appLog: — Student: 	- Барсуков Виктор
-16:01:09.447 [main] INFO	appLog: — Student: 	- Лилов Тимофей
-16:01:09.447 [main] INFO	appLog: — Student: 	- Решетилов Изяслав
-16:01:09.450 [main] INFO	appLog: Course: 	Data Scientist с 0 до PRO
-16:01:09.450 [main] INFO	appLog: - Teacher:		- Лобан Эммануил
-16:01:09.457 [main] INFO	appLog:   — Course 1: 	  - Java-разработчик
-16:01:09.457 [main] INFO	appLog:     — Student 1: 	    — Кооскора Вениамин
-16:01:09.457 [main] INFO	appLog:     — Student 2: 	    — Грузинский Парфен
-16:01:09.457 [main] INFO	appLog:     — Student 3: 	    — Квасников Емельян
-16:01:09.458 [main] INFO	appLog:     — Student 4: 	    — Барсуков Виктор
-16:01:09.458 [main] INFO	appLog:     — Student 5: 	    — Лилов Тимофей
-16:01:09.458 [main] INFO	appLog:     — Student 6: 	    — Решетилов Изяслав
-16:01:09.458 [main] INFO	appLog:   — Course 2: 	  - Python-разработчик с нуля
-16:01:09.468 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
-16:01:09.469 [main] INFO	appLog:     — Student 2: 	    — Молодых Елисей
-16:01:09.469 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
-16:01:09.469 [main] INFO	appLog:     — Student 4: 	    — Катаев Павел
-16:01:09.469 [main] INFO	appLog:     — Student 5: 	    — Тургенев Самсон
-16:01:09.469 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
-16:01:09.469 [main] INFO	appLog:   — Course 3: 	  - Data Scientist с 0 до PRO
-16:01:09.477 [main] INFO	appLog:     — Student 1: 	    — Фуриков Эрнст
-16:01:09.477 [main] INFO	appLog:     — Student 2: 	    — Шамило Федосий
-16:01:09.478 [main] INFO	appLog:     — Student 3: 	    — Саввин Онисим
-16:01:09.478 [main] INFO	appLog:     — Student 4: 	    — Порошин Степан
-16:01:09.478 [main] INFO	appLog:     — Student 5: 	    — Большаков Панкратий
-16:01:09.478 [main] INFO	appLog:     — Student 6: 	    — Круминьш Виталий
-16:01:09.478 [main] INFO	appLog:   — Course 4: 	  - Анимация интерфейсов
-16:01:09.488 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
-16:01:09.488 [main] INFO	appLog:     — Student 2: 	    — Журавлев Севастьян
-16:01:09.488 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
-16:01:09.488 [main] INFO	appLog:     — Student 4: 	    — Боварин Анатолий
-16:01:09.488 [main] INFO	appLog:     — Student 5: 	    — Ядрихинский Егор
-16:01:09.488 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
-16:01:09.488 [main] DEBUG	appLog: Program completed
+15:28:59.652 [main] DEBUG	appLog: Program start
+15:29:01.831 [main] INFO	appLog: Course: 	Data Scientist с 0 до PRO
+15:29:01.831 [main] INFO	appLog: - Teacher:		- Лобан Эммануил
+15:29:01.850 [main] INFO	appLog:   — Course 1: 	  - Java-разработчик
+15:29:01.875 [main] INFO	appLog:     — Course subscription 1: 	    — Кооскора Вениамин
+15:29:01.875 [main] INFO	appLog:     — Course subscription 2: 	    — Грузинский Парфен
+15:29:01.875 [main] INFO	appLog:     — Course subscription 3: 	    — Квасников Емельян
+15:29:01.876 [main] INFO	appLog:     — Course subscription 4: 	    — Барсуков Виктор
+15:29:01.876 [main] INFO	appLog:     — Course subscription 5: 	    — Лилов Тимофей
+15:29:01.876 [main] INFO	appLog:     — Course subscription 6: 	    — Решетилов Изяслав
+15:29:01.881 [main] INFO	appLog:     — Student 1: 	    — Кооскора Вениамин
+15:29:01.890 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.890 [main] INFO	appLog:       — Student subscription 2: 	    — Рекламная графика
+15:29:01.890 [main] INFO	appLog:     — Student 2: 	    — Грузинский Парфен
+15:29:01.899 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.899 [main] INFO	appLog:       — Student subscription 2: 	    — CRM-маркетолог
+15:29:01.899 [main] INFO	appLog:     — Student 3: 	    — Квасников Емельян
+15:29:01.911 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.911 [main] INFO	appLog:       — Student subscription 2: 	    — Рекламная графика
+15:29:01.911 [main] INFO	appLog:       — Student subscription 3: 	    — SMM-маркетолог от А до Я
+15:29:01.911 [main] INFO	appLog:       — Student subscription 4: 	    — CRM-маркетолог
+15:29:01.911 [main] INFO	appLog:     — Student 4: 	    — Барсуков Виктор
+15:29:01.927 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.927 [main] INFO	appLog:       — Student subscription 2: 	    — Sketch
+15:29:01.927 [main] INFO	appLog:       — Student subscription 3: 	    — Управление репутацией
+15:29:01.927 [main] INFO	appLog:     — Student 5: 	    — Лилов Тимофей
+15:29:01.939 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.939 [main] INFO	appLog:       — Student subscription 2: 	    — Графический дизайнер с нуля до PRO
+15:29:01.940 [main] INFO	appLog:       — Student subscription 3: 	    — CRM-маркетолог
+15:29:01.940 [main] INFO	appLog:     — Student 6: 	    — Решетилов Изяслав
+15:29:01.948 [main] INFO	appLog:       — Student subscription 1: 	    — Java-разработчик
+15:29:01.948 [main] INFO	appLog:       — Student subscription 2: 	    — Рекламная графика
+15:29:01.949 [main] INFO	appLog:       — Student subscription 3: 	    — SMM-маркетолог от А до Я
+15:29:01.949 [main] INFO	appLog:   — Course 2: 	  - Python-разработчик с нуля
+15:29:01.972 [main] INFO	appLog:     — Course subscription 1: 	    — Блаженов Артем
+15:29:01.972 [main] INFO	appLog:     — Course subscription 2: 	    — Молодых Елисей
+15:29:01.972 [main] INFO	appLog:     — Course subscription 3: 	    — Дьячков Севастьян
+15:29:01.972 [main] INFO	appLog:     — Course subscription 4: 	    — Катаев Павел
+15:29:01.973 [main] INFO	appLog:     — Course subscription 5: 	    — Тургенев Самсон
+15:29:01.973 [main] INFO	appLog:     — Course subscription 6: 	    — Герций Афанасий
+15:29:01.977 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
+15:29:01.982 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:01.982 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:01.983 [main] INFO	appLog:     — Student 2: 	    — Молодых Елисей
+15:29:01.992 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:01.992 [main] INFO	appLog:       — Student subscription 2: 	    — Как открыть салон красоты
+15:29:01.992 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
+15:29:02.006 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.006 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.006 [main] INFO	appLog:       — Student subscription 3: 	    — Интернет-маркетолог от А до Я
+15:29:02.006 [main] INFO	appLog:       — Student subscription 4: 	    — Как открыть салон красоты
+15:29:02.006 [main] INFO	appLog:     — Student 4: 	    — Катаев Павел
+15:29:02.021 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.021 [main] INFO	appLog:       — Student subscription 2: 	    — Интернет-маркетолог от Ingate
+15:29:02.021 [main] INFO	appLog:       — Student subscription 3: 	    — SEO-специалист
+15:29:02.021 [main] INFO	appLog:     — Student 5: 	    — Тургенев Самсон
+15:29:02.032 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.032 [main] INFO	appLog:       — Student subscription 2: 	    — Промо-сайты от Red Collar
+15:29:02.032 [main] INFO	appLog:       — Student subscription 3: 	    — Как открыть салон красоты
+15:29:02.032 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
+15:29:02.038 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.039 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.039 [main] INFO	appLog:       — Student subscription 3: 	    — Интернет-маркетолог от А до Я
+15:29:02.039 [main] INFO	appLog:   — Course 3: 	  - Data Scientist с 0 до PRO
+15:29:02.064 [main] INFO	appLog:     — Course subscription 1: 	    — Фуриков Эрнст
+15:29:02.064 [main] INFO	appLog:     — Course subscription 2: 	    — Шамило Федосий
+15:29:02.064 [main] INFO	appLog:     — Course subscription 3: 	    — Саввин Онисим
+15:29:02.064 [main] INFO	appLog:     — Course subscription 4: 	    — Порошин Степан
+15:29:02.064 [main] INFO	appLog:     — Course subscription 5: 	    — Большаков Панкратий
+15:29:02.064 [main] INFO	appLog:     — Course subscription 6: 	    — Круминьш Виталий
+15:29:02.071 [main] INFO	appLog:     — Student 1: 	    — Фуриков Эрнст
+15:29:02.086 [main] INFO	appLog:       — Student subscription 1: 	    — Мобильный разработчик с нуля
+15:29:02.086 [main] INFO	appLog:       — Student subscription 2: 	    — Data Scientist с 0 до PRO
+15:29:02.086 [main] INFO	appLog:     — Student 2: 	    — Шамило Федосий
+15:29:02.097 [main] INFO	appLog:       — Student subscription 1: 	    — Data Scientist с 0 до PRO
+15:29:02.097 [main] INFO	appLog:       — Student subscription 2: 	    — Скетчинг для дизайнеров
+15:29:02.097 [main] INFO	appLog:     — Student 3: 	    — Саввин Онисим
+15:29:02.135 [main] INFO	appLog:       — Student subscription 1: 	    — Data Scientist с 0 до PRO
+15:29:02.135 [main] INFO	appLog:       — Student subscription 2: 	    — Sketch
+15:29:02.135 [main] INFO	appLog:       — Student subscription 3: 	    — Как делать контент для YouTube
+15:29:02.135 [main] INFO	appLog:       — Student subscription 4: 	    — Управление продуктом
+15:29:02.136 [main] INFO	appLog:     — Student 4: 	    — Порошин Степан
+15:29:02.145 [main] INFO	appLog:       — Student subscription 1: 	    — Data Scientist с 0 до PRO
+15:29:02.145 [main] INFO	appLog:       — Student subscription 2: 	    — Скетчинг для дизайнеров
+15:29:02.145 [main] INFO	appLog:       — Student subscription 3: 	    — Управление репутацией
+15:29:02.146 [main] INFO	appLog:       — Student subscription 4: 	    — Управление продуктом
+15:29:02.146 [main] INFO	appLog:     — Student 5: 	    — Большаков Панкратий
+15:29:02.162 [main] INFO	appLog:       — Student subscription 1: 	    — Data Scientist с 0 до PRO
+15:29:02.162 [main] INFO	appLog:       — Student subscription 2: 	    — Сквозная аналитика
+15:29:02.162 [main] INFO	appLog:       — Student subscription 3: 	    — Управление командами
+15:29:02.162 [main] INFO	appLog:     — Student 6: 	    — Круминьш Виталий
+15:29:02.169 [main] INFO	appLog:       — Student subscription 1: 	    — Data Scientist с 0 до PRO
+15:29:02.169 [main] INFO	appLog:       — Student subscription 2: 	    — Sketch
+15:29:02.169 [main] INFO	appLog:       — Student subscription 3: 	    — Управление продуктом
+15:29:02.169 [main] INFO	appLog:   — Course 4: 	  - Анимация интерфейсов
+15:29:02.184 [main] INFO	appLog:     — Course subscription 1: 	    — Блаженов Артем
+15:29:02.184 [main] INFO	appLog:     — Course subscription 2: 	    — Журавлев Севастьян
+15:29:02.184 [main] INFO	appLog:     — Course subscription 3: 	    — Дьячков Севастьян
+15:29:02.184 [main] INFO	appLog:     — Course subscription 4: 	    — Боварин Анатолий
+15:29:02.184 [main] INFO	appLog:     — Course subscription 5: 	    — Ядрихинский Егор
+15:29:02.184 [main] INFO	appLog:     — Course subscription 6: 	    — Герций Афанасий
+15:29:02.191 [main] INFO	appLog:     — Student 1: 	    — Блаженов Артем
+15:29:02.191 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.191 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.191 [main] INFO	appLog:     — Student 2: 	    — Журавлев Севастьян
+15:29:02.199 [main] INFO	appLog:       — Student subscription 1: 	    — Анимация интерфейсов
+15:29:02.199 [main] INFO	appLog:       — Student subscription 2: 	    — Figma
+15:29:02.199 [main] INFO	appLog:     — Student 3: 	    — Дьячков Севастьян
+15:29:02.199 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.199 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.199 [main] INFO	appLog:       — Student subscription 3: 	    — Интернет-маркетолог от А до Я
+15:29:02.199 [main] INFO	appLog:       — Student subscription 4: 	    — Как открыть салон красоты
+15:29:02.199 [main] INFO	appLog:     — Student 4: 	    — Боварин Анатолий
+15:29:02.209 [main] INFO	appLog:       — Student subscription 1: 	    — Анимация интерфейсов
+15:29:02.209 [main] INFO	appLog:       — Student subscription 2: 	    — Figma
+15:29:02.209 [main] INFO	appLog:       — Student subscription 3: 	    — Как открыть веб-студию
+15:29:02.209 [main] INFO	appLog:     — Student 5: 	    — Ядрихинский Егор
+15:29:02.217 [main] INFO	appLog:       — Student subscription 1: 	    — Веб-разработчик c 0 до PRO
+15:29:02.217 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.217 [main] INFO	appLog:       — Student subscription 3: 	    — SEO-специалист
+15:29:02.217 [main] INFO	appLog:     — Student 6: 	    — Герций Афанасий
+15:29:02.217 [main] INFO	appLog:       — Student subscription 1: 	    — Python-разработчик с нуля
+15:29:02.217 [main] INFO	appLog:       — Student subscription 2: 	    — Анимация интерфейсов
+15:29:02.217 [main] INFO	appLog:       — Student subscription 3: 	    — Интернет-маркетолог от А до Я
+15:29:02.217 [main] DEBUG	appLog: Program completed

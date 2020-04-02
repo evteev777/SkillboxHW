@@ -1,6 +1,7 @@
 import lombok.Cleanup;
 import entities.Course;
 import entities.Student;
+import entities.Subscription;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.hibernate.Session;
@@ -27,29 +28,13 @@ public class Main {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-//        Subscription subscription = session.get(Subscription.class, 3);
-//        appLogger.info(subscription.getCourseId());
-//        appLogger.info(subscription.getStudentId());
+//        Subscription subscription = session.get(Subscription.class, 1);
+//        appLogger.info(subscription.getSubscriptionDate());
+//        appLogger.info(subscription.getCourse());
 
-        studentMappingLog(appLogger, session, 3);
-        courseMappingLog(appLogger, session, 3);
         totalMappingLog(appLogger, session, 10);
 
         appLogger.debug( "Program completed");
-    }
-
-    private static void studentMappingLog(Logger appLogger, Session session, int studentNumber) {
-        Student student = session.get(Student.class, studentNumber);
-        appLogger.info("Student: \t" + student.getName());
-        student.getCourses().forEach(c -> appLogger.info("— Course: \t- " + c.getName()));
-        System.out.println();
-    }
-
-    private static void courseMappingLog(Logger appLogger, Session session, int courseNumber) {
-        Course course = session.get(Course.class, courseNumber);
-        appLogger.info("Course: \t" + course.getName());
-        course.getStudents().forEach(s -> appLogger.info("— Student: \t- " + s.getName()));
-        System.out.println();
     }
 
     private static void totalMappingLog(Logger appLogger, Session session, int courseNumber) {
@@ -63,10 +48,24 @@ public class Main {
             Course teacherCourse = teacherCourses.get(i);
             appLogger.info("  — Course " + (i + 1) + ": \t  - " + teacherCourse.getName());
 
+            List<Subscription> courseSubscriptions = teacherCourse.getSubscriptions();
+            for (int j = 0; j < courseSubscriptions.size(); j++) {
+                Subscription subscr1 = courseSubscriptions.get(j);
+                appLogger.info("    — Course subscription " + (j + 1) + ": \t    — "
+                        + subscr1.getStudent().getName());
+            }
+
             List<Student> studentsOnCourse = teacherCourse.getStudents();
             for (int j = 0; j < studentsOnCourse.size(); j++) {
                 Student std = studentsOnCourse.get(j);
                 appLogger.info("    — Student " + (j + 1) + ": \t    — " + std.getName());
+
+                List<Subscription> studentSubscriptions = std.getSubscriptions();
+                for (int k = 0; k < studentSubscriptions.size(); k++) {
+                    Subscription subscr2 = studentSubscriptions.get(k);
+                    appLogger.info("      — Student subscription " + (k + 1) + ": \t    — "
+                            + subscr2.getCourse().getName());
+                }
             }
         }
         System.out.println();

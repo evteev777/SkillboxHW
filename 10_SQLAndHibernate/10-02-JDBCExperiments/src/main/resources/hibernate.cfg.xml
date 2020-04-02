@@ -24,8 +24,8 @@
         <mapping class="entities.Course"/>
         <mapping class="entities.Student"/>
         <mapping class="entities.Teacher"/>
-        <mapping class="entities.Purchase"/>
         <mapping class="entities.Subscription"/>
+<!--        <mapping class="entities.Purchase"/>-->
 
     </session-factory>
 </hibernate-configuration>

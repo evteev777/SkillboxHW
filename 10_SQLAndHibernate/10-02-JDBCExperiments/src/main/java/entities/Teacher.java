@@ -6,9 +6,9 @@ import java.util.List;
 
 // Lombok
 @Data
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 
 @Entity

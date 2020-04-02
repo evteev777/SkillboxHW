@@ -1,17 +1,16 @@
 package entities;
 
-import enums.CourseType;
 import lombok.*;
-
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+import enums.CourseType;
 
 // Lombok
 @Data
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "type"})
 
 @Entity
@@ -26,9 +25,9 @@ public class Course {
 
     private int duration;
 
+    @NonNull
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "enum")
-    @NonNull
     private CourseType type;
 
     private String description;
@@ -48,7 +47,9 @@ public class Course {
     @JoinTable(
             name = "Subscriptions",
             joinColumns = @JoinColumn(name="course_id", referencedColumnName="id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName="id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName="id"))
     private List<Student> students = new ArrayList<>();
+
+    @OneToMany(mappedBy = "course")
+    private List<Subscription> subscriptions;
 }

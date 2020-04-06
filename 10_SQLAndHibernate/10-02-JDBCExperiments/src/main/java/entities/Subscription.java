@@ -7,24 +7,32 @@ import java.util.Date;
 
 // Lombok
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"student", "course", "subscriptionDate"})
+@EqualsAndHashCode
 
 @Entity
 @Table(name = "Subscriptions")
 public class Subscription implements Serializable {
 
-    @Id
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Student student;
-
-    @Id
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Course course;
+    @EmbeddedId
+    private SubscriptionKey key;
 
     @Column(name = "subscription_date")
     @Temporal(TemporalType.TIMESTAMP)
-    Date subscriptionDate;
+    private Date subscriptionDate;
+
+    // Lombok
+    @Data
+    @NoArgsConstructor
+    @EqualsAndHashCode
+
+    @Embeddable
+    public static class SubscriptionKey implements Serializable{
+
+        @ManyToOne(cascade = CascadeType.ALL)
+        protected Student student;
+
+        @ManyToOne(cascade = CascadeType.ALL)
+        protected Course course;
+    }
 }

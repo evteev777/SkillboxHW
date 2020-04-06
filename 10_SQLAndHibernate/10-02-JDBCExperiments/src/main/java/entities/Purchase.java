@@ -6,8 +6,6 @@ import java.util.Date;
 
 //Lombok
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"student", "course", "price", "subscriptionDate"})
 

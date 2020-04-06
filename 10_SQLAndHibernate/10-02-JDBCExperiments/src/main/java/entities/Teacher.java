@@ -6,8 +6,6 @@ import java.util.List;
 
 // Lombok
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "name"})
 

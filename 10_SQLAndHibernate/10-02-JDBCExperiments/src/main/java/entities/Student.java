@@ -8,8 +8,6 @@ import java.util.Date;
 
 // Lombok
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "name", "registrationDate"})
 
@@ -34,6 +32,6 @@ public class Student {
     @ManyToMany(mappedBy = "students")
     private List<Course> courses = new ArrayList<>();
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "key.student")
     private List<Subscription> subscriptions;
 }

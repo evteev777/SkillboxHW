@@ -2,20 +2,19 @@ package entities;
 
 import lombok.*;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 import enums.CourseType;
 
 // Lombok
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id", "type"})
 
 @Entity
 @Table(name = "Courses")
-public class Course {
+public class Course implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,6 +49,6 @@ public class Course {
             inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName="id"))
     private List<Student> students = new ArrayList<>();
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "key.course")
     private List<Subscription> subscriptions;
 }

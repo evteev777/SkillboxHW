@@ -1,0 +1,43 @@
+### Java
+/out/
+**/libraries/
+**/target/
+*.class
+*.ctxt
+hs_err_pid*
+
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+**/log*/
+*.log
+
+# Pictures
+*.jpg
+*.png
+*.gif
+
+### macOS
+Icon
+Network Trash Folder
+Temporary Items
+
+.DS_Store
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+._*

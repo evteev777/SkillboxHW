@@ -25,19 +25,17 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
-        <schema name="skillbox" object-types="index, constraint, column, table, dataset trigger, view, procedure, function" />
+        <schema name="skillbox" object-types="table, view, procedure, function" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
-      <console name="Skillbox" type="STANDARD" schema="skillbox" session="Main"><![CDATA[SHOW databases;]]></console>
+      <console name="Skillbox" type="STANDARD" schema="skillbox" session="Main">SHOW databases;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" object-ref="schemas/skillbox/tables/PurchaseList" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c" />

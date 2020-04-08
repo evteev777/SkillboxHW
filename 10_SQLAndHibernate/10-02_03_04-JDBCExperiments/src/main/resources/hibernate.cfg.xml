@@ -24,12 +24,14 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">validate</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <mapping class="entities.Course"/>
         <mapping class="entities.Student"/>
         <mapping class="entities.Teacher"/>
         <mapping class="entities.Subscription"/>
+        <mapping class="entities.Purchase"/>
         <mapping class="entities.Purchase"/>
 
     </session-factory>

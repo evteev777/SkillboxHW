@@ -30,9 +30,11 @@ public class Subscription implements Serializable {
     public static class Key implements Serializable {
 
         @ManyToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "student_id", referencedColumnName="id")
         protected Student student;
 
         @ManyToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "course_id", referencedColumnName="id")
         protected Course course;
     }
 }

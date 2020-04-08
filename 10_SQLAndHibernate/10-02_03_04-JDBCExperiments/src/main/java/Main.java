@@ -3,7 +3,6 @@ import entities.*;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.List;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.hibernate.Session;
@@ -57,6 +56,8 @@ public class Main {
             appLogger.info( "TOTAL MAPPING:");
             final int COURSE_ID_4 = 10;
             totalMapping(COURSE_ID_4 ,dateFormat, session, appLogger);
+
+            appLogger.info( "ADD NEW TABLE:");
 
         } catch (Exception e) {
             e.printStackTrace();

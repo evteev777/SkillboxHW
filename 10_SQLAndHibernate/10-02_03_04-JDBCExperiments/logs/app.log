@@ -1,0 +1,143 @@
+06:52:14.578 [main] DEBUG	appLog: Program start
+06:52:16.855 [main] INFO	appLog: TEACHER MAPPING:
+06:52:16.883 [main] INFO	appLog: - Teacher ID_1: Ягешев Сидор
+06:52:16.883 [main] INFO	appLog: COURSE MAPPING:
+06:52:16.889 [main] INFO	appLog: - Course  ID_1: Веб-разработчик c 0 до PRO
+06:52:16.889 [main] INFO	appLog: STUDENT MAPPING:
+06:52:16.894 [main] INFO	appLog: - Student ID_1: Фуриков Эрнст
+06:52:16.894 [main] INFO	appLog: SUBSCRIPTION MAPPING:
+06:52:16.921 [main] INFO	appLog: - Subscription number: 	1
+06:52:16.921 [main] INFO	appLog: - Subscription date:   	17.05.18
+06:52:16.921 [main] INFO	appLog: - Subscription course: 	Веб-разработчик c 0 до PRO
+06:52:16.921 [main] INFO	appLog: - Subscription student:	Жариков Афанасий
+06:52:16.921 [main] INFO	appLog: PURCHASE MAPPING:
+06:52:16.952 [main] INFO	appLog: - Purchase number: 	0
+06:52:16.952 [main] INFO	appLog: - Purchase date:   	02.01.18
+06:52:16.952 [main] INFO	appLog: - Purchase course: 	Веб-разработчик c 0 до PRO
+06:52:16.952 [main] INFO	appLog: - Purchase student:	Амбражевич Порфирий
+06:52:16.952 [main] INFO	appLog: - Purchase price:	189600
+06:52:16.952 [main] INFO	appLog: TOTAL MAPPING:
+06:52:16.960 [main] INFO	appLog: - Course: Data Scientist с 0 до PRO
+06:52:16.963 [main] INFO	appLog: - Course teacher: Лобан Эммануил
+06:52:16.972 [main] INFO	appLog: 	1. Teacher: Лобан Эммануил,	Course: Java-разработчик
+06:52:16.994 [main] INFO	appLog: 		1. Subscription:	04.01.18 Кооскора Вениамин
+06:52:16.994 [main] INFO	appLog: 		2. Subscription:	18.02.18 Квасников Емельян
+06:52:16.994 [main] INFO	appLog: 		3. Subscription:	04.04.18 Решетилов Изяслав
+06:52:16.995 [main] INFO	appLog: 		4. Subscription:	19.05.18 Грузинский Парфен
+06:52:16.995 [main] INFO	appLog: 		5. Subscription:	03.07.18 Лилов Тимофей
+06:52:16.995 [main] INFO	appLog: 		6. Subscription:	17.08.18 Барсуков Виктор
+06:52:16.999 [main] INFO	appLog: 		1. Student:	Кооскора Вениамин
+06:52:17.005 [main] INFO	appLog: 			1. Subscription:	04.01.18 Java-разработчик
+06:52:17.005 [main] INFO	appLog: 			2. Subscription:	14.04.18 Рекламная графика
+06:52:17.005 [main] INFO	appLog: 		2. Student:	Грузинский Парфен
+06:52:17.011 [main] INFO	appLog: 			1. Subscription:	08.02.18 CRM-маркетолог
+06:52:17.011 [main] INFO	appLog: 			2. Subscription:	19.05.18 Java-разработчик
+06:52:17.011 [main] INFO	appLog: 		3. Student:	Квасников Емельян
+06:52:17.020 [main] INFO	appLog: 			1. Subscription:	18.02.18 Java-разработчик
+06:52:17.020 [main] INFO	appLog: 			2. Subscription:	29.05.18 Рекламная графика
+06:52:17.020 [main] INFO	appLog: 			3. Subscription:	27.07.18 SMM-маркетолог от А до Я
+06:52:17.020 [main] INFO	appLog: 			4. Subscription:	21.09.18 CRM-маркетолог
+06:52:17.021 [main] INFO	appLog: 		4. Student:	Барсуков Виктор
+06:52:17.028 [main] INFO	appLog: 			1. Subscription:	11.03.18 Sketch
+06:52:17.028 [main] INFO	appLog: 			2. Subscription:	19.06.18 Управление репутацией
+06:52:17.029 [main] INFO	appLog: 			3. Subscription:	17.08.18 Java-разработчик
+06:52:17.029 [main] INFO	appLog: 		5. Student:	Лилов Тимофей
+06:52:17.036 [main] INFO	appLog: 			1. Subscription:	25.03.18 CRM-маркетолог
+06:52:17.036 [main] INFO	appLog: 			2. Subscription:	03.07.18 Java-разработчик
+06:52:17.036 [main] INFO	appLog: 			3. Subscription:	31.08.18 Графический дизайнер с нуля до PRO
+06:52:17.036 [main] INFO	appLog: 		6. Student:	Решетилов Изяслав
+06:52:17.041 [main] INFO	appLog: 			1. Subscription:	04.04.18 Java-разработчик
+06:52:17.041 [main] INFO	appLog: 			2. Subscription:	13.07.18 Рекламная графика
+06:52:17.041 [main] INFO	appLog: 			3. Subscription:	10.09.18 SMM-маркетолог от А до Я
+06:52:17.041 [main] INFO	appLog: 	2. Teacher: Лобан Эммануил,	Course: Python-разработчик с нуля
+06:52:17.055 [main] INFO	appLog: 		1. Subscription:	06.01.18 Блаженов Артем
+06:52:17.055 [main] INFO	appLog: 		2. Subscription:	20.02.18 Дьячков Севастьян
+06:52:17.056 [main] INFO	appLog: 		3. Subscription:	06.04.18 Герций Афанасий
+06:52:17.056 [main] INFO	appLog: 		4. Subscription:	21.05.18 Молодых Елисей
+06:52:17.056 [main] INFO	appLog: 		5. Subscription:	05.07.18 Тургенев Самсон
+06:52:17.056 [main] INFO	appLog: 		6. Subscription:	19.08.18 Катаев Павел
+06:52:17.060 [main] INFO	appLog: 		1. Student:	Блаженов Артем
+06:52:17.066 [main] INFO	appLog: 			1. Subscription:	06.01.18 Python-разработчик с нуля
+06:52:17.066 [main] INFO	appLog: 			2. Subscription:	16.04.18 Анимация интерфейсов
+06:52:17.066 [main] INFO	appLog: 		2. Student:	Молодых Елисей
+06:52:17.074 [main] INFO	appLog: 			1. Subscription:	10.02.18 Как открыть салон красоты
+06:52:17.074 [main] INFO	appLog: 			2. Subscription:	21.05.18 Python-разработчик с нуля
+06:52:17.074 [main] INFO	appLog: 		3. Student:	Дьячков Севастьян
+06:52:17.088 [main] INFO	appLog: 			1. Subscription:	20.02.18 Python-разработчик с нуля
+06:52:17.088 [main] INFO	appLog: 			2. Subscription:	31.05.18 Анимация интерфейсов
+06:52:17.088 [main] INFO	appLog: 			3. Subscription:	29.07.18 Интернет-маркетолог от А до Я
+06:52:17.088 [main] INFO	appLog: 			4. Subscription:	23.09.18 Как открыть салон красоты
+06:52:17.088 [main] INFO	appLog: 		4. Student:	Катаев Павел
+06:52:17.104 [main] INFO	appLog: 			1. Subscription:	13.03.18 Интернет-маркетолог от Ingate
+06:52:17.105 [main] INFO	appLog: 			2. Subscription:	21.06.18 SEO-специалист
+06:52:17.105 [main] INFO	appLog: 			3. Subscription:	19.08.18 Python-разработчик с нуля
+06:52:17.105 [main] INFO	appLog: 		5. Student:	Тургенев Самсон
+06:52:17.116 [main] INFO	appLog: 			1. Subscription:	27.03.18 Как открыть салон красоты
+06:52:17.116 [main] INFO	appLog: 			2. Subscription:	05.07.18 Python-разработчик с нуля
+06:52:17.116 [main] INFO	appLog: 			3. Subscription:	02.09.18 Промо-сайты от Red Collar
+06:52:17.116 [main] INFO	appLog: 		6. Student:	Герций Афанасий
+06:52:17.122 [main] INFO	appLog: 			1. Subscription:	06.04.18 Python-разработчик с нуля
+06:52:17.122 [main] INFO	appLog: 			2. Subscription:	15.07.18 Анимация интерфейсов
+06:52:17.123 [main] INFO	appLog: 			3. Subscription:	12.09.18 Интернет-маркетолог от А до Я
+06:52:17.123 [main] INFO	appLog: 	3. Teacher: Лобан Эммануил,	Course: Data Scientist с 0 до PRO
+06:52:17.143 [main] INFO	appLog: 		1. Subscription:	11.01.18 Шамило Федосий
+06:52:17.143 [main] INFO	appLog: 		2. Subscription:	25.02.18 Порошин Степан
+06:52:17.144 [main] INFO	appLog: 		3. Subscription:	11.04.18 Фуриков Эрнст
+06:52:17.144 [main] INFO	appLog: 		4. Subscription:	26.05.18 Саввин Онисим
+06:52:17.144 [main] INFO	appLog: 		5. Subscription:	10.07.18 Круминьш Виталий
+06:52:17.144 [main] INFO	appLog: 		6. Subscription:	24.08.18 Большаков Панкратий
+06:52:17.150 [main] INFO	appLog: 		1. Student:	Фуриков Эрнст
+06:52:17.157 [main] INFO	appLog: 			1. Subscription:	01.01.18 Мобильный разработчик с нуля
+06:52:17.157 [main] INFO	appLog: 			2. Subscription:	11.04.18 Data Scientist с 0 до PRO
+06:52:17.157 [main] INFO	appLog: 		2. Student:	Шамило Федосий
+06:52:17.166 [main] INFO	appLog: 			1. Subscription:	11.01.18 Data Scientist с 0 до PRO
+06:52:17.166 [main] INFO	appLog: 			2. Subscription:	21.04.18 Скетчинг для дизайнеров
+06:52:17.166 [main] INFO	appLog: 		3. Student:	Саввин Онисим
+06:52:17.176 [main] INFO	appLog: 			1. Subscription:	15.02.18 Управление продуктом
+06:52:17.176 [main] INFO	appLog: 			2. Subscription:	26.05.18 Data Scientist с 0 до PRO
+06:52:17.176 [main] INFO	appLog: 			3. Subscription:	24.07.18 Sketch
+06:52:17.176 [main] INFO	appLog: 			4. Subscription:	18.09.18 Как делать контент для YouTube
+06:52:17.176 [main] INFO	appLog: 		4. Student:	Порошин Степан
+06:52:17.181 [main] INFO	appLog: 			1. Subscription:	25.02.18 Data Scientist с 0 до PRO
+06:52:17.181 [main] INFO	appLog: 			2. Subscription:	05.06.18 Скетчинг для дизайнеров
+06:52:17.181 [main] INFO	appLog: 			3. Subscription:	03.08.18 Управление репутацией
+06:52:17.182 [main] INFO	appLog: 			4. Subscription:	28.09.18 Управление продуктом
+06:52:17.182 [main] INFO	appLog: 		5. Student:	Большаков Панкратий
+06:52:17.191 [main] INFO	appLog: 			1. Subscription:	18.03.18 Сквозная аналитика
+06:52:17.191 [main] INFO	appLog: 			2. Subscription:	26.06.18 Управление командами
+06:52:17.191 [main] INFO	appLog: 			3. Subscription:	24.08.18 Data Scientist с 0 до PRO
+06:52:17.191 [main] INFO	appLog: 		6. Student:	Круминьш Виталий
+06:52:17.197 [main] INFO	appLog: 			1. Subscription:	01.04.18 Управление продуктом
+06:52:17.197 [main] INFO	appLog: 			2. Subscription:	10.07.18 Data Scientist с 0 до PRO
+06:52:17.197 [main] INFO	appLog: 			3. Subscription:	07.09.18 Sketch
+06:52:17.197 [main] INFO	appLog: 	4. Teacher: Лобан Эммануил,	Course: Анимация интерфейсов
+06:52:17.204 [main] INFO	appLog: 		1. Subscription:	16.01.18 Журавлев Севастьян
+06:52:17.204 [main] INFO	appLog: 		2. Subscription:	02.03.18 Боварин Анатолий
+06:52:17.205 [main] INFO	appLog: 		3. Subscription:	16.04.18 Блаженов Артем
+06:52:17.205 [main] INFO	appLog: 		4. Subscription:	31.05.18 Дьячков Севастьян
+06:52:17.205 [main] INFO	appLog: 		5. Subscription:	15.07.18 Герций Афанасий
+06:52:17.205 [main] INFO	appLog: 		6. Subscription:	29.08.18 Ядрихинский Егор
+06:52:17.208 [main] INFO	appLog: 		1. Student:	Блаженов Артем
+06:52:17.208 [main] INFO	appLog: 			1. Subscription:	06.01.18 Python-разработчик с нуля
+06:52:17.208 [main] INFO	appLog: 			2. Subscription:	16.04.18 Анимация интерфейсов
+06:52:17.208 [main] INFO	appLog: 		2. Student:	Журавлев Севастьян
+06:52:17.213 [main] INFO	appLog: 			1. Subscription:	16.01.18 Анимация интерфейсов
+06:52:17.213 [main] INFO	appLog: 			2. Subscription:	26.04.18 Figma
+06:52:17.214 [main] INFO	appLog: 		3. Student:	Дьячков Севастьян
+06:52:17.214 [main] INFO	appLog: 			1. Subscription:	20.02.18 Python-разработчик с нуля
+06:52:17.214 [main] INFO	appLog: 			2. Subscription:	31.05.18 Анимация интерфейсов
+06:52:17.214 [main] INFO	appLog: 			3. Subscription:	29.07.18 Интернет-маркетолог от А до Я
+06:52:17.214 [main] INFO	appLog: 			4. Subscription:	23.09.18 Как открыть салон красоты
+06:52:17.214 [main] INFO	appLog: 		4. Student:	Боварин Анатолий
+06:52:17.220 [main] INFO	appLog: 			1. Subscription:	02.03.18 Анимация интерфейсов
+06:52:17.220 [main] INFO	appLog: 			2. Subscription:	10.06.18 Figma
+06:52:17.220 [main] INFO	appLog: 			3. Subscription:	08.08.18 Как открыть веб-студию
+06:52:17.220 [main] INFO	appLog: 		5. Student:	Ядрихинский Егор
+06:52:17.225 [main] INFO	appLog: 			1. Subscription:	23.03.18 SEO-специалист
+06:52:17.225 [main] INFO	appLog: 			2. Subscription:	01.07.18 Веб-разработчик c 0 до PRO
+06:52:17.225 [main] INFO	appLog: 			3. Subscription:	29.08.18 Анимация интерфейсов
+06:52:17.225 [main] INFO	appLog: 		6. Student:	Герций Афанасий
+06:52:17.225 [main] INFO	appLog: 			1. Subscription:	06.04.18 Python-разработчик с нуля
+06:52:17.226 [main] INFO	appLog: 			2. Subscription:	15.07.18 Анимация интерфейсов
+06:52:17.226 [main] INFO	appLog: 			3. Subscription:	12.09.18 Интернет-маркетолог от А до Я
+06:52:17.239 [main] DEBUG	appLog: Program completed

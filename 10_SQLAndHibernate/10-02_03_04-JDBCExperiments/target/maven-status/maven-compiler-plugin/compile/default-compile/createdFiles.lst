@@ -1,0 +1,10 @@
+entities/Student.class
+entities/Purchase.class
+entities/Subscription.class
+entities/LinkedPurchaseList.class
+entities/LinkedPurchaseList$Key.class
+enums/CourseType.class
+Main.class
+entities/Subscription$Key.class
+entities/Teacher.class
+entities/Course.class

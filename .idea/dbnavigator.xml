@@ -23,7 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
+        <schema name="skillbox" object-types="index, constraint, column, table, dataset trigger, view, procedure, function" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
@@ -31,7 +35,9 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" object-ref="schemas/skillbox/tables/PurchaseList" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c" />

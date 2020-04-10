@@ -25,7 +25,11 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
+        <schema name="information_schema" object-types="table, view, procedure, function" />
+        <schema name="mysql" object-types="table, view, procedure, function" />
+        <schema name="performance_schema" object-types="table, view, procedure, function" />
         <schema name="skillbox" object-types="table, view, procedure, function" />
+        <schema name="sys" object-types="index, constraint, column, table, dataset trigger, view, procedure, function" />
       </connection>
     </loaded-nodes>
   </component>
@@ -42,6 +46,7 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Students" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="sys.sys_config" active-filter-id="" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Teachers_Courses" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Teachers" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Courses" active-filter-id="EMPTY_FILTER">

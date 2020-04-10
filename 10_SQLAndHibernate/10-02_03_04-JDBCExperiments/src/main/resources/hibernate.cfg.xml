@@ -32,7 +32,7 @@
         <mapping class="entities.Teacher"/>
         <mapping class="entities.Subscription"/>
         <mapping class="entities.Purchase"/>
-        <mapping class="entities.Purchase"/>
+        <mapping class="entities.LinkedPurchase"/>
 
     </session-factory>
 </hibernate-configuration>

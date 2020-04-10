@@ -98,12 +98,12 @@ public class Main {
     private static void purchaseMapping(int COURSE_ID, int PURCHASE_NUMBER,
                                             SimpleDateFormat dateFormat, Session session, Logger appLogger) {
         Course course = session.get(Course.class, COURSE_ID);
-        Purchase.Key key = course.getPurchases().get(PURCHASE_NUMBER).getPurchaseListKey();
+        Purchase.Key key = course.getPurchases().get(PURCHASE_NUMBER).getPurchaseKey();
         Purchase purchase = session.get(Purchase.class, key);
         appLogger.info("- Purchase number: \t" + PURCHASE_NUMBER);
         appLogger.info("- Purchase date:   \t" + dateFormat.format(purchase.getSubscriptionDate()));
-        appLogger.info("- Purchase course: \t" + purchase.getPurchaseListKey().getCourse().getName());
-        appLogger.info("- Purchase student:\t" + purchase.getPurchaseListKey().getStudent().getName());
+        appLogger.info("- Purchase course: \t" + purchase.getPurchaseKey().getCourse().getName());
+        appLogger.info("- Purchase student:\t" + purchase.getPurchaseKey().getStudent().getName());
         appLogger.info("- Purchase price:\t" + purchase.getPrice());
         System.out.println();
     }

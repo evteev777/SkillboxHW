@@ -36,6 +36,6 @@ public class Student implements Serializable {
     @OneToMany(mappedBy = "subscriptionKey.student", fetch = FetchType.LAZY)
     private List<Subscription> subscriptions;
 
-    @OneToMany(mappedBy = "purchaseListKey.student", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "purchaseKey.student", fetch = FetchType.LAZY)
     private List<Purchase> purchases;
 }

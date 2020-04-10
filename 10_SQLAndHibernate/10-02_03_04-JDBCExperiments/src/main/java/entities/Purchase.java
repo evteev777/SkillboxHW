@@ -8,14 +8,14 @@ import java.util.Date;
 //Lombok
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"purchaseListKey", "price", "subscriptionDate"})
+@EqualsAndHashCode(of = {"purchaseKey", "price", "subscriptionDate"})
 
 @Entity
 @Table(name = "PurchaseList")
 public class Purchase {
 
     @EmbeddedId
-    private Key purchaseListKey;
+    private Key purchaseKey;
 
     private int price;
 

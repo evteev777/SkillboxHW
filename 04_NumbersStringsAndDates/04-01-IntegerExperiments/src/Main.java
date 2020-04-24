@@ -12,7 +12,6 @@ public class Main
 
     private static Integer sumDigits(Integer number)
     {
-        //@TODO: write code here
         String textString = Integer.toString(number);
         int currentSum = 0;
         for (int i = 0; i < textString.length(); i++) {

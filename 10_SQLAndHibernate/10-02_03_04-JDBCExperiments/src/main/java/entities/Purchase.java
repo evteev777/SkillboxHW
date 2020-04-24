@@ -8,14 +8,14 @@ import java.util.Date;
 //Lombok
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"purchaseKey", "price", "subscriptionDate"})
+@EqualsAndHashCode(of = {"pKey", "price", "subscriptionDate"})
 
 @Entity
 @Table(name = "PurchaseList")
 public class Purchase {
 
     @EmbeddedId
-    private Key purchaseKey;
+    private Key pKey;
 
     private int price;
 
@@ -37,5 +37,15 @@ public class Purchase {
         @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
         @JoinColumn(name = "course_name", referencedColumnName="name")
         protected Course course;
+
+        @Override
+        public String toString() {
+            return String.format("%-45s\t%-35s", course, student);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Purchase\t%s\t%8s\t%s", pKey, price, subscriptionDate);
     }
 }

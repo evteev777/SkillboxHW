@@ -8,14 +8,14 @@ import java.util.Date;
 // Lombok
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"subscriptionKey", "subscriptionDate"})
+@EqualsAndHashCode(of = {"sbsKey", "subscriptionDate"})
 
 @Entity
 @Table(name = "Subscriptions")
 public class Subscription implements Serializable {
 
     @EmbeddedId
-    private Key subscriptionKey;
+    private Key sbsKey;
 
     @Column(name = "subscription_date")
     @Temporal(TemporalType.TIMESTAMP)

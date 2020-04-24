@@ -33,9 +33,14 @@ public class Student implements Serializable {
     @ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
     private List<Course> courses = new ArrayList<>();
 
-    @OneToMany(mappedBy = "subscriptionKey.student", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "sbsKey.student", fetch = FetchType.LAZY)
     private List<Subscription> subscriptions;
 
-    @OneToMany(mappedBy = "purchaseKey.student", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "pKey.student", fetch = FetchType.LAZY)
     private List<Purchase> purchases;
+
+    @Override
+    public String toString() {
+        return "Student " + id + ". " + name;
+    }
 }

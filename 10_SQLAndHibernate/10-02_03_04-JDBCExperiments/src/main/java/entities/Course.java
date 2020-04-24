@@ -50,9 +50,14 @@ public class Course implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName="id"))
     private List<Student> students = new ArrayList<>();
 
-    @OneToMany(mappedBy = "subscriptionKey.course", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "sbsKey.course", fetch = FetchType.LAZY)
     private List<Subscription> subscriptions;
 
-    @OneToMany(mappedBy = "purchaseKey.course", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "pKey.course", fetch = FetchType.LAZY)
     private List<Purchase> purchases;
+
+    @Override
+    public String toString() {
+        return "Course " + id + ". " + name;
+    }
 }

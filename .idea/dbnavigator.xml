@@ -22,20 +22,16 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes>
       <connection connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
-        <schema name="information_schema" object-types="table, view, procedure, function" />
-        <schema name="mysql" object-types="table, view, procedure, function" />
-        <schema name="performance_schema" object-types="table, view, procedure, function" />
-        <schema name="skillbox" object-types="table, view, procedure, function" />
-        <schema name="sys" object-types="index, constraint, column, table, dataset trigger, view, procedure, function" />
+        <schema name="skillbox" object-types="procedure, column, constraint, view, index, function, table, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
-      <console name="Skillbox" type="STANDARD" schema="skillbox" session="Main">SHOW databases;</console>
+      <console name="Skillbox" type="STANDARD" schema="skillbox" session="Main"><![CDATA[SHOW databases;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -48,6 +44,7 @@
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Students" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="sys.sys_config" active-filter-id="" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Teachers_Courses" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.LinkedPurchaseList" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Teachers" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c" dataset="skillbox.Courses" active-filter-id="EMPTY_FILTER">
       <filter id="6753289c-3b7f-4349-8598-699b9d40c3cc" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
@@ -300,6 +297,8 @@
           <content-type name="Java" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JSON" enabled="true" />
+          <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />

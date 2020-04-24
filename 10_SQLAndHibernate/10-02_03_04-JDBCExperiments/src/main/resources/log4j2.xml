@@ -3,8 +3,8 @@
 
     <Properties>
         <Property name="logPath">logs</Property>
-        <Property name="appLogFile">app</Property>
-        <Property name="generalLogFile">general</Property>
+        <Property name="appLogFile">debug</Property>
+        <Property name="generalLogFile">all</Property>
     </Properties>
 
     <Appenders>

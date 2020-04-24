@@ -26,4 +26,9 @@ public class Teacher {
 
     @OneToMany(mappedBy = "teacher", fetch = FetchType.LAZY)
     private List<Course> courses;
+
+    @Override
+    public String toString() {
+        return "Teacher " + id + ". " + name;
+    }
 }

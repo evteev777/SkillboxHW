@@ -7,32 +7,48 @@ import java.io.Serializable;
 // Lombok
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"LinkedPurchaseKey"})
+@EqualsAndHashCode(of = {"lpKey"})
 
 @Entity
 @Table(name = "LinkedPurchaseList")
 public class LinkedPurchase implements Serializable {
 
     @EmbeddedId
-    private Key LinkedPurchaseKey;
+    private Key lpKey;
+
+
+
+    public LinkedPurchase(int courseId, int studentId) {
+        this.lpKey = new Key(courseId, studentId);
+    }
+
+    @Override
+    public String toString() {
+        return lpKey.toString();
+    }
 
     // Lombok
     @Data
     @NoArgsConstructor
-    @EqualsAndHashCode(of = {"studentId", "courseId"})
+    @EqualsAndHashCode(of = {"courseId", "studentId"})
 
     @Embeddable
     public static class Key implements Serializable {
 
+        @Column(name = "course_id")
+        int courseId;
 
         @Column(name = "student_id")
-//        @OneToOne(mappedBy = "purchaseKey.student")
-//        @JoinColumn(name = "student_id", referencedColumnName="id")
         int studentId;
 
-        @Column(name = "course_id")
-//        @OneToOne(mappedBy = "purchaseKey.course")
-//        @JoinColumn(name = "course_id", referencedColumnName="id")
-        int courseId;
+        public Key(int courseId, int studentId) {
+            this.courseId = courseId;
+            this.studentId = studentId;
+        }
+
+        @Override
+        public String toString() {
+            return "Course Id = " + courseId + "\t\tStudent Id = " + studentId;
+        }
     }
 }

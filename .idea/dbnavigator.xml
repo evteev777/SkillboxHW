@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes>
-      <connection connection-id="3e7de68f-b507-4494-88e7-272cc59b0f7c">
-        <schema name="skillbox" object-types="procedure, column, constraint, view, index, function, table, dataset trigger" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e7de68f-b507-4494-88e7-272cc59b0f7c">

@@ -1,0 +1,39 @@
+images/dst
+
+### Java
+/out/
+**/target/
+*.class
+*.ctxt
+hs_err_pid*
+
+### Logs
+*.log
+
+### Archives
+*.zip
+*.tar.gz
+*.rar
+
+### Pictures
+*.png
+*.gif
+
+### macOS
+Icon
+Network Trash Folder
+Temporary Items
+.DS_Store
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+._*

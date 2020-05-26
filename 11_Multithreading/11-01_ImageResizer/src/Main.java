@@ -138,7 +138,7 @@ public class Main {
         }
 
         for (int i = 0; i < scale; i++) {
-            image = resizeHabr(image, newWidth, 0);
+            image = resizeHabr(image, newWidth, (scale - 1) - i);
         }
 
         return image;

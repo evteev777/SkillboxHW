@@ -2,6 +2,8 @@
 //import org.imgscalr.Scalr;
 
 import javax.imageio.ImageIO;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +28,8 @@ public class Main {
         threadsCount = Math.min(threadsCount, PROCESSORS);
         System.out.println("\nThreads count: " + threadsCount + "\n-----");
 
-        File[] allFiles = new File(SRC_FOLDER).listFiles();
+        File[] allFiles = new File(SRC_FOLDER)
+                .listFiles();
 
         if (allFiles != null) {
             // Sorting - for distribution files of different sizes by threads
@@ -129,7 +132,7 @@ public class Main {
         if (width < newWidth) {
             System.out.println("Original width " + width + " px is lower " + newWidth + " px");
         } else if (width == newWidth) {
-            System.out.println("Image width already " + width + " px");
+            System.out.println("Image width is already " + width + " px, no need to convert");
         } else {
 
             int scale = 0;
@@ -140,14 +143,14 @@ public class Main {
             }
 
             HashSet<Integer> availableWidths = new HashSet<>();
-            for (int i = 0; i < 8; i++) {
+            for (int i = 1; i < 8; i++) {
                 availableWidths.add(newWidth * (int) Math.pow(2, i));
             }
 
             if (!availableWidths.contains(width)) {
                 image = resizeHabr(image, newWidth, scale);
                 System.out.printf("Resize - prepare:\t%5s px\t->\t %5s px%n", width, image.getWidth());
-            } else System.out.printf("Resize - prepare:\t%5s px in set %s and no need prepare %n",
+            } else System.out.printf("Resize - prepare:\t%5s px in set %s, no need to prepare %n",
                     width, availableWidths);
 
             for (int i = 0; i < scale; i++) {
@@ -161,22 +164,14 @@ public class Main {
 
     private static BufferedImage resizeHabr(BufferedImage image, int newWidth, int scale) {
 
-        int width = newWidth * (int) Math.pow(2, scale);
-        int height = (int) Math.round((double) width / image.getWidth() * image.getHeight());
+        double multiply = newWidth * Math.pow(2, scale) / image.getWidth();
+        System.out.println("Multiply: " + multiply);
 
-        BufferedImage resizedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        AffineTransformOp op = new AffineTransformOp(AffineTransform
+                .getScaleInstance(multiply, multiply),
+                AffineTransformOp.TYPE_BILINEAR);
 
-        double widthStep = (double) image.getWidth() / width;
-        double heightStep = (double) image.getHeight() / height;
-
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                int rgb = image.getRGB((int) (x * widthStep), (int) (y * heightStep));
-                resizedImage.setRGB(x, y, rgb);
-            }
-        }
-
-        return resizedImage;
+        return op.filter(image, null);
     }
 
     private static String formatFileName(File file) {

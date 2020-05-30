@@ -1,5 +1,5 @@
 
-//import org.imgscalr.Scalr;
+import org.imgscalr.Scalr;
 
 import javax.imageio.ImageIO;
 import java.awt.geom.AffineTransform;
@@ -19,20 +19,20 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         convertAllImages(300, 1);
-//        convertAllImages(300, PROCESSORS);
+        convertAllImages(300, PROCESSORS);
     }
 
     private static void convertAllImages(int newWidth, int threadsCount)
             throws InterruptedException {
 
         threadsCount = Math.min(threadsCount, PROCESSORS);
-        System.out.println("\nThreads count: " + threadsCount + "\n-----");
+        Log.info("\nThreads count: " + threadsCount + "\n-----");
 
         File[] allFiles = new File(SRC_FOLDER)
                 .listFiles();
 
         if (allFiles != null) {
-            // Sorting - for distribution files of different sizes by threads
+            // Sorting - for even distribution files of different sizes by threads
             Arrays.sort(allFiles, Comparator.comparing(File::length));
 
             List<List<File>> files = splitAllFiles(allFiles, threadsCount);
@@ -41,11 +41,11 @@ public class Main {
 
             convertFilesInThreads(files, threadsCount, newWidth);
 
-            System.out.println("Duration after all threads termination: " +
+            Log.info("Duration after all threads termination: " +
                     (System.currentTimeMillis() - start) + " ms");
 
         } else {
-            System.out.println("Directory " + SRC_FOLDER + " is empty");
+            Log.warn("Directory " + SRC_FOLDER + " is empty");
         }
     }
 
@@ -82,10 +82,12 @@ public class Main {
 
                 List<File> list = files.get(finalI);
 
-                for (File file : list) {
-
+                for (int j = 0; j < list.size(); j++) {
+                    File fileForScalr = list.get(j);
+                    File fileForHabr = list.get(list.size() - 1 - j);
                     try {
-                        convertImage(file, newWidth);
+                        convertImageScalr(fileForScalr, newWidth);
+                        convertImageHabr(fileForHabr, newWidth);
 
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
@@ -101,28 +103,36 @@ public class Main {
         }
     }
 
-    private static void convertImage(File file, int newWidth) throws IOException {
+    private static void convertImageScalr(File file, int newWidth) throws IOException {
 
         BufferedImage image = ImageIO.read(file);
 
         if (image != null) {
 
-//            BufferedImage newImageScalr = comverterScalr(image, newWidth);
-//            File newFileScalr = new File(DST_FOLDER + "/S-" + formatFileName(file));
-//            ImageIO.write(newImageScalr, "jpg", newFileScalr);
-
-            BufferedImage newImageHabr = converterHabr(image, newWidth);
-            File newFileHabr = new File(DST_FOLDER + "/H-" + formatFileName(file));
-            ImageIO.write(newImageHabr, "jpg", newFileHabr);
-
-//            print(file, image, newFileScalr, newImageScalr);
-            print(file, image, newFileHabr, newImageHabr);
+            BufferedImage newImageScalr = comverterScalr(image, newWidth);
+            File newFileScalr = new File(DST_FOLDER + "/S-" + formatFileName(file));
+            ImageIO.write(newImageScalr, "jpg", newFileScalr);
+            Log.convertInfo(file, image, newFileScalr, newImageScalr);
         }
     }
 
-//    private static BufferedImage comverterScalr(BufferedImage image, int imageSize) {
-//        return Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, imageSize, Scalr.OP_ANTIALIAS);
-//    }
+    private static BufferedImage comverterScalr(BufferedImage image, int imageSize) {
+        return Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, imageSize, Scalr.OP_ANTIALIAS);
+    }
+
+    private static void convertImageHabr(File file, int newWidth) throws IOException {
+
+        BufferedImage image = ImageIO.read(file);
+
+        if (image != null) {
+
+            BufferedImage newImageHabr = converterHabr(image, newWidth);
+            File newFileHabr = new File(DST_FOLDER + "/H-" + formatFileName(file));
+            String formatName = (newImageHabr.getType() == 5) ? "jpg" : "png";
+            ImageIO.write(newImageHabr, formatName, newFileHabr);
+            Log.convertInfo(file, image, newFileHabr, newImageHabr);
+        }
+    }
 
     private static BufferedImage converterHabr(BufferedImage image, int newWidth) {
 
@@ -130,9 +140,9 @@ public class Main {
         int width = image.getWidth();
 
         if (width < newWidth) {
-            System.out.println("Original width " + width + " px is lower " + newWidth + " px");
+            Log.debug("Original width " + width + " px is lower " + newWidth + " px");
         } else if (width == newWidth) {
-            System.out.println("Image width is already " + width + " px, no need to convert");
+            Log.debug("Image width is already " + width + " px, no need to convert");
         } else {
 
             int scale = 0;
@@ -149,14 +159,16 @@ public class Main {
 
             if (!availableWidths.contains(width)) {
                 image = resizeHabr(image, newWidth, scale);
-                System.out.printf("Resize - prepare:\t%5s px\t->\t %5s px%n", width, image.getWidth());
-            } else System.out.printf("Resize - prepare:\t%5s px in set %s, no need to prepare %n",
-                    width, availableWidths);
+                Log.debug(String.format("Resize - prepare:\t%5s px\t->\t %5s px",
+                        width, image.getWidth()));
+            } else Log.debug(String.format("Resize - prepare:\t%5s px in set %s, no need to prepare",
+                    width, availableWidths));
 
             for (int i = 0; i < scale; i++) {
                 tempWidth = image.getWidth();
                 image = resizeHabr(image, newWidth, (scale - 1) - i);
-                System.out.printf("Resize - step %s:  \t%5s px\t->\t %5s px%n", i, tempWidth, image.getWidth());
+                Log.debug(String.format("Resize - step %s:  \t%5s px\t->\t %5s px",
+                        i, tempWidth, image.getWidth()));
             }
         }
         return image;
@@ -165,7 +177,7 @@ public class Main {
     private static BufferedImage resizeHabr(BufferedImage image, int newWidth, int scale) {
 
         double multiply = newWidth * Math.pow(2, scale) / image.getWidth();
-        System.out.println("Multiply: " + multiply);
+        Log.debug("Multiply: " + multiply);
 
         AffineTransformOp op = new AffineTransformOp(AffineTransform
                 .getScaleInstance(multiply, multiply),
@@ -174,18 +186,8 @@ public class Main {
         return op.filter(image, null);
     }
 
-    private static String formatFileName(File file) {
+    static String formatFileName(File file) {
         String fileName = file.getName().substring(0, file.getName().lastIndexOf("."));
         return (fileName.length() <= 8 ? fileName : fileName.substring(0, 8) + "~") + ".jpg";
-    }
-
-    private static void print(File file, BufferedImage image, File newFile, BufferedImage newImage) {
-        System.out.printf(
-                "Converted:\tThread %s\t%-13s\t%6s kb\t%s x %s px\t-> \t%-12s\t%6s kb\t%s x %s px%n-----%n",
-                Thread.currentThread().getId(),
-                formatFileName(file), file.length() / 1024,
-                image.getWidth(), image.getHeight(),
-                formatFileName(newFile), newFile.length() / 1024,
-                newImage.getWidth(), newImage.getHeight());
     }
 }

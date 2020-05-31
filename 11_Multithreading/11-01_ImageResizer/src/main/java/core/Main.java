@@ -1,3 +1,4 @@
+package core;
 
 import org.imgscalr.Scalr;
 
@@ -11,8 +12,8 @@ import java.util.*;
 
 public class Main {
 
-    private static final String SRC_FOLDER = "images/src";
-    private static final String DST_FOLDER = "images/dst";
+    private static final String SRC_FOLDER = "src/main/resources/images/src";
+    private static final String DST_FOLDER = "src/main/resources/images/dst";
 
     private static final int PROCESSORS = Runtime.getRuntime().availableProcessors();
 
@@ -26,10 +27,12 @@ public class Main {
             throws InterruptedException {
 
         threadsCount = Math.min(threadsCount, PROCESSORS);
-        Log.info("\nThreads count: " + threadsCount + "\n-----");
 
-        File[] allFiles = new File(SRC_FOLDER)
-                .listFiles();
+        Log.debug("Conversion start");
+        Log.info("\nImage conversion in progress. Please wait...");
+        Log.info(String.format("%nTHREADS COUNT: %d", threadsCount));
+
+        File[] allFiles = new File(SRC_FOLDER).listFiles();
 
         if (allFiles != null) {
             // Sorting - for even distribution files of different sizes by threads
@@ -39,13 +42,13 @@ public class Main {
 
             long start = System.currentTimeMillis();
 
-            convertFilesInThreads(files, threadsCount, newWidth);
+            convertFilesInThreads(files, newWidth);
 
-            Log.info("Duration after all threads termination: " +
-                    (System.currentTimeMillis() - start) + " ms");
-
+            Log.info(String.format("Duration after all threads termination: %d ms",
+                    (System.currentTimeMillis() - start)));
+            Log.debug("Conversion finish\n");
         } else {
-            Log.warn("Directory " + SRC_FOLDER + " is empty");
+            Log.warn(String.format("Directory %s is empty", SRC_FOLDER));
         }
     }
 
@@ -69,28 +72,19 @@ public class Main {
         return lists;
     }
 
-    private static void convertFilesInThreads(
-            List<List<File>> files, int threadsCount, int newWidth)
+    private static void convertFilesInThreads(List<List<File>> files, int newWidth)
             throws InterruptedException {
 
         List<Thread> threads = new LinkedList<>();
-
-        for (int i = 0; i < threadsCount; i++) {
-            int finalI = i;
+        for(List<File> fileList : files) {
 
             threads.add(new Thread(() -> {
-
-                List<File> list = files.get(finalI);
-
-                for (int j = 0; j < list.size(); j++) {
-                    File fileForScalr = list.get(j);
-                    File fileForHabr = list.get(list.size() - 1 - j);
+                for (File file : fileList) {
                     try {
-                        convertImageScalr(fileForScalr, newWidth);
-                        convertImageHabr(fileForHabr, newWidth);
-
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
+                        convertImageScalr(file, newWidth);
+                        convertImageHabr(file, newWidth);
+                    } catch (IOException e) {
+                        Log.error(e);
                     }
                 }
             }));
@@ -108,29 +102,34 @@ public class Main {
         BufferedImage image = ImageIO.read(file);
 
         if (image != null) {
+            long startTime = System.currentTimeMillis();
 
-            BufferedImage newImageScalr = comverterScalr(image, newWidth);
+            BufferedImage newImageScalr =
+                    Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, newWidth, Scalr.OP_ANTIALIAS);
+
             File newFileScalr = new File(DST_FOLDER + "/S-" + formatFileName(file));
             ImageIO.write(newImageScalr, "jpg", newFileScalr);
-            Log.convertInfo(file, image, newFileScalr, newImageScalr);
+
+            long duration = System.currentTimeMillis() - startTime;
+            Log.convertInfo(file, image, newFileScalr, newImageScalr, duration);
         }
     }
 
-    private static BufferedImage comverterScalr(BufferedImage image, int imageSize) {
-        return Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, imageSize, Scalr.OP_ANTIALIAS);
-    }
-
     private static void convertImageHabr(File file, int newWidth) throws IOException {
+        long startTime = System.currentTimeMillis();
 
         BufferedImage image = ImageIO.read(file);
 
         if (image != null) {
 
             BufferedImage newImageHabr = converterHabr(image, newWidth);
+
             File newFileHabr = new File(DST_FOLDER + "/H-" + formatFileName(file));
             String formatName = (newImageHabr.getType() == 5) ? "jpg" : "png";
             ImageIO.write(newImageHabr, formatName, newFileHabr);
-            Log.convertInfo(file, image, newFileHabr, newImageHabr);
+
+            long duration = System.currentTimeMillis() - startTime;
+            Log.convertInfo(file, image, newFileHabr, newImageHabr, duration);
         }
     }
 
@@ -140,9 +139,9 @@ public class Main {
         int width = image.getWidth();
 
         if (width < newWidth) {
-            Log.debug("Original width " + width + " px is lower " + newWidth + " px");
+            Log.debug(String.format("Original width %d px is lower %d px", width, newWidth));
         } else if (width == newWidth) {
-            Log.debug("Image width is already " + width + " px, no need to convert");
+            Log.debug(String.format("Image width is already %d px, no need to convert", width));
         } else {
 
             int scale = 0;
@@ -177,7 +176,7 @@ public class Main {
     private static BufferedImage resizeHabr(BufferedImage image, int newWidth, int scale) {
 
         double multiply = newWidth * Math.pow(2, scale) / image.getWidth();
-        Log.debug("Multiply: " + multiply);
+        Log.debug(String.format("Multiply: %s", multiply));
 
         AffineTransformOp op = new AffineTransformOp(AffineTransform
                 .getScaleInstance(multiply, multiply),
@@ -187,7 +186,7 @@ public class Main {
     }
 
     static String formatFileName(File file) {
-        String fileName = file.getName().substring(0, file.getName().lastIndexOf("."));
+        String fileName = file.getName().substring(0, file.getName().lastIndexOf('.'));
         return (fileName.length() <= 8 ? fileName : fileName.substring(0, 8) + "~") + ".jpg";
     }
 }

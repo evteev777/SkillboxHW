@@ -2,7 +2,7 @@
 <Configuration status="INFO">
 
     <Properties>
-        <Property name="logPath">logs</Property>
+        <Property name="logPath">src/main/resources/logs</Property>
         <Property name="fileName">app</Property>
     </Properties>
 

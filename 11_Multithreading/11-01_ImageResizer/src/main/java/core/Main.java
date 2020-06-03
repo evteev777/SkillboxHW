@@ -48,7 +48,7 @@ public class Main {
                     (System.currentTimeMillis() - start)));
             Log.debug("Conversion finish\n");
         } else {
-            Log.warn(String.format("Directory %s is empty", SRC_FOLDER));
+            Log.warn(String.format("Directory %s is empty or not exist", SRC_FOLDER));
         }
     }
 

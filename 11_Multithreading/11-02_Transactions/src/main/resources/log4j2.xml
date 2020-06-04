@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Properties>
+        <Property name="logPath">logs</Property>
+        <Property name="fileName">app</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Log" target="SYSTEM_OUT">
+            <PatternLayout pattern="%m%n"/>
+        </Console>
+        <File name="File" fileName="${logPath}/${fileName}.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %p\t%c{1.}: %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <logger level="ALL" name="Log">
+            <appender-ref ref="Log" level="INFO"/>
+        </logger>
+        <root level="ALL">
+            <appender-ref ref="File" level="ALL"/>
+        </root>
+    </Loggers>
+
+</Configuration>

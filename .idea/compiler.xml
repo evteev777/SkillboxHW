@@ -22,6 +22,7 @@
       <module name="10-02_03_04-JDBCExperiments" target="1.8" />
       <module name="11-01_ImageResizer" target="1.8" />
       <module name="11-02_Transactions" target="1.8" />
+      <module name="11-02_Transactions_old" target="1.8" />
       <module name="Maven" target="1.5" />
     </bytecodeTargetLevel>
   </component>

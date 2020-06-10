@@ -12,7 +12,9 @@ public class Main {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        Log.threadStart();
+        long startTime = System.currentTimeMillis();
+        Log.timerStart();
+
         AtomicInteger transfersCount = new AtomicInteger();
 
         Bank bank = new Bank("New Bank");
@@ -32,25 +34,21 @@ public class Main {
         Log.info("Difference with start bank balance: " +
                 bank.getBankBalance().subtract(startBankBalance));
         Log.counters(transfersCount, bank);
-        Log.threadFinish();
+        Log.timerFinish(System.currentTimeMillis() - startTime);
     }
 
     private static void createRandomAccounts(Bank bank, int count) {
         for (int i = 0; i < count; i++) {
             int maxBalance = 2_000_000;
             long money = RANDOM.nextInt(maxBalance);
+
             bank.createAccount(money);
         }
     }
 
     private static void randomTransfer(Bank bank) {
         String fromAccountNum = bank.getRandomAccountNum();
-
-        String toAccountNum;
-        do {
-            toAccountNum = bank.getRandomAccountNum();
-        } while (fromAccountNum.equals(toAccountNum));
-
+        String toAccountNum = bank.getRandomAccountNum();
         long amount = (long) (bank.getBalance(fromAccountNum) * RANDOM.nextDouble());
 
         bank.transfer(fromAccountNum, toAccountNum, amount);

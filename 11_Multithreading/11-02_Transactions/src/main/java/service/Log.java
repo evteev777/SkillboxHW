@@ -27,12 +27,14 @@ public class Log {
         LOGGER.error(e.getStackTrace());
     }
 
-    public static void threadStart() {
-        LOGGER.debug(String.format("Start %s", Thread.currentThread().getName()));
+    public static void timerStart() {
+        String s = String.format("Start %s", Thread.currentThread().getName());
+        LOGGER.debug(s);
     }
 
-    public static void threadFinish() {
-        LOGGER.debug(String.format("Finish %s", Thread.currentThread().getName()));
+    public static void timerFinish(long time) {
+        String s = String.format("Finish %s - %s", Thread.currentThread().getName(), time);
+        LOGGER.debug(s);
     }
 
     public static void created(Object obj) {
@@ -62,9 +64,17 @@ public class Log {
     }
 
     public static void counters(AtomicInteger transfersCount, Bank bank) {
-        LOGGER.debug(String.format("Transfers count:  \t%d", transfersCount.intValue()));
-        LOGGER.debug(String.format("Ext. verify count:\t%d", bank.extFraudCheckCount.intValue()));
-        LOGGER.debug(String.format("Call Police count:\t%d", bank.callPoliceCount.intValue()));
+        String tc   = String.format("Transfers count:      \t%d",
+                transfersCount.intValue());
+        LOGGER.debug(tc);
+
+        String efcc = String.format("Ext.fraud check count:\t%d",
+                bank.extFraudCheckCount.intValue());
+        LOGGER.debug(efcc);
+
+        String cpc  = String.format("Call Police count:    \t%d",
+                bank.callPoliceCount.intValue());
+        LOGGER.debug(cpc);
     }
 
 }

@@ -51,26 +51,56 @@ public class Bank {
 
         Log.transfer(fromAccount.getNumber(), toAccount.getNumber(), amount);
 
+        if (isTransferParamsIsNotCorrect(amount, fromAccount, toAccount)) return;
+
+        fromAccount.setMoney(fromAccount.getMoney() - amount);
+        toAccount.setMoney(toAccount.getMoney() + amount);
+
+        if (amount > fraudAmountLimit)
+            fraudCheck(fromAccount, toAccount);
+    }
+
+    private boolean isTransferParamsIsNotCorrect(long amount, Account fromAccount, Account toAccount) {
+        if (isZeroAmount(amount)) return true;
+        if (isSameAccount(fromAccount, toAccount)) return true;
+        if (isAccountBlocked(fromAccount) || isAccountBlocked(toAccount)) return true;
+
+        return false;
+    }
+
+    private boolean isZeroAmount(long amount) {
         if (amount == 0) {
-            Log.info("ZERO-SUM TRANSFERS ARE NOT ALLOWED !!!");
-
-        } else if (fromAccount.isBlocked() || toAccount.isBlocked()) {
-            Log.info("TRANSFER BETWEEN BLOCKED ACCOUNTS DENIED !!!");
-            if (fromAccount.isBlocked())
-                Log.info(fromAccount.toString());
-            if (toAccount.isBlocked())
-                Log.info(toAccount.toString());
-
-        } else {
-            fromAccount.setMoney(fromAccount.getMoney() - amount);
-            toAccount.setMoney(toAccount.getMoney() + amount);
-
-            if (amount > fraudAmountLimit)
-                fraudCheck(fromAccount, toAccount);
+            Log.info("ZERO-AMOUNT TRANSFERS ARE NOT ALLOWED !!!");
+            return true;
         }
+        return false;
+    }
+
+    private boolean isSameAccount(Account fromAccount, Account toAccount) {
+        if (fromAccount == toAccount) {
+            Log.info("TRANSFER BETWEEN THE SAME ACCOUNT IS NOT ALLOWED !!!");
+            Log.info("From: " + fromAccount.toString());
+            Log.info("To:   " + toAccount.toString());
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isAccountBlocked(Account account) {
+        if (account.isBlocked()) {
+            Log.info("TRANSFER BETWEEN BLOCKED ACCOUNTS DENIED !!!");
+            if (account.isBlocked()) {
+                Log.info(account.toString());
+            }
+            return true;
+        }
+        return false;
     }
 
     private void fraudCheck(Account fromAccount, Account toAccount) {
+        long startTime = System.currentTimeMillis();
+        Log.timerStart();
+
         boolean isFraud = RANDOM.nextDouble() < fraudPercent;
 
         if (isFraud) {
@@ -94,10 +124,13 @@ public class Bank {
                 Log.error(e);
             }
         }
+        Log.timerFinish(System.currentTimeMillis() - startTime);
     }
 
     private void extFraudCheck(Account account) {
-        Log.threadStart();
+        long startTime = System.currentTimeMillis();
+        Log.timerStart();
+
         Log.info("Ext. check start:  \tAccount " + account.getNumber());
         extFraudCheckCount.incrementAndGet();
 
@@ -118,7 +151,7 @@ public class Bank {
 
         extFraudCheckCount.decrementAndGet();
         Log.info("Ext.verify finish: \tAccount " + account.getNumber());
-        Log.threadFinish();
+        Log.timerFinish(System.currentTimeMillis() - startTime);
     }
 
     public long getBalance(String accountNum) {

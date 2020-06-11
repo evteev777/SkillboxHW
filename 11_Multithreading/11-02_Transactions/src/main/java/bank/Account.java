@@ -8,7 +8,7 @@ public class Account {
     private long money;
     private boolean isBlocked;
 
-    public Account(String number, long money) {
+    Account(String number, long money) {
         this.number = number;
         this.money = money;
         this.isBlocked = false;

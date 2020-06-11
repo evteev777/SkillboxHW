@@ -31,8 +31,8 @@ public class Bank {
         this.name = name;
         this.accounts = new HashMap<>();
 
-        this.fraudAmountLimit = 50_000;
-        this.fraudPercent = 0.05;
+        this.fraudAmountLimit = 50_000; // should be positive
+        this.fraudPercent = 0.05; // should be between 0 and 1
         this.fraudCheckDuration = 100; // ms
         this.extFraudCheckDuration = 300; // ms
 
@@ -62,15 +62,23 @@ public class Bank {
 
     private boolean isTransferParamsIsNotCorrect(long amount, Account fromAccount, Account toAccount) {
         if (isZeroAmount(amount)) return true;
-        if (isSameAccount(fromAccount, toAccount)) return true;
-        if (isAccountBlocked(fromAccount) || isAccountBlocked(toAccount)) return true;
-
-        return false;
+        else if (isZeroBalance(fromAccount)) return true;
+        else if (isSameAccount(fromAccount, toAccount)) return true;
+        else if (isAccountBlocked(fromAccount) || isAccountBlocked(toAccount)) return true;
+        else return false;
     }
 
     private boolean isZeroAmount(long amount) {
         if (amount == 0) {
             Log.info("ZERO-AMOUNT TRANSFERS ARE NOT ALLOWED !!!");
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isZeroBalance(Account account) {
+        if (account.getMoney() == 0) {
+            Log.info("TRANSFER FROM ACCOUNT WITH ZERO-BALANCE ARE NOT ALLOWED !!!");
             return true;
         }
         return false;
@@ -122,6 +130,7 @@ public class Bank {
 
             } catch (InterruptedException e) {
                 Log.error(e);
+                Thread.currentThread().interrupt();
             }
         }
         Log.timerFinish(System.currentTimeMillis() - startTime);
@@ -138,6 +147,7 @@ public class Bank {
             Thread.sleep(extFraudCheckDuration);
         } catch (InterruptedException e) {
             Log.error(e);
+            Thread.currentThread().interrupt();
         }
 
         boolean isTransferValid = RANDOM.nextBoolean();

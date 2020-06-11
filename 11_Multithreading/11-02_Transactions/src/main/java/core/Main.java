@@ -19,7 +19,7 @@ public class Main {
 
         Bank bank = new Bank("New Bank");
 
-        int accountsCount = 9;
+        int accountsCount = 10;
         createRandomAccounts(bank, accountsCount);
 
         BigInteger startBankBalance = bank.getBankBalance();
@@ -38,10 +38,9 @@ public class Main {
     }
 
     private static void createRandomAccounts(Bank bank, int count) {
+        int maxBalance = 2_000_000;
         for (int i = 0; i < count; i++) {
-            int maxBalance = 2_000_000;
             long money = RANDOM.nextInt(maxBalance);
-
             bank.createAccount(money);
         }
     }

@@ -14,10 +14,6 @@ public class Log {
 
     private static final Logger LOGGER = LogManager.getLogger("Log");
 
-    public static void debug(String msg) {
-        LOGGER.debug(msg);
-    }
-
     public static void info(String msg) {
         LOGGER.info(msg);
     }

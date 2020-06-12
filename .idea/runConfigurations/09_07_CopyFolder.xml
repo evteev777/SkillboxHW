@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="09-07-CopyFolder" type="Application" factoryName="Application" folderName="09_FilesAndNetwork">
+    <option name="MAIN_CLASS_NAME" value="Main" />
+    <module name="09-07-CopyFolder" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Maven" />
         <module name="11-02_Transactions" />
         <module name="10-01-AvgCoursesPurchases" />
         <module name="08-05-SPBMetro" />

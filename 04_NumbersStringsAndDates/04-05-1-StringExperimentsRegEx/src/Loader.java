@@ -11,7 +11,7 @@ public class Loader
         int[] salary = new int[salaryText.length];
         int sum = 0;
 
-        for (int i = 0; i < salaryText.length; i++) {
+        for (int i = 0; i < 3; i++) {
             salary[i] = Integer.parseInt(salaryText[i]);
             sum += salary[i];
         }

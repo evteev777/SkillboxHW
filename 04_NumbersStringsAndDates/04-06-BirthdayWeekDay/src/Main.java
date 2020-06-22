@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LocalDate birthday = LocalDate.of(1975, 7, 18);
+        LocalDate birthday = LocalDate.of(1985, 7, 18);
         LocalDate currentBirthday = birthday;
 
         Period p = Period.between(birthday, LocalDate.now());

@@ -1,5 +1,3 @@
-src/main/resources/images/dst
-
 ### Java
 /out/
 **/target/
@@ -16,6 +14,8 @@ hs_err_pid*
 *.rar
 
 ### Pictures
+*.jpg
+*.jpeg
 *.png
 *.gif
 
@@ -37,3 +37,5 @@ Temporary Items
 .com.apple.timemachine.donotpresent
 .apdisk
 ._*
+/src/main/resources/images/dst/
+/src/main/resources/images/src/

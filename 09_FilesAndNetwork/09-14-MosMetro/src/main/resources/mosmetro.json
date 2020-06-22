@@ -1356,6 +1356,36 @@
       "isClosed": false
     },
     {
+      "name": "Лефортово",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
+      "name": "Авиамоторная",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
+      "name": "Нижегородская",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
+      "name": "Стахановская",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
+      "name": "Окская",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
+      "name": "Юго-Восточная",
+      "lineNumber": "15",
+      "isClosed": false
+    },
+    {
       "name": "Косино",
       "lineNumber": "15",
       "isClosed": false
@@ -1736,10 +1766,6 @@
         {
           "name": "Парк Победы",
           "lineNumber": "08А"
-        },
-        {
-          "name": "Кутузовская",
-          "lineNumber": "14"
         }
       ]
     },
@@ -2194,6 +2220,16 @@
       ]
     },
     {
+      "name": "Авиамоторная",
+      "lineNumber": "08",
+      "connected_stations": [
+        {
+          "name": "Авиамоторная",
+          "lineNumber": "15"
+        }
+      ]
+    },
+    {
       "name": "Марксистская",
       "lineNumber": "08",
       "connected_stations": [
@@ -2262,10 +2298,6 @@
         {
           "name": "Парк Победы",
           "lineNumber": "03"
-        },
-        {
-          "name": "Кутузовская",
-          "lineNumber": "14"
         }
       ]
     },
@@ -2804,16 +2836,8 @@
       "lineNumber": "14",
       "connected_stations": [
         {
-          "name": "Парк Победы",
-          "lineNumber": "03"
-        },
-        {
           "name": "Кутузовская",
           "lineNumber": "04"
-        },
-        {
-          "name": "Парк Победы",
-          "lineNumber": "08А"
         }
       ]
     },
@@ -2834,6 +2858,16 @@
         {
           "name": "Спортивная",
           "lineNumber": "01"
+        }
+      ]
+    },
+    {
+      "name": "Нижегородская",
+      "lineNumber": "14",
+      "connected_stations": [
+        {
+          "name": "Нижегородская",
+          "lineNumber": "15"
         }
       ]
     },
@@ -2930,12 +2964,32 @@
       ]
     },
     {
+      "name": "Авиамоторная",
+      "lineNumber": "15",
+      "connected_stations": [
+        {
+          "name": "Авиамоторная",
+          "lineNumber": "08"
+        }
+      ]
+    },
+    {
       "name": "Косино",
       "lineNumber": "15",
       "connected_stations": [
         {
           "name": "Лермонтовский проспект",
           "lineNumber": "07"
+        }
+      ]
+    },
+    {
+      "name": "Нижегородская",
+      "lineNumber": "15",
+      "connected_stations": [
+        {
+          "name": "Нижегородская",
+          "lineNumber": "14"
         }
       ]
     }
@@ -3197,16 +3251,8 @@
         "lineNumber": "03"
       },
       {
-        "name": "Кутузовская",
-        "lineNumber": "04"
-      },
-      {
         "name": "Парк Победы",
         "lineNumber": "08А"
-      },
-      {
-        "name": "Кутузовская",
-        "lineNumber": "14"
       }
     ],
     [
@@ -3431,6 +3477,16 @@
     ],
     [
       {
+        "name": "Авиамоторная",
+        "lineNumber": "08"
+      },
+      {
+        "name": "Авиамоторная",
+        "lineNumber": "15"
+      }
+    ],
+    [
+      {
         "name": "Площадь Ильича",
         "lineNumber": "08"
       },
@@ -3609,6 +3665,16 @@
       {
         "name": "Шелепиха",
         "lineNumber": "14"
+      }
+    ],
+    [
+      {
+        "name": "Нижегородская",
+        "lineNumber": "14"
+      },
+      {
+        "name": "Нижегородская",
+        "lineNumber": "15"
       }
     ]
   ]

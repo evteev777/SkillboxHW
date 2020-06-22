@@ -1,7 +1,7 @@
-package core;
+package ru.evteev;
 
-import bank.Bank;
-import service.Log;
+import ru.evteev.bank.Bank;
+import ru.evteev.utils.Log;
 
 import java.math.BigInteger;
 import java.util.Random;

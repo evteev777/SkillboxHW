@@ -1,6 +1,6 @@
-package bank;
+package ru.evteev.bank;
 
-import service.Log;
+import ru.evteev.utils.Log;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

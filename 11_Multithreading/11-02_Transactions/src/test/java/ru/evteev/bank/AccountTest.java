@@ -1,4 +1,4 @@
-package bank;
+package ru.evteev.bank;
 
 import org.junit.After;
 import org.junit.AfterClass;

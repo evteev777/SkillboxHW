@@ -1,7 +1,7 @@
-package service;
+package ru.evteev.utils;
 
-import bank.Account;
-import bank.Bank;
+import ru.evteev.bank.Account;
+import ru.evteev.bank.Bank;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

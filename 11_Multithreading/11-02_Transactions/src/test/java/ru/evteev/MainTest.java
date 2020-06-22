@@ -1,6 +1,6 @@
-package core;
+package ru.evteev;
 
-import bank.Bank;
+import ru.evteev.bank.Bank;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

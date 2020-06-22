@@ -1,6 +1,6 @@
-package bank;
+package ru.evteev.bank;
 
-import service.Log;
+import ru.evteev.utils.Log;
 
 public class Account {
 

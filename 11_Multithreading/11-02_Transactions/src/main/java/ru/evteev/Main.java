@@ -25,7 +25,7 @@ public class Main {
         BigInteger startBankBalance = bank.getBankBalance();
 
         // To make a transfer, at least two accounts must be not blocked
-        while (bank.getAccountsCount() - bank.callPoliceCount.intValue() >= 2) {
+        while (bank.getUnblockedAccountsCount() >= 2) {
             randomTransfer(bank);
             transfersCount.incrementAndGet();
             Log.counters(transfersCount, bank);

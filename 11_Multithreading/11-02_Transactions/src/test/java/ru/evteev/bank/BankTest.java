@@ -1,113 +1,128 @@
 package ru.evteev.bank;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import ru.evteev.utils.Log;
+
+import java.lang.reflect.Field;
+import java.math.BigInteger;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class BankTest {
 
-    long fraudAmountLimit;
+    private Bank bank;
 
-    Bank bank;
+    private long accountBalance;
 
-    @BeforeClass
-    public static void globalSetup() {
-    }
+    // TRANSFER:
+    private String from; // Account "from" number
+    private String to;   // Account "To" number
+    private long amount;
 
     @Before
     public void setup() {
         bank = new Bank("Test Bank");
-        fraudAmountLimit = 50_000;
+
+        accountBalance = 50_000; // equals fraud limit
+        bank.createAccount(accountBalance);
+        bank.createAccount(accountBalance);
+
+        from = bank.getRandomAccountNum();
+        to = getAnotherRandomAccountNum(from);
+
+        amount = getRandomTransferAmount(from);
     }
 
     @Test
     public void createAccountTest() {
-        long amount = 2_000_000;
+        amount = 2_000_000;
         int before = bank.getAccountsCount();
         bank.createAccount(amount);
         int after = bank.getAccountsCount();
-        Assert.assertEquals(1, after - before);
+        Assert.assertEquals(1, (long) after - before);
     }
 
     @Test
     public void noFraudTransferShouldBeCompleted() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        bank.createAccount(balance);
-
-        String from = bank.getRandomAccountNum();
-
-        String to;
-        do {
-            to = bank.getRandomAccountNum();
-        } while (to.equals(from));
-
-        bank.transfer(from, to, balance);
-
-        Assert.assertEquals(balance * 2, bank.getBalance(to) - bank.getBalance(from));
-    }
-
-    @Test
-    public void fraudTransferShouldNotBeCompleted() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        bank.createAccount(balance);
-
-        String from = bank.getRandomAccountNum();
-
-        String to;
-        do {
-            to = bank.getRandomAccountNum();
-        } while (to.equals(from));
-
-        bank.transfer(from, to, balance);
-
-        Assert.assertEquals(balance * 2, bank.getBalance(to) - bank.getBalance(from));
+        bank.transfer(from, to, amount);
+        Log.info("After transfer:");
+        Log.accountState(bank, from);
+        Log.accountState(bank, to);
+        Assert.assertEquals(amount * 2,
+                bank.getBalance(to) - bank.getBalance(from));
     }
 
     @Test
     public void transferWithZeroAmountShouldNotBeCompleted() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        bank.createAccount(balance);
-
-        String from = bank.getRandomAccountNum();
-        String to;
-        do {
-            to = bank.getRandomAccountNum();
-        } while (to.equals(from));
-
-        long amount = 0;
-
+        amount = 0;
         Assert.assertFalse(isTransferChangedBalances(from, to, amount));
     }
 
     @Test
     public void transferWithZeroFromAccBalanceShouldNotBeCompleted() {
         long balance = 0;
-        bank.createAccount(balance);
-        bank.createAccount(balance);
-
-        String from = bank.getRandomAccountNum();
-        String to = bank.getRandomAccountNum();
-        long amount = 100;
-
+        setBalance(bank, from, balance);
         Assert.assertFalse(isTransferChangedBalances(from, to, amount));
     }
 
     @Test
     public void transferBetweenSameAccountShouldNotBeCompleted() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        bank.createAccount(balance);
+        to = from;
+        Assert.assertFalse(isTransferChangedBalances(from, to, amount));
+    }
 
-        String accountNum = bank.getRandomAccountNum();
-        long amount = 100;
+    @Test
+    public void transferFromBlockedAccountShouldNotBeCompleted() {
+        blockAccount(bank, from);
+        Assert.assertFalse(isTransferChangedBalances(from, to, amount));
+    }
 
-        Assert.assertFalse(isTransferChangedBalances(accountNum, accountNum, amount));
+    @Test
+    public void transferToBlockedAccountShouldNotBeCompleted() {
+        blockAccount(bank, to);
+        Assert.assertFalse(isTransferChangedBalances(from, to, amount));
+    }
+
+    @Test
+    public void randomAccountNumShouldNotBeNull() {
+        Assert.assertNotNull(bank.getRandomAccountNum());
+    }
+
+    @Test
+    public void getAccountsCountTest() {
+        int count = 10;
+        int bankAccountsCount = bank.getAccountsCount();
+        for (int i = 0; i < count - bankAccountsCount; i++) {
+            bank.createAccount(accountBalance);
+        }
+        Assert.assertEquals(count, bank.getAccountsCount());
+    }
+
+    @Test
+    public void getBalanceTest() {
+        Assert.assertEquals(accountBalance, bank.getBalance(from));
+    }
+
+    @Test
+    public void getBankBalanceTest() {
+        BigInteger bankBalance =
+                BigInteger.valueOf(accountBalance * bank.getAccountsCount());
+        Assert.assertEquals(bankBalance, bank.getBankBalance());
+    }
+
+    // SERVICE METHODS
+
+    private String getAnotherRandomAccountNum(String from) {
+        do {
+            to = bank.getRandomAccountNum();
+        } while (to.equals(from));
+        return to;
+    }
+
+    private long getRandomTransferAmount(String from) {
+        return (long) (bank.getBalance(from) * Math.random());
     }
 
     private boolean isTransferChangedBalances(String from, String to, long amount) {
@@ -119,48 +134,36 @@ public class BankTest {
         boolean iaFromBalanceChanged = bank.getBalance(from) != fromBalanceBefore;
         boolean isToBalanceChanged = bank.getBalance(to) != toBalanceBefore;
 
-        return iaFromBalanceChanged | isToBalanceChanged;
+        return iaFromBalanceChanged || isToBalanceChanged;
     }
 
-    @Test
-    public void getBalanceTest() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        String accountNum = bank.getRandomAccountNum();
-        Assert.assertEquals(balance, bank.getBalance(accountNum));
-    }
+    private void blockAccount(Bank bank, String from) {
+        try {
+            Field accountsField = Bank.class.getDeclaredField("accounts");
+            accountsField.setAccessible(true);
+            Map<String, Account> accounts =
+                    (ConcurrentHashMap<String, Account>) accountsField.get(bank);
+            Account account = accounts.get(from);
+            account.block();
 
-    @Test
-    public void randomAccountNumShouldNotBeNull() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        Assert.assertNotNull(bank.getRandomAccountNum());
-    }
-
-    @Test
-    public void getAccountsCountTest() {
-        int count = 100;
-        long balance = fraudAmountLimit;
-        for (int i = 0; i < count; i++) {
-            bank.createAccount(balance);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            Log.error(e);
+            Assert.fail("Account can't be blocked");
         }
-        Assert.assertEquals(count, bank.getAccountsCount());
     }
 
-    @Test
-    public void getBankBalanceTest() {
-        long balance = fraudAmountLimit;
-        bank.createAccount(balance);
-        String accountNum = bank.getRandomAccountNum();
-        Assert.assertEquals(balance, bank.getBalance(accountNum));
-    }
+    private void setBalance(Bank bank, String from, long balance) {
+        try {
+            Field accountsField = Bank.class.getDeclaredField("accounts");
+            accountsField.setAccessible(true);
+            Map<String, Account> accounts =
+                    (ConcurrentHashMap<String, Account>) accountsField.get(bank);
+            Account account = accounts.get(from);
+            account.setMoney(balance);
 
-    @After
-    public void afterMethod() {
-        bank = null;
-    }
-
-    @AfterClass
-    public static void tearDown() {
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            Log.error(e);
+            Assert.fail("Can't set account balance");
+        }
     }
 }

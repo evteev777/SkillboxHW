@@ -4,45 +4,56 @@ import ru.evteev.utils.Log;
 
 public class Account {
 
+    private final Bank bank;
     private final String number;
     private long money;
     private boolean isBlocked;
 
-    Account(String number, long money) {
+    Account(Bank bank, String number, long money) {
+        this.bank = bank;
         this.number = number;
         this.money = money;
         this.isBlocked = false;
         Log.created(this);
     }
 
-    boolean isBlocked() {
+    synchronized boolean isBlocked() {
         return isBlocked;
     }
 
-    void block() {
+    synchronized void block() {
         isBlocked = true;
-        Log.blocked(this);
+        Log.accountBlocked(this);
     }
 
-    void unBlock() {
+    synchronized void unBlock() {
         isBlocked = false;
-        Log.unBlocked(this);
+        Log.accountUnBlocked(this);
     }
 
     void callPolice() {
-        // Some code for call to police about a fraud transfer
+        // Any code for call to police about a fraud transfer
         Log.callPolice(this);
+        Log.unBlockedAccountsCount(this.bank);
     }
 
-    String getNumber() {
+    synchronized String getNumber() {
         return number;
     }
 
-    long getMoney() {
+    synchronized void writeOff(long amount) {
+        money -= amount;
+    }
+
+    synchronized void writeOn(long amount) {
+        money += amount;
+    }
+
+    synchronized long getMoney() {
         return money;
     }
 
-    void setMoney(long money) {
+    synchronized void setMoney(long money) {
         this.money = money;
     }
 

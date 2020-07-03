@@ -1,4 +1,4 @@
-package ru.evteev.todolist;
+package ru.evteev.tasklist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

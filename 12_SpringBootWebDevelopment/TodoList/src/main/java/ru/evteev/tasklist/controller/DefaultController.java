@@ -1,4 +1,4 @@
-package ru.evteev.todolist;
+package ru.evteev.tasklist.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

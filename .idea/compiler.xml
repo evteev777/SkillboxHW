@@ -12,6 +12,7 @@
         <module name="10-01-AvgCoursesPurchases" />
         <module name="08-05-SPBMetro" />
         <module name="10-02_03_04-JDBCExperiments" />
+        <module name="TodoList" />
         <module name="09-14-MosMetro" />
         <module name="11-01_ImageResizer" />
       </profile>
@@ -25,6 +26,7 @@
       <module name="11-02_Transactions" target="1.8" />
       <module name="11-02_Transactions_old" target="1.8" />
       <module name="Maven" target="1.5" />
+      <module name="TodoList" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

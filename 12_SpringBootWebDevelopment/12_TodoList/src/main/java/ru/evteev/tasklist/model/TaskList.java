@@ -14,37 +14,37 @@ public class TaskList {
     private TaskList() {
     }
 
-    public static synchronized void addTask(Task task) {
+    public static void addTask(Task task) {
         id.incrementAndGet();
         task.setId(id.intValue());
         TASK_LIST.put(id.intValue(), task);
     }
 
-    public static synchronized Task getTask(int id) {
+    public static Task getTask(int id) {
         return TASK_LIST.getOrDefault(id, null);
     }
 
-    public static synchronized List<Task> getAllTasks() {
+    public static List<Task> getAllTasks() {
         return new ArrayList<>(TASK_LIST.values());
     }
 
-    public static synchronized void updateTask(Task oldTask, Task newTask) {
+    public static void updateTask(Task oldTask, Task newTask) {
         oldTask.setName(newTask.getName());
         oldTask.setCompleted(newTask.isCompleted());
     }
 
-    public static synchronized void updateAllTasks(Task newTask) {
+    public static void updateAllTasks(Task newTask) {
         TASK_LIST.values().forEach(t -> {
             t.setName(newTask.getName());
             t.setCompleted(newTask.isCompleted());
         });
     }
 
-    public static synchronized void deleteTask(int id) {
+    public static void deleteTask(int id) {
         TASK_LIST.remove(id);
     }
 
-    public static synchronized void deleteAllTasks() {
+    public static void deleteAllTasks() {
         TASK_LIST.clear();
     }
 

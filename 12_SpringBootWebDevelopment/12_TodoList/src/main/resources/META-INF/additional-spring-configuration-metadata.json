@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "someParameter",
+      "type": "java.lang.String",
+      "description": "Description for someParameter."
+    },
+    {
+      "name": "value",
+      "type": "java.lang.String",
+      "description": "Description for value."
+    }
+  ] }

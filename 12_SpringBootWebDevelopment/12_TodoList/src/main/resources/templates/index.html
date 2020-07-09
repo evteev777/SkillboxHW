@@ -12,9 +12,13 @@
         <form>
             <h2>Add task</h2>
             <label>Task name:</label>
-            <input type="text" name="name" value="">
+            <label>
+                <input type="text" name="name" value="">
+            </label>
             <label>Completed:</label>
-            <input type="text" name="completed" value="">
+            <label>
+                <input type="text" name="completed" value="">
+            </label>
             <hr>
             <button id="save-task">Save</button>
         </form>
@@ -27,6 +31,6 @@
             <a href="#" class="task-link" th:attr="data-id=${task.id}" th:text="${task.name}"></a>
         </div>
     </div>
-    <p th:text="${someParameter}"></p>
+<!--    <p th:text="${someParameter}"></p>-->
 </body>
 </html>

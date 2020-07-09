@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/tasks")
 public class TaskListController {
 
     private final TaskRepository taskRepository;
@@ -26,11 +27,6 @@ public class TaskListController {
     public TaskListController(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
-
-    private static final String PATH = "/tasks";
-    private static final String PATH_ID = PATH + "/{id}";
-
-    @PostMapping(PATH)
 
     @PostMapping
     public ResponseEntity<String> createTask(Task task) {

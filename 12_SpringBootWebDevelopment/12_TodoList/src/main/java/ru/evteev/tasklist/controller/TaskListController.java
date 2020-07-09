@@ -19,10 +19,14 @@ import java.util.Optional;
 @RestController
 public class TaskListController {
 
-    @Autowired
-    private TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
 
-    private static final String PATH = "/tasklist";
+    @Autowired
+    public TaskListController(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
+    private static final String PATH = "/tasks";
     private static final String PATH_ID = PATH + "/{id}";
 
     @PostMapping(PATH)

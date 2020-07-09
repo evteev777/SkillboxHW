@@ -1,0 +1,12 @@
+spring.datasource.driver-class-name: org.postgresql.Driver
+spring.datasource.url: jdbc:postgresql://localhost:5432/todolist
+spring.datasource.username: postgres
+spring.datasource.password: 111222333
+
+spring.jpa.database: postgresql
+spring.jpa.database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+spring.jpa.hibernate.ddl-auto: none
+spring.jpa.generate-ddl: true
+
+someParameter:
+value: 5463

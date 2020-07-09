@@ -2,7 +2,7 @@
     font-family: Arial, serif;
 }
 
-#book-form {
+#task-form {
     display: none;
     align-items: center;
     justify-content: center;
@@ -15,22 +15,22 @@
     background-color: #88888878;
 }
 
-#book-form form {
+#task-form form {
     background-color: white;
     border: 1px solid #333;
     width: 300px;
     padding: 20px;
 }
 
-#book-form h2 {
+#task-form h2 {
     margin-top: 0;
 }
 
-#book-form label {
+#task-form label {
     display: block;
 }
 
-#book-form form > * {
+#task-form form > * {
     margin-bottom: 5px;
 }
 

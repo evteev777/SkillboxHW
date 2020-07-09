@@ -1,5 +1,6 @@
 package ru.evteev.tasklist.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,16 +11,31 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.evteev.tasklist.model.Task;
-import ru.evteev.tasklist.model.TaskList;
+import ru.evteev.tasklist.model.TaskRepository;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/tasklist")
 public class TaskListController {
-    
+
+    private final TaskRepository taskRepository;
+
+    @Autowired
+    public TaskListController(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
+    private static final String PATH = "/tasks";
+    private static final String PATH_ID = PATH + "/{id}";
+
+    @PostMapping(PATH)
+
     @PostMapping
     public ResponseEntity<String> createTask(Task task) {
-        TaskList.addTask(task);
-        return new ResponseEntity<>("Task added: ID_" + task.getId(), HttpStatus.OK);
+        Task newTask = taskRepository.save(task);
+        return new ResponseEntity<>("Task added: ID_" + newTask.getId(), HttpStatus.OK);
     }
 
     @PostMapping("/{id}")
@@ -29,51 +45,58 @@ public class TaskListController {
 
     @GetMapping
     public ResponseEntity<Object> readAllTasks() {
-        return new ResponseEntity<>(TaskList.getAllTasks(), HttpStatus.OK);
+
+        Iterable<Task> taskIterable = taskRepository.findAll();
+        List<Task> allTasks = (ArrayList<Task>) taskIterable;
+        return new ResponseEntity<>(allTasks, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> readTask(@PathVariable int id) {
 
-        Task task = TaskList.getTask(id);
-        if (task == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        Optional<Task> optionalTask = taskRepository.findById(id);
+        if (optionalTask.isPresent()) {
+            return new ResponseEntity<>(optionalTask.get(), HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(task, HttpStatus.OK);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
     @PutMapping
     public ResponseEntity<String> updateAllTasks(Task newTask) {
-        TaskList.updateAllTasks(newTask);
-        return new ResponseEntity<>("Tasks updated: " + TaskList.getSize(), HttpStatus.OK);
+        for (Task oldTask : taskRepository.findAll()) {
+            newTask.setId(oldTask.getId());
+            taskRepository.save(newTask);
+        }
+        return new ResponseEntity<>("Tasks updated: " + taskRepository.count(), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<String> updateTask(@PathVariable int id, Task newTask) {
-        Task oldTask = TaskList.getTask(id);
-        if (oldTask == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        } else {
-            TaskList.updateTask(oldTask, newTask);
+        Optional<Task> optionalTask = taskRepository.findById(id);
+        if (optionalTask.isPresent()) {
+            newTask.setId(id);
+            taskRepository.save(newTask);
             return new ResponseEntity<>("Task updated: ID_" + id, HttpStatus.OK);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
     @DeleteMapping
     public ResponseEntity<String> deleteAllTasks() {
-        TaskList.deleteAllTasks();
+        taskRepository.deleteAll();
         return new ResponseEntity<>("Task list cleared", HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTask(@PathVariable int id) {
-        Task task = TaskList.getTask(id);
-        if (task == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        } else {
-            TaskList.deleteTask(id);
+        Optional<Task> optionalTask = taskRepository.findById(id);
+        if (optionalTask.isPresent()) {
+            taskRepository.delete(optionalTask.get());
             return new ResponseEntity<>("Task deleted: ID_" + id, HttpStatus.OK);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 }

@@ -21,5 +21,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/skillbox?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Europe/Moscow</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - todolist@localhost" uuid="670e32cb-61b3-44f9-9088-afcc80b993bb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/todolist</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -26,39 +26,45 @@
         <property name="connection.serverTimeZone">Europe/Moscow</property>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mysql-connector-java.version>RELEASE</mysql-connector-java.version>
+        <hibernate-core.version>5.4.20.Final</hibernate-core.version>
+        <log4j.version>RELEASE</log4j.version>
+        <lombok.version>RELEASE</lombok.version>
+        <junit.version>RELEASE</junit.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.19</version>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
         <dependency>
+            <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.12.Final</version>
+            <version>${hibernate-core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.13.1</version>
+            <version>${log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.13.1</version>
+            <version>${log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 

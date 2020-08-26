@@ -12,8 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <springBoot.version>2.3.1.RELEASE</springBoot.version>
-        <postgresql.version>42.2.14</postgresql.version>
+        <springBoot.version>RELEASE</springBoot.version>
+        <postgresql.version>RELEASE</postgresql.version>
     </properties>
 
     <dependencies>

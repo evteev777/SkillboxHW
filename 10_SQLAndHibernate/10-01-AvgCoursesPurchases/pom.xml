@@ -26,13 +26,14 @@
         <property name="connection.serverTimeZone">Europe/Moscow</property>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mysql-connector-java.version>RELEASE</mysql-connector-java.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.19</version>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
     </dependencies>
 

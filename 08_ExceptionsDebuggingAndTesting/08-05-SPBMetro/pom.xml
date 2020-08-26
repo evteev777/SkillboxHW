@@ -7,9 +7,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <json-simple.version>RELEASE</json-simple.version>
-        <junit.version>RELEASE</junit.version>
-        <log4j.version>RELEASE</log4j.version>
+        <json-simple.version>[1.1.1,)</json-simple.version>
+        <junit.version>[4.13,)</junit.version>
+        <log4j.version>[2.13.2,)</log4j.version>
     </properties>
 
     <groupId>org.example</groupId>

@@ -26,11 +26,11 @@
         <property name="connection.serverTimeZone">Europe/Moscow</property>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mysql-connector-java.version>RELEASE</mysql-connector-java.version>
+        <mysql-connector-java.version>[8.0.21,)</mysql-connector-java.version>
         <hibernate-core.version>5.4.20.Final</hibernate-core.version>
-        <log4j.version>RELEASE</log4j.version>
-        <lombok.version>RELEASE</lombok.version>
-        <junit.version>RELEASE</junit.version>
+        <log4j.version>[2.13.2,)</log4j.version>
+        <lombok.version>[1.18.12,)</lombok.version>
+        <junit.version>[4.13,)</junit.version>
     </properties>
 
     <dependencies>

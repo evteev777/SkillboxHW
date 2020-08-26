@@ -26,8 +26,8 @@
         <property name="connection.serverTimeZone">Europe/Moscow</property>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <imgscalr-lib.version>RELEASE</imgscalr-lib.version>
-        <log4j.version>RELEASE</log4j.version>
+        <imgscalr-lib.version>[4.2,)</imgscalr-lib.version>
+        <log4j.version>[2.13.2,)</log4j.version>
     </properties>
 
     <dependencies>

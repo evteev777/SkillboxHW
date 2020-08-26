@@ -26,8 +26,8 @@
         <property name="connection.serverTimeZone">Europe/Moscow</property>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <log4j.version>RELEASE</log4j.version>
-        <junit.version>RELEASE</junit.version>
+        <log4j.version>[2.13.2,)</log4j.version>
+        <junit.version>[4.13,)</junit.version>
     </properties>
 
     <dependencies>

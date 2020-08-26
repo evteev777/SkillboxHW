@@ -15,7 +15,7 @@
         <redisson.version>RELEASE</redisson.version>
         <cassandra.version>3.11.7</cassandra.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <log4j.version>RELEASE</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
     </properties>
 
     <dependencies>
